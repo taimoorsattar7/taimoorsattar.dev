@@ -1,0 +1,15 @@
+.sect{
+
+	li{
+		line-height: 1.7;
+	}
+
+	&__par{
+		margin-top: 25px;
+		margin-bottom: 30px
+	}
+	&__links-bar{
+		display: inline-block;
+	}
+
+}

@@ -1,0 +1,38 @@
+.headline{
+	font-size: 1.8rem;
+	color: white;
+
+	&--logo{
+		display: inline-block;
+		position: relative;
+		float: left;
+		margin: 0;
+		font-size: 1.75rem;
+		font-weight: 100;
+		& a{
+			text-decoration: none;
+			color: white;
+		}
+	}
+
+	&__title{
+		font-size: 2.4rem;
+	}
+
+	&__intro{
+		font-size: 1.1rem;
+	}
+
+	&__sect{
+		color: black;
+		font-weight: 600;
+		font-size: 1.3rem;
+		&-p{
+			color: black;
+			font-size: 1.05rem;
+			font-weight: 400;
+			line-height: 1.7;
+			word-spacing: 1px;
+		}
+	}
+}
