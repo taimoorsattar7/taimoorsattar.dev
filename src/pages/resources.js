@@ -3,21 +3,19 @@ import React from "react"
 import Header from '../components/header'
 
 import Banner from '../components/banner'
-import Base from '../components/base'
 
 import Footer from '../components/footer'
 
 
 
-const IndexPage = () => (
+const Resources = () => (
   <div>
     <Header></Header>
-    <Banner title="Front-end Engineer"></Banner>
+    <Banner></Banner>
 
-    <Base></Base>
     <Footer></Footer>
 
   </div>
 )
 
-export default IndexPage
+export default Resources

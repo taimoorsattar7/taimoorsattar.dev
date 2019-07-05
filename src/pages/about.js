@@ -3,18 +3,18 @@ import React from "react"
 import Header from '../components/header'
 
 import Banner from '../components/banner'
-import Base from '../components/base'
 
 import Footer from '../components/footer'
+
+import aboutImg from "../images/contact.jpg"
 
 
 
 const IndexPage = () => (
   <div>
     <Header></Header>
-    <Banner title="Front-end Engineer"></Banner>
+    <Banner title="About Me" img={aboutImg}></Banner>
 
-    <Base></Base>
     <Footer></Footer>
 
   </div>

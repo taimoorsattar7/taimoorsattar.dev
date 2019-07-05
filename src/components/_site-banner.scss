@@ -4,10 +4,12 @@
 	position: relative;
 	overflow: hidden;
 	&__bg-image{
+		display: block;
+		-webkit-mask: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%);
 		opacity: 0.45;
-		background-size: cover;
+		width: 120%;
+		height: auto;
 		position: absolute;
-		top: 0;
 		bottom: 0;
 		left: 0;
 		right: 0;

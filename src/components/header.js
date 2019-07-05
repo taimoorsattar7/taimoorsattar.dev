@@ -1,23 +1,33 @@
 
 import React from 'react';
+import { Link } from "gatsby"
+
 import './_site-header.scss'
 import './_wrapper.scss'
 import './_headline.scss'
 import './_primary-nav.scss'
+import './_sect.scss'
+
 
 const Header = () => {
-    return (<header class="site-header">
-            <div class="wrapper">
-                <h1 class="headline headline--logo"><a href="#"><strong>Taimoor Sattar</strong></a></h1>
+    return (<header className="site-header">
+            <div className="wrapper">
+                <h1 className="headline headline--logo"><Link to="/"><strong>Taimoor Sattar</strong></Link></h1>
 
-                <div class="site-header__menu group">
+                <div className="site-header__menu group">
+        
+                    <nav className="primary-nav primary-nav--pull-right">
 
-                    <nav class="primary-nav primary-nav--pull-right">
+                        <form className="sect__nav-form">
+                            <input type="search" placeholder="search" id="search" name="search" />
+                            <input className='sect__search' type="submit" value="Submit" />
+                        </form>
 
-                        <ul class="nav">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Blogs</a></li>
-                            <li><a href="#">Contact</a></li>
+                        <ul className="nav">
+                            <li><Link to="/about/">About</Link></li>
+                            <li><Link to="/resources/">Resources</Link></li>
+                            <li><Link to="/blogs/">Blogs</Link></li>
+                            <li><Link to="/contact/">Contact</Link></li>
                         </ul>
 
                     </nav>

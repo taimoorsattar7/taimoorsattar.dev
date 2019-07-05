@@ -1,5 +1,5 @@
 import React from "react"
-
+import { Link } from "gatsby"
 
 import './_wrapper.scss'
 import './_headline.scss'
@@ -16,9 +16,10 @@ const Footer = () => (
       <div className="primary-nav">
 
         <ul className="footer">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Blogs</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><Link to="/about/">About</Link></li>
+          <li><Link to="/resources/">Resources</Link></li>
+          <li><Link to="/blogs/">Blogs</Link></li>
+          <li><Link to="/contact/">Contact</Link></li>
           <li><a href="https://github.com/taimoorsattar7/taimoorsattar.com">View Source</a></li>
         </ul>
 

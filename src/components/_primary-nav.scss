@@ -1,8 +1,12 @@
 .primary-nav {
-    padding-top: 5px;
+    padding-top: 8px;
   
     &--pull-right {
       float: right;
+    }
+
+    .nav{
+      display: inline-block;
     }
   
     ul {

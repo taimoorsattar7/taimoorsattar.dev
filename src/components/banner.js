@@ -9,43 +9,47 @@ import './_btn.scss'
 
 import oceanImg from "../images/ocean.jpg"
 
-const Banner = () => {
+const Banner = (props) => {
+
+  const image = props.img ? props.img: oceanImg;
+  const title = props.title ? props.title : "Page";
+
     return (
-        <div class="site-banner">
-<img class="site-banner__bg-image" src={oceanImg} alt="ocean" />
-<div class="site-banner__up">
+      <div className="site-banner">
+    <img className="site-banner__bg-image" src={image} alt="ocean" />
+    <div className="site-banner__up">
 
-  <div class="wrapper wrapper--narrow">
+    <div className="wrapper wrapper--narrow">
 
-    <h1 class="headline headline__title">Front-end Engineer</h1>
+      <h1 className="headline headline__title">{title}</h1>
 
-    <div class="sect__links-bar">
+      <div className="sect__links-bar">
 
-      <div class="primary-nav">
-        <ul class="social">
+        <div className="primary-nav">
+          <ul className="social">
 
-          <li >
-            <a class="btn btn--small" target="_blank" href="https://twitter.com/taimoorsattar7">
-              twitter
-            </a>
-          </li>
+            <li >
+              <a className="btn btn--small" rel="noopener noreferrer" target="_blank" href="https://twitter.com/taimoorsattar7">
+                twitter
+              </a>
+            </li>
 
-          <li>
-            <a class="btn btn--small" target="_blank" href="https://www.linkedin.com/in/taimoorsattar">linkedin</a>
-          </li>
+            <li>
+              <a className="btn btn--small" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/taimoorsattar">linkedin</a>
+            </li>
 
-          <li>
-            <a class="btn btn--small" target="_blank" href="https://github.com/taimoorsattar7">
-              github
-            </a>
-          </li>
+            <li>
+              <a className="btn btn--small" rel="noopener noreferrer" target="_blank" href="https://github.com/taimoorsattar7">
+                github
+              </a>
+            </li>
 
-        </ul>
+          </ul>
+        </div>
       </div>
-    </div>
 
-  </div>
-</div>  
+    </div>
+    </div>  
 
 </div>);
 };
