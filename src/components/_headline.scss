@@ -27,11 +27,22 @@
 		color: black;
 		font-weight: 600;
 		font-size: 1.3rem;
-		&-p{
+		line-height: 1.7;
+
+		h2{
+			color: black;
+			font-weight: 600;
+			font-size: 1.3rem;
+		}
+
+		a{
+			text-decoration: none;
+		}
+		
+		p, ul, span{
 			color: black;
 			font-size: 1.05rem;
 			font-weight: 400;
-			line-height: 1.7;
 			word-spacing: 1px;
 		}
 	}

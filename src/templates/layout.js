@@ -1,7 +1,13 @@
 import React from 'react';
 
-const Layout = () => (
-    <div className="row"></div>
+const Layout = (props) => (
+    <div className="row row--gutters">
+
+        <div className="row__large-4">
+            {props.children}
+        </div>
+        
+    </div>
 );
 
 export default Layout;

@@ -22,6 +22,7 @@ const Blogs = ({data}) => {
           <Post
             title={node.frontmatter.title}
             slug={node.fields.slug}
+            excerpt={node.excerpt}
           />
         )
 

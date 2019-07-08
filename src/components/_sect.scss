@@ -15,6 +15,16 @@
 		}
 	}
 
+	&__post-block{
+		border: 1px solid black;
+		border-radius: 3px;
+		padding: 5px 10px;
+		box-shadow: 3px 3px 0 rgba(126, 126, 126, 1);
+		&:hover{
+			background-color: #fff6e6;
+		}
+	}
+
 	li{
 		line-height: 1.7;
 	}

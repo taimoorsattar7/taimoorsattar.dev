@@ -12,7 +12,12 @@ const BlogPost = ({data}) => {
         <Header />
         <Banner title={post.frontmatter.title} />
 
-        <div className="wrapper wrapper--narrow" dangerouslySetInnerHTML={{__html: post.html}}></div>
+        <div className="wrapper wrapper--narrow">
+
+            <div className="headline headline__sect" dangerouslySetInnerHTML={{__html: post.html}}></div>
+
+        </div>
+        
         <Footer />
 
     </div>);
