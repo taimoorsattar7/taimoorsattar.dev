@@ -6,7 +6,7 @@ import Banner from '../components/banner'
 
 import Footer from '../components/footer'
 
-import aboutImg from "../images/contact.jpg"
+import aboutImg from "../images/about.jpg"
 
 
 

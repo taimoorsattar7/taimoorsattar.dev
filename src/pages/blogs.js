@@ -8,7 +8,7 @@ import Post from '../components/posts'
 
 import Footer from '../components/footer'
 
-import blogImg from "../images/blog.jpg"
+import blogImg from "../images/blogs.jpg"
 
 
 const Blogs = ({data}) => {
