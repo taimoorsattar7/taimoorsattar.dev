@@ -21,7 +21,11 @@ const Banner = (props) => {
 
     <div className="wrapper wrapper--narrow">
 
-      <h1 className="headline headline__title">{title}</h1>
+      <div className="site-banner__title-wrapper">
+        <h1 className="headline headline__title">{title}</h1>
+      </div>
+
+      
 
       <div className="sect__links-bar">
 

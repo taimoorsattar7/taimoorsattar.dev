@@ -15,6 +15,11 @@
 		right: 0;
 		z-index: 2;
 	}
+
+	&__title-wrapper{
+		max-width: 720px;
+	}
+	
 	&__up{
 		position: relative;
 		z-index: 10;

@@ -1,16 +1,14 @@
 import React from 'react';
 
 import Header from '../components/header'
-
 import Banner from '../components/banner'
-
 import Footer from '../components/footer'
 
 const BlogPost = ({data}) => {
     const post = data.markdownRemark;
     return (<div>
         <Header />
-        <Banner title={post.frontmatter.title} />
+        <Banner title={post.frontmatter.title} img={post.frontmatter.cover_image} />
 
         <div className="wrapper wrapper--narrow">
 
@@ -30,7 +28,7 @@ query($slug: String!){
     markdownRemark(fields: {slug: {eq: $slug}}){
         html
         frontmatter{
-            title
+            title, cover_image
         }
     }
 }
