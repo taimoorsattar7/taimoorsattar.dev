@@ -15,6 +15,18 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `TaimoorSattar`,
+        short_name: `TaimoorSattar`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+      },
+    },
+    `gatsby-plugin-offline`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
   ],
