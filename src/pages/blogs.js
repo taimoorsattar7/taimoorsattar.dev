@@ -1,37 +1,35 @@
 import React from "react"
 
-import Header from '../components/header'
-
 import Banner from '../components/banner'
-
 import Post from '../components/posts'
-
-import Footer from '../components/footer'
 
 import blogImg from "../images/blogs.jpg"
 
+import PrimaryLayout from '../templates/primarylayout'
 
 const Blogs = ({data}) => {
 
   return (<div>
-    <Header></Header>
-    <Banner title="Blogs" img={blogImg}></Banner>
-    <div className="wrapper wrapper--narrow">
-      {
-        data.allMarkdownRemark.nodes.map( node => (
-          <Post
-            title={node.frontmatter.title}
-            slug={node.fields.slug}
-            excerpt={node.excerpt}
-          />
-        )
+    <PrimaryLayout>
 
-        )
-      }
-    </div>
+      <Banner title="Blogs" img={blogImg}></Banner>
+      <div className="wrapper wrapper--narrow">
+        {
+          data.allMarkdownRemark.nodes.map( (node, index) => (
+
+            <div key={index} className="row__large-4">
+            <Post
+              title={node.frontmatter.title}
+              slug={node.fields.slug}
+              excerpt={node.excerpt}
+            />
+            </div>
+          ))
+        }
+        
+      </div>
     
-    
-    <Footer></Footer>
+    </PrimaryLayout>
 
   </div>)
 }

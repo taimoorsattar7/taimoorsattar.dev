@@ -1,20 +1,15 @@
 import React from "react"
 
-import Header from '../components/header'
-
 import Banner from '../components/banner'
-
-import Footer from '../components/footer'
-
-
 import aboutImg from "../images/resource.jpg"
+
+import PrimaryLayout from '../templates/primarylayout'
 
 const Resources = () => (
   <div>
-    <Header></Header>
-    <Banner title="Resources Page" img={aboutImg}></Banner>
-
-    <Footer></Footer>
+    <PrimaryLayout>
+      <Banner title="Resources Page" img={aboutImg}></Banner>
+    </PrimaryLayout>
 
   </div>
 )

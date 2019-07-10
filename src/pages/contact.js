@@ -1,25 +1,24 @@
 import React from "react"
 
-import Header from '../components/header'
-
 import Banner from '../components/banner'
 
-import Footer from '../components/footer'
-
 import contactImg from "../images/contact.jpg"
+//const contactImg = React.lazy(() => import('../images/contact.jpg'));
 
+import PrimaryLayout from '../templates/primarylayout'
 
 
 const IndexPage = () => (
   <div>
-    <Header></Header>
-    <Banner title="Contact Me" img={contactImg}></Banner>
+    <PrimaryLayout>
+      
+      <Banner title="Contact Me" img={contactImg}></Banner>
 
-    <div className="wrapper wrapper--narrow">
-        For any information contact me at <a href="mailto:taimoorsattar7@gmail.com">taimoorsattar7@gmail.com</a>
-    </div>
+      <div className="wrapper wrapper--narrow">
+          For any information contact me at <a href="mailto:taimoorsattar7@gmail.com">taimoorsattar7@gmail.com</a>
+      </div>
 
-    <Footer></Footer>
+    </PrimaryLayout>
 
   </div>
 )

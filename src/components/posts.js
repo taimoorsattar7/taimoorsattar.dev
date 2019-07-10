@@ -8,8 +8,6 @@ import './_row.scss'
 
 const Posts = (props) => (
   
-  <div className="row__large-4">
-
     <div className="sect__post-block">
 
       <div className="headline headline__sect">
@@ -20,8 +18,6 @@ const Posts = (props) => (
       </div>
 
     </div>
-
-  </div>
   
 );
 
