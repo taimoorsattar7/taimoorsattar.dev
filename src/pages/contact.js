@@ -12,7 +12,7 @@ const IndexPage = () => (
   <div>
     <PrimaryLayout>
       
-      <Banner title="Contact Me" img={contactImg}></Banner>
+      
 
       <div className="wrapper wrapper--narrow">
           For any information contact me at <a href="mailto:taimoorsattar7@gmail.com">taimoorsattar7@gmail.com</a>

@@ -1,22 +1,31 @@
 .headline{
 	font-size: 1.8rem;
-	color: white;
 
 	&--logo{
 		display: inline-block;
 		float: left;
 		margin: 0;
-		font-size: 1.75rem;
-		font-weight: 100;
+		font-size: 1.6rem;
+		font-weight: 400;
+		
 		& a{
+			color: black;
 			text-decoration: none;
-			color: white;
 		}
 	}
 
 	&__title{
-		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-		font-size: 2.4rem;
+		font-size: 2.2rem;
+		font-weight: 500;
+	}
+
+	&__info{
+		display: block;
+		font-weight: 400;
+		font-size: 1rem;
+		line-height: 1.8;
+		word-spacing: 2px;
+		color: #000;
 	}
 
 	&__intro{
@@ -24,13 +33,11 @@
 	}
 
 	&__sect{
-		color: black;
 		font-weight: 600;
 		font-size: 1.3rem;
 		line-height: 1.7;
 
 		h2{
-			color: black;
 			font-weight: 600;
 			font-size: 1.3rem;
 		}
@@ -40,7 +47,6 @@
 		}
 		
 		p, ul, span{
-			color: black;
 			font-size: 1.05rem;
 			font-weight: 400;
 			word-spacing: 1px;

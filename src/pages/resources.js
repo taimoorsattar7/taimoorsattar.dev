@@ -8,7 +8,6 @@ import PrimaryLayout from '../templates/primarylayout'
 const Resources = () => (
   <div>
     <PrimaryLayout>
-      <Banner title="Resources Page" img={aboutImg}></Banner>
     </PrimaryLayout>
 
   </div>

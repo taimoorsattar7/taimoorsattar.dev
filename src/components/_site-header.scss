@@ -1,8 +1,16 @@
 .site-header{
 	z-index: 15;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 20px 0;
+    background-color: #E0E7EB;
+    padding: 7px 0;
+
+    border-bottom: 1px solid #B1C3CD;
+
+    &__logo{
+        position: relative;
+        top: 4px;
+        display: inline-block;
+        width: 30px;
+        height: auto;
+        margin-right: 10px; 
+    }
 }

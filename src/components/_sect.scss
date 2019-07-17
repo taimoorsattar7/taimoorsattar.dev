@@ -34,8 +34,11 @@
 		margin-bottom: 30px
 	}
 	&__links-bar{
+		margin-top: 15px;
+		margin-bottom: 25px;
 		display: inline-block;
-		width: 500px;
+		width: 100%;
+		text-align: center;
 	}
 
 }

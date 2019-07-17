@@ -11,7 +11,6 @@ const IndexPage = () => (
   <div>
     <PrimaryLayout>
     
-      <Banner title="About Me" img={aboutImg}></Banner>
 
     </PrimaryLayout>
 

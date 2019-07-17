@@ -8,20 +8,21 @@ import './_headline.scss'
 import './_primary-nav.scss'
 import './_sect.scss'
 
+import logo from "../images/logo.svg"
+
 
 const Header = () => {
     return (<header className="site-header">
-            <div className="wrapper">
-                <h1 className="headline headline--logo"><Link to="/"><strong>Taimoor Sattar</strong></Link></h1>
+            <div className="wrapper wrapper--narrow">
+
+                <h1 className="headline headline--logo">
+                    <img className="site-header__logo" src={logo} alt="Taimoor Sattar" />
+                    <Link to="/">Taimoor Sattar</Link>
+                </h1>
 
                 <div className="site-header__menu group">
         
                     <nav className="primary-nav primary-nav--pull-right">
-
-                        <form className="sect__nav-form">
-                            <input type="search" placeholder="search" id="search" name="search" />
-                            <input className='sect__search' type="submit" value="Submit" />
-                        </form>
 
                         <ul className="nav">
                             <li><Link to="/about/">About</Link></li>

@@ -1,11 +1,16 @@
 .site-banner{
-	background-color: #000;
-	padding: 120px 0 100px 0;
-	position: relative;
+	width: 100%;
+	padding: 50px 0;
 	overflow: hidden;
+
+	&__info{
+		max-width: 680px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
 	&__bg-image{
 		display: block;
-		-webkit-mask: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%);
 		opacity: 0.45;
 		width: 100%;
 		height: auto;
@@ -14,14 +19,5 @@
 		left: 0;
 		right: 0;
 		z-index: 2;
-	}
-
-	&__title-wrapper{
-		max-width: 720px;
-	}
-	
-	&__up{
-		position: relative;
-		z-index: 10;
 	}
 }

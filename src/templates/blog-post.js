@@ -16,9 +16,14 @@ const BlogPost = ({data}) => {
             keywords = {post.frontmatter.keywords}
             image = {post.frontmatter.cover_image}
         />
-        <Banner title={post.frontmatter.title} img={post.frontmatter.cover_image} />
+
+        
 
         <div className="wrapper wrapper--narrow">
+
+            <img src={post.frontmatter.cover_image} width="100%" border="1px solid lightblue"/>
+            
+            <h1>{post.frontmatter.title}</h1> 
 
             <div className="headline headline__sect" dangerouslySetInnerHTML={{__html: post.html}}></div>
 

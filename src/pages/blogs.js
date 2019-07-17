@@ -12,7 +12,6 @@ const Blogs = ({data}) => {
   return (<div>
     <PrimaryLayout>
 
-      <Banner title="Blogs" img={blogImg}></Banner>
       <div className="wrapper wrapper--narrow">
         {
           data.allMarkdownRemark.nodes.map( (node, index) => (
