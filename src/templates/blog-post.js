@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Header from '../components/header'
-import Banner from '../components/banner'
 import Footer from '../components/footer'
 
 import SEO from '../components/SEO'
@@ -25,7 +24,7 @@ const BlogPost = ({data}) => {
             
             <h1>{post.frontmatter.title}</h1> 
 
-            <div className="headline headline__sect" dangerouslySetInnerHTML={{__html: post.html}}></div>
+            <div className="headline headline__text" dangerouslySetInnerHTML={{__html: post.html}}></div>
 
         </div>
         

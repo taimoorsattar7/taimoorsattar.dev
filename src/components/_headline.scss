@@ -1,5 +1,7 @@
 .headline{
 	font-size: 1.8rem;
+	margin: 0;
+	padding: 0;
 
 	&--logo{
 		display: inline-block;
@@ -17,39 +19,101 @@
 	&__title{
 		font-size: 2.2rem;
 		font-weight: 500;
+
+		
+		font-weight: 500;
+
+		letter-spacing: 3px;
+		word-spacing: 6px;
+
+		color: #000;
+
+		margin-bottom: 15px;
+	}
+	
+	&__feature{
+		display: block;
+		font-size: 26px;
+		
+		font-weight: 500;
+
+		letter-spacing: 3px;
+		word-spacing: 6px;
+
+		color: #000;
+
+		margin-bottom: 26px;
 	}
 
-	&__info{
+	&__subtitle{
 		display: block;
+		font-weight: bold;
+		font-size: 28px;
+
+		line-height: 1.4;
+		word-spacing: 8px;
+
+		color: #006699;
+	}
+
+	&--mid{
+		text-align: center;
+	}
+
+	&__date{
+		display: block;
+		font-size: 15px;
 		font-weight: 400;
-		font-size: 1rem;
+		margin-bottom: 0;
+		
 		line-height: 1.8;
 		word-spacing: 2px;
+		color: #666666;
+	}
+
+	&__error-text{
+		display: block;
+		font-weight: 500;
+		font-size: 50px;
+		line-height: 1.5;
+
+		letter-spacing: 3px;
+		word-spacing: 6px;
 		color: #000;
+
+		margin-bottom: 20px;
 	}
 
-	&__intro{
-		font-size: 1.1rem;
-	}
-
-	&__sect{
-		font-weight: 600;
-		font-size: 1.3rem;
-		line-height: 1.7;
+	&__text{
+		display: block;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 1.5;
+		word-spacing: 1.2px;
+		color: #000;
 
 		h2{
-			font-weight: 600;
-			font-size: 1.3rem;
+			font-weight: 700;
+			font-size: 1.6rem;
+			line-height: 1.5;
+			
+			letter-spacing: 1.5px;
+			word-spacing: 3px;
+
+			margin-top: 30px;
+			margin-bottom: 40px;
 		}
 
 		a{
 			text-decoration: none;
 		}
-		
-		p, ul, span{
-			font-size: 1.05rem;
-			font-weight: 400;
-			word-spacing: 1px;
-		}
+
 	}
+
+
+
+	&__intro{
+		font-size: 1.1rem;
+	}
+
 }
