@@ -22,7 +22,7 @@ https://reactjs.org
 React is a JavaScript library for building user interfaces. You can either write react UI component either in classes or function.
 Here is the simple example
 
-```
+```js
 class HelloMessage extends React.Component {
   render() {
     return (

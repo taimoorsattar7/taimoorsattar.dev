@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-1774.98,-332.197)">
+        <g transform="matrix(0.79505,0,0,2.89167,663.109,228.156)">
+            <g id="about-icon" transform="matrix(1.19513,0,0,1.19513,-276.041,-8.30969)">
+                <g transform="matrix(1.25778,0,0,0.345821,-834.047,-78.9012)">
+                    <circle cx="1784.96" cy="343.195" r="7.531" style="fill:none;stroke:rgb(0,119,178);stroke-width:0.7px;"/>
+                </g>
+                <g transform="matrix(1.25778,0,0,0.345821,-833.295,-79.2433)">
+                    <text x="1781.52px" y="347.753px" style="font-family:'Consolas-Bold', 'Consolas', monospace;font-weight:700;font-size:10.053px;fill:rgb(0,119,178);">i</text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

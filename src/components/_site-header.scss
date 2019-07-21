@@ -1,16 +1,157 @@
+@import '../styles/mixin';
+
 .site-header{
-	z-index: 15;
+
+    z-index: 15;
     background-color: #E0E7EB;
-    padding: 7px 0;
+
+    padding-top: 0;
+    padding-bottom: 0;
 
     border-bottom: 1px solid #B1C3CD;
+
 
     &__logo{
         position: relative;
         top: 4px;
         display: inline-block;
-        width: 30px;
-        height: auto;
-        margin-right: 10px; 
+        width: auto;
+        height: 30px;
+        margin-right: 10px;
+        &-send{
+          float: right;
+          margin-left: 30px;
+        }
+        &-text{
+          text-indent: -9999px;
+          position: absolute;
+        }
     }
+
+    &__menu-icon {
+
+        @include clearfix;
+        width: 20px;
+        height: 19px;
+        z-index: 10;
+        margin-top: 8px;
+        margin-left: 25px;
+        position: relative;
+        float: right;
+
+        @include atMinMedium{
+          display: none;
+        }
+    
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 20px;
+          height: 3px;
+          background-color: black;
+          transform-origin: 0 0;
+          transition: transform .3s ease-out;
+        }
+    
+        &__middle {
+          position: absolute;
+          top: 8px;
+          left: 0;
+          width: 20px;
+          height: 3px;
+          background-color: black;
+          transition: all .3s ease-out;
+          transform-origin: 0 50%;
+        }
+    
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 20px;
+          height: 3px;
+          background-color: black;
+          transform-origin: 0 100%;
+          transition: transform .3s ease-out;
+        }
+      }
+    
+      &__menu-icon--close-x {
+
+        width: 20px;
+        height: 19px;
+
+        z-index: 10;
+        margin-top: 8px;
+        margin-left: 25px;
+        position: relative;
+        float: right;
+
+        @include atMinMedium{
+          display: none;
+        }
+        
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: black;
+            
+            transform-origin: 100% 0;
+            transition: transform .3s ease-out;
+
+            transform: rotate(45deg) scaleX(1.25);
+        }
+    
+        .site-header__menu-icon__middle {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+    
+        &::after {
+
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: black;
+            
+            transform-origin: 0 0;
+            transition: transform .3s ease-out;
+
+            transform: rotate(-45deg) scaleX(1.25);
+        }
+      }
+      
+      &__menu-content {
+          opacity: 0;
+          z-index: 1;
+          padding-top: 0;
+          transform: scale(1);
+
+        @include atMinMedium {
+          float: right;
+          display: inline-block;
+          opacity: 1;
+          transform: scale(1);
+          transition: all .3s ease-out;
+          position: relative;
+          z-index: 5;
+          text-align: center;
+        }
+
+        &--is-visible {
+            opacity: 1;
+            z-index: 1;
+            transform: scale(1);
+        }
+      }
 }

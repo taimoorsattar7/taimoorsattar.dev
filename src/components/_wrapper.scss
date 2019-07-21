@@ -1,23 +1,43 @@
-@mixin atMedium() {
-    @media (max-width: 960px) {
-        @content;
-    }
-  }
+@import '../styles/mixin';
 
 .wrapper{
 	overflow: hidden;
 	max-width: 1300px;
 	margin: 0 auto;
-	padding-top: 15px;
+	padding-top: 10px;
 	padding-bottom: 10px;
 
-	@include atMedium{
-		padding-left: 25px;
-		padding-right: 25px;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	position: relative;
+
+	@include atMinLarge{
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	@include atMinMedium{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	@include atMinSmall{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	&--no-padding{
+		padding-left: 0;
+		padding-right: 0;
 	}
 
 	&--narrow {
 		max-width: 960px;
+	}
+
+	&--small {
+		max-width: 530px;
 	}
 
 }

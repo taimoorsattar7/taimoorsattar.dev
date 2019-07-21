@@ -1,21 +1,20 @@
-@mixin atSmall() {
+@mixin atMinSmall() {
     @media (min-width: 530px) {
         @content;
     }
   }
   
-  @mixin atMedium() {
+  @mixin atMinMedium() {
     @media (min-width: 960px) {
         @content;
     }
   }
   
-  @mixin atLarge() {
+  @mixin atMinLarge() {
     @media (min-width: 1010px) {
         @content;
     }
   }
-  
 
   @mixin clearfix {
     &::after {

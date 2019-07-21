@@ -5,11 +5,15 @@ import PrimaryLayout from '../templates/primarylayout'
 
 import '../components/_error.scss'
 
+import SEO from '../components/SEO'
 
-const Four0Four = () => (
-  <div>
+
+const Four0Four = () => (<>
 
     <PrimaryLayout>
+
+    <SEO />
+    
 
     <div className="wrapper wrapper--narrow">
 
@@ -26,7 +30,6 @@ const Four0Four = () => (
 
     </PrimaryLayout>
 
-  </div>
-)
+  </>)
 
 export default Four0Four

@@ -1,11 +1,26 @@
+@import '../styles/mixin';
+
 .headline{
 	font-size: 1.8rem;
-	margin: 0;
+    font-weight: 600;
+    margin: 0;
 	padding: 0;
+	
+    word-spacing: 2.2px;
+	letter-spacing: 1.5px;
+
+	color: #000;
+	
+	text-transform: capitalize;
+
+	@include atMinMedium{
+		font-size: 2.2rem;
+		letter-spacing: 2px;
+		word-spacing: 1px;
+	}
 
 	&--logo{
 		display: inline-block;
-		float: left;
 		margin: 0;
 		font-size: 1.6rem;
 		font-weight: 400;
@@ -16,21 +31,6 @@
 		}
 	}
 
-	&__title{
-		font-size: 2.2rem;
-		font-weight: 500;
-
-		
-		font-weight: 500;
-
-		letter-spacing: 3px;
-		word-spacing: 6px;
-
-		color: #000;
-
-		margin-bottom: 15px;
-	}
-	
 	&__feature{
 		display: block;
 		font-size: 26px;
@@ -54,10 +54,6 @@
 		word-spacing: 8px;
 
 		color: #006699;
-	}
-
-	&--mid{
-		text-align: center;
 	}
 
 	&__date{
@@ -85,12 +81,22 @@
 	}
 
 	&__text{
+	
 		display: block;
 		font-weight: 400;
-		font-size: 18px;
-		line-height: 1.5;
-		word-spacing: 1.2px;
+		font-size: 16px;
+		line-height: 1.6;
+		word-spacing: 1px;
 		color: #000;
+
+		text-transform: none;
+
+		@include atMinMedium{
+			font-size: 18px;
+			line-height: 1.6;
+			word-spacing: 1.1px;
+			letter-spacing: 1.1px;
+		}
 
 		h2{
 			font-weight: 700;
@@ -105,15 +111,43 @@
 		}
 
 		a{
-			text-decoration: none;
+			cursor: pointer;
+			text-decoration: underline;
+			color: #2B00FF;
 		}
 
 	}
 
-
-
 	&__intro{
 		font-size: 1.1rem;
+	}
+
+	strong {
+		font-weight: 400;
+	}
+
+	&--dark-blue{
+		color: #006699;
+	}
+
+	&--b-margin-small {
+		margin-bottom: .5em;
+	}
+
+	&--b-margin-medium {
+		margin-bottom: 1em;
+	}
+
+	&--b-margin-large {
+		margin-bottom: 1.5em;
+	}
+
+	&--no-t-margin {
+		margin-top: 0;
+	}
+
+	&--mid{
+		text-align: center;
 	}
 
 }

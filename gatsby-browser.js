@@ -7,3 +7,7 @@
 // You can delete this file if you're not using it
 
 import './src/styles/render.scss'
+import './src/styles/syntax-editor.scss'
+
+require("prismjs/themes/prism.css")
+require("prismjs/plugins/line-numbers/prism-line-numbers.css")

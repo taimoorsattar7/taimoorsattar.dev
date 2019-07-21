@@ -2,15 +2,16 @@ import React from 'react';
 
 import Header from '../components/header'
 import Footer from '../components/footer'
-import SEO from '../components/SEO'
+import '../components/_misc.scss'
 
-const PrimaryLayout = (props) => (
-    <div>
-        <SEO />
-        <Header></Header>
-            {props.children}
-        <Footer></Footer>
-    </div>
-);
+const PrimaryLayout = (props) => (<>
+        
+            <Header></Header>
+                <div className="misc">
+                    {props.children}
+                </div>
+            <Footer></Footer>
+    
+    </>);
 
 export default PrimaryLayout;

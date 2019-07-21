@@ -1,36 +1,42 @@
 import React from "react"
 
-import Banner from '../components/banner'
-import Post from '../components/posts'
-
-import blogImg from "../images/blogs.jpg"
-
 import PrimaryLayout from '../templates/primarylayout'
+import SEO from '../components/SEO'
+
+import { Link } from "gatsby"
 
 const Blogs = ({data}) => {
 
-  return (<div>
+  const posts = data.allMarkdownRemark.nodes;
+
+  return (<>
     <PrimaryLayout>
+    <SEO />
 
       <div className="wrapper wrapper--narrow">
-        {
-          data.allMarkdownRemark.nodes.map( (node, index) => (
 
-            <div key={index} className="row__large-4">
-            <Post
-              title={node.frontmatter.title}
-              slug={node.fields.slug}
-              excerpt={node.excerpt}
-            />
-            </div>
-          ))
-        }
+        <h1 className="headline headline--b-margin-small">Recent Blogs</h1>
+        
+        {posts.map(post=>{
+              return(<>
+
+                <div className="site-banner__post-block">
+
+                  <Link to={post.fields.slug}>
+                    <h2 className="headline headline--dark-blue">{post.frontmatter.title}</h2>
+                    <span className="headline headline__date">{post.frontmatter.date}</span>
+                    <p className="headline headline__text">This is Info about blog.</p>
+                    </Link>
+                </div>
+
+                </>)
+        })}
         
       </div>
     
     </PrimaryLayout>
 
-  </div>)
+  </>)
 }
 
 export default Blogs

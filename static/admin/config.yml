@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: taimoorsattar7/taimoorsattar.com
+  branch: master
 
 media_folder: static/assets
 public_folder: assets
@@ -11,7 +12,9 @@ collections:
     folder: blog
     create: true
     fields:
+      - { name: title, label: Title }
+      - { label: "Description", name: "description", widget: "string" }
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
+      
       - { name: body, label: Body, widget: markdown }

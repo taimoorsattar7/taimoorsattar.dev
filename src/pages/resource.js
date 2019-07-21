@@ -2,12 +2,15 @@ import React from "react"
 
 import PrimaryLayout from '../templates/primarylayout'
 
-const Resources = () => (
-  <div>
+const Resources = () => {
+
+  return (<>
     <PrimaryLayout>
+    
     </PrimaryLayout>
 
-  </div>
-)
+  </>)
+}
 
 export default Resources
+

@@ -1,15 +1,33 @@
+@import '../styles/mixin';
+
 .primary-nav {
 
-    margin-top: 12px;
+    @include clearfix;
+
+    margin-top: 10px;
+
+    &--vanish{
+      
+      position: absolute;
+
+      @include atMinMedium{
+        position: relative;
+      }
+      
+    }
 
     &--pull-right {
-      float: right;
+      @include atMinMedium{
+        float: right;
+      }
+      
     }
     .social{
       margin: a auto;
     }
+
     .nav{
-      display: inline-block;
+      display: block;
     }
   
     ul {
@@ -29,17 +47,64 @@
       }
     }
 
+    .nav li {
+      list-style: none;
+      display: block;
+      transition: all 0.20s ease;
+
+      background-color: #D1DCE1;
+
+      padding: 15px 20px;
+
+      margin-bottom: 0;
+      margin-right: 0;
+
+      border-top: 1px solid #B1C3CD;
+      border-bottom: 1px solid #B1C3CD;
+
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+
+      img{
+        display: inline-block;
+        margin-right: 20px;
+        
+        height: 20px;
+        width: auto;
+        @include atMinMedium{
+          display: none;
+        }
+      }
+
+      @include atMinMedium{
+
+        background-color: transparent;
+        padding: 0;
+
+        border: none;
+
+        display: inline-block;
+
+        margin-right: 30px;
+
+        &:last-of-type{
+          margin-right: 0;
+        }
+      }
+    }
+
     
     a {
       color: black;
-      display: block;
+      display: inline-block;
       text-decoration: none;
       font-weight: 400;
       text-shadow: 0.3px 0.3px 1px rgba(0, 0, 0, 0.1);
       &:hover{
         transition: all 0.25s;
         cursor: pointer;
-        color: #FF6A00;
+        color: #0077B2;
       }
     }
 
@@ -56,7 +121,7 @@
       display: block;
       &:hover{
         cursor: pointer;
-        color: #FF6A00;
+        color: #0077B2;
       }
     }
     

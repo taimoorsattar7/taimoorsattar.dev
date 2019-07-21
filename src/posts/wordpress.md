@@ -32,7 +32,7 @@ Two of these words you will commonly look that is wordpress.com and wordpress.or
 WordPress.com is the official site of WordPress and it is a self hosting platform of WordPress. If we use WordPress.com, the user has not to care about purchasing a domain and maintaining it. It has his own subscription fee.
 
 ## WordPress.org
-WordPress.com have open source its allow of it project code which is WordPress.org. WordPress.org is a free and open-source content management system based on PHP and MySQL. It provides back-end handful function to save retrieve data and store in the database. It is used to make any kind of website ranging from blog to business website. If you are using wordpress.org, you have to hosting your WordPress site on any
+[WordPress.org](https://wordpress.org/) have open source its allow of it project code which is WordPress.org. WordPress.org is a free and open-source content management system based on PHP and MySQL. It provides back-end handful function to save retrieve data and store in the database. It is used to make any kind of website ranging from blog to business website. If you are using wordpress.org, you have to hosting your WordPress site on any
 
 What are Prerequisite of WordPress?
 Here are few listed prerequisite of WordPress.
