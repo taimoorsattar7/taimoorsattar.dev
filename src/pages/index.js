@@ -32,7 +32,7 @@ const IndexPage = ({data}) => {
             return(
               <div className="site-banner__post-block">
                 <Link to={post.fields.slug}>
-                  <h2 className="headline headline--dark-blue headline--mid">{post.frontmatter.title}</h2>
+                  <h2 className="headline headline__medium headline--mid">{post.frontmatter.title}</h2>
                   <span className="headline headline__date headline--mid">{post.frontmatter.date}</span>
                   <p className="headline headline__text headline--mid">This is Info about blog.</p>
                   </Link>

@@ -21,7 +21,8 @@ const Header = () => {
     const [hamBurger, handleHamBurger] = useState(true);
 
     return (<header className="site-header">
-            <div className="wrapper wrapper--narrow">
+            <div className={"wrapper wrapper--narrow" +
+                            (hamBurger ? "" : " wrapper--no-bottom-padd") }>
 
                 <h1 className="headline headline--logo">
                     <Link to="/">

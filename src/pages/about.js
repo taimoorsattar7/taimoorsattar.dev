@@ -12,7 +12,9 @@ const IndexPage = () => (<>
       <div className="wrapper wrapper--narrow">
         <h2 className="headline headline--b-margin-small">About</h2>
         <div className="headline headline__text">
-          My Name is Taimoor Sattar. I love to code as a profession. I am UX/UI designer, Writer and a developer. I have completed my bachelor degree.  
+          <p>
+            My Name is Taimoor Sattar and front-end developer. I love to code as a profession. I have completed my bachelor degree and work with technology like WordPress, React, Graphql and Jamstack. I have good taste of UX/UI designer. I appreciate white space, balance, impact, hierarchy; and all of the other hallmarks of good design. I enjoy collaborating with developers, growing and pushing the boundaries of development to craft elegant, modern user experiences.
+          </p>
         </div>
       </div>
 

@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
-    <g transform="matrix(1,0,0,1,-1774.98,-332.197)">
-        <g transform="matrix(0.79505,0,0,2.89167,663.109,228.156)">
-            <g id="about-icon" transform="matrix(1.19513,0,0,1.19513,-276.041,-8.30969)">
-                <g transform="matrix(1.25778,0,0,0.345821,-834.047,-78.9012)">
-                    <circle cx="1784.96" cy="343.195" r="7.531" style="fill:none;stroke:rgb(0,119,178);stroke-width:0.7px;"/>
-                </g>
-                <g transform="matrix(1.25778,0,0,0.345821,-833.295,-79.2433)">
-                    <text x="1781.52px" y="347.753px" style="font-family:'Consolas-Bold', 'Consolas', monospace;font-weight:700;font-size:10.053px;fill:rgb(0,119,178);">i</text>
-                </g>
+<svg width="100%" height="100%" viewBox="0 0 10 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(1,0,0,1,-1782.28,-333.613)">
+        <g transform="matrix(0.79505,0,0,2.89167,663.109,230.156)">
+            <g id="Hail" transform="matrix(1.20929,-1.63899e-18,1.20563e-17,0.332489,1015.55,-35.7732)">
+                <path d="M327.5,223.362L327.5,235.002C327.5,235.554 327.948,236 328.5,236C329.056,236 329.5,235.553 329.5,235.002L329.5,228.5L330,228.5L330,235.002C330,235.554 330.448,236 331,236C331.556,236 332,235.553 332,235.002L332,227.75L332,223.495C332.118,223.495 332.347,223.495 332.493,223.495C332.817,223.495 332.988,223.932 333.013,224L333,224L333,227.757C333,228.162 333.336,228.5 333.75,228.5C334.167,228.5 334.5,228.167 334.5,227.757L334.5,224L334.49,224C334.474,223.812 334.365,222.857 333.766,221.935C333.37,221.325 332.579,221.102 332,221.021L332,221L331.824,221C331.518,220.969 331.305,220.978 331.305,220.978L331.305,221L327.55,221L326.024,219.834C325.819,219.678 325.61,219.313 325.58,219.037L325.206,215.586C325.183,215.372 324.986,215.191 324.767,215.198L324.638,215.203C324.421,215.21 324.249,215.393 324.257,215.611L324.414,220.205C324.423,220.49 324.598,220.857 324.805,221.035L327.5,223.362ZM329.6,220.5C330.705,220.5 331.6,219.605 331.6,218.5C331.6,217.395 330.705,216.5 329.6,216.5C328.495,216.5 327.6,217.395 327.6,218.5C327.6,219.605 328.495,220.5 329.6,220.5Z" style="fill:rgb(0,119,178);"/>
             </g>
         </g>
     </g>

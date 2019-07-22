@@ -20,7 +20,7 @@ const BlogPost = ({data}) => {
             
             <h1 className="headline headline--b-margin-small">{post.frontmatter.title}</h1> 
 
-            <img src={post.frontmatter.cover_image} width="100%" border="1px solid lightblue"/>
+            {post.frontmatter.cover_image && <img src={post.frontmatter.cover_image} width="100%" border="1px solid lightblue"/>}
 
             <div className="headline headline__text" dangerouslySetInnerHTML={{__html: post.html}}></div>
 

@@ -1,19 +1,15 @@
 ---
-title: "Making Sence of React"
+title: "Making Sense of React"
 
 date: "2019-07-03"
 
-keywords: "wordpress, cms"
+keywords: "React"
 
 author: taimoorsattar
 
 published: true
 
-description: WordPress is a free CMS(Content Management System), power up most of the website and is used by many web community.
-
-canonical_url: https://www.underlinejobs.com/blogs/wordpress/
-
-cover_image: https://www.underlinejobs.com/wp-content/uploads/2019/03/WordPress-Blog.jpg
+description: About React
 
 ---
 
@@ -39,4 +35,4 @@ ReactDOM.render(
 );
 ```
 
-Props is used to pass data between different 
+More To write...

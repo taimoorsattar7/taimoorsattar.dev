@@ -54,16 +54,25 @@
 
       background-color: #D1DCE1;
 
-      padding: 15px 20px;
+      padding: 15px 25px;
+
+      width: 100vw;
 
       margin-bottom: 0;
       margin-right: 0;
+
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
 
       border-top: 1px solid #B1C3CD;
       border-bottom: 1px solid #B1C3CD;
 
       &:last-of-type{
         margin-bottom: 0;
+        border-bottom: none;
       }
 
       img{
@@ -72,12 +81,22 @@
         
         height: 20px;
         width: auto;
+        position: relative;
+        top: 4px;
         @include atMinMedium{
           display: none;
         }
       }
 
       @include atMinMedium{
+
+        width: auto;
+
+
+        position: relative;
+        left: 0;
+        right: 0;
+        margin-left: 0;
 
         background-color: transparent;
         padding: 0;

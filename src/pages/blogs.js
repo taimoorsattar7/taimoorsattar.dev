@@ -23,7 +23,7 @@ const Blogs = ({data}) => {
                 <div className="site-banner__post-block">
 
                   <Link to={post.fields.slug}>
-                    <h2 className="headline headline--dark-blue">{post.frontmatter.title}</h2>
+                    <h2 className="headline headline__medium">{post.frontmatter.title}</h2>
                     <span className="headline headline__date">{post.frontmatter.date}</span>
                     <p className="headline headline__text">This is Info about blog.</p>
                     </Link>
