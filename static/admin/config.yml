@@ -2,19 +2,29 @@ backend:
   name: github
   repo: taimoorsattar7/taimoorsattar.dev
   branch: master
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Upload “{{path}}”'
+    deleteMedia: '[skip ci] Delete “{{path}}”'
 
-media_folder: static/assets
-public_folder: assets
+media_folder: static/img
+public_folder: /img
 
 collections:
   - name: blog
     label: Blog
-    folder: blogs
+    folder: "src/pages/blogs"
+    slug: "{{slug}}-{{year}}-{{month}}-{{day}}"
     create: true
     fields:
       - { name: title, label: Title }
       - { label: "Description", name: "description", widget: "string" }
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
-      
       - { name: body, label: Body, widget: markdown }
+      - {label: Tags, name: tags, widget: list}
+      - {label: Featured Post, name: featuredpost, widget: boolean}
+      - {label: Featured Image, name: featuredimage, widget: image}
+      
