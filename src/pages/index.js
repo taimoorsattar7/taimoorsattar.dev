@@ -24,6 +24,18 @@ const IndexPage = ({data}) => {
 
       <div className="wrapper wrapper--narrow wrapper--no-padding">
 
+        <div className="site-banner__tech">
+        
+          <img src="/img/tech/javascript.png" alt="javascript" />
+          <img src="/img/tech/gatsby.png" alt="gatsby" />
+          <img src="/img/tech/reactjs.svg" alt="reactjs" />
+          <img src="/img/tech/wordpress.svg" alt="wordpress" />
+          <img src="/img/tech/svelte.png" alt="svelte" />
+          <img src="/img/tech/netlify.png" alt="netlify" />
+
+
+        </div>
+
         <div className="site-banner__post">
 
           <h2 className="headline headline__feature headline--mid">Feature Post</h2>

@@ -1,12 +1,62 @@
+@import '../styles/mixin';
+
 .site-banner{
 	width: 100%;
-	padding: 50px 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	overflow: hidden;
 
+	&__tech{
+		display: block;
+		text-align: center;
+		opacity: 0.35;
+		width: 100%;
+		margin-top: 25px;
+		margin-bottom: 100px;
+
+		img{
+			display: inline-block;
+			width: 36px;
+			height: auto;
+			margin-right: 8%;
+			&:last-of-type{
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__frame{
+		display: block;
+		max-width: 165px;
+		height: auto;
+		float: none;
+		margin: auto;
+		margin-top: 10px;
+
+		@include atMinMedium{
+			display: inline-block;
+			max-width: 185px;
+			height: auto;
+			float: right;
+		}
+
+		border-radius: 5px;
+		background-color: black;
+		
+		img{
+			border: 2px solid grey;
+			transform: rotate(2deg);
+			display: inline-block;
+			width: 100%;
+			border-radius: 5px;
+		}
+	
+	}
+
 	&__info{
+		display: inline-block;
 		max-width: 680px;
 		margin: 0 auto;
-		text-align: center;
 	}
 
 	&__bg-image{

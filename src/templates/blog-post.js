@@ -24,6 +24,10 @@ const BlogPost = ({data}) => {
 
             <div className="headline headline__text" dangerouslySetInnerHTML={{__html: post.html}}></div>
 
+            <div className="">
+                <span className="">Edit on GitHub</span>
+            </div>
+
         </div>
         
         </PrimaryLayout>

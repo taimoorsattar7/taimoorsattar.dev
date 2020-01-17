@@ -7,6 +7,7 @@ import '../components/_misc.scss'
 const PrimaryLayout = (props) => (<>
         
             <Header></Header>
+            
                 <div className="misc">
                     {props.children}
                 </div>
