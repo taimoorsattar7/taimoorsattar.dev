@@ -34,7 +34,12 @@ Integrate schema into a web page that will help search engines to understand you
 ## Make better Title and description
 
 Title and description meta appear on the search engine query. Eye-catching title increase the chance of more clicks.  Write the title and description meta in the `head` of HTML.
-`<head><title>Your title here</title><meta name="description: content= "Write your description Here.." /></head>`
+```
+<head>
+  <title>Your title here</title>
+  <meta name="description: content= "Write your description Here.." />
+</head>
+```
 
 ## Links building are Optional
 
