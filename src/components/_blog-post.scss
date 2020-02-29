@@ -1,0 +1,45 @@
+@import '../styles/mixin';
+
+.blogPost{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    &__info{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    &__img-main{
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+
+        @include atMinMedium{
+            float: right;
+            width: 60%;
+            margin-left: 30px;
+            margin-bottom: 30px;
+            border: 1px solid lightgray;
+        }
+
+    }
+
+    &__profile{
+        display: inline-block;
+        width: 30px;
+        height: auto;
+        border-radius: 50px;
+        margin-right: 7px;
+    }
+
+    &__socialite{
+        display: block;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+}

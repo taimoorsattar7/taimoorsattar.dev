@@ -26,6 +26,14 @@
 		word-spacing: 1px;
 	}
 
+	&--inline{
+		display: inline;
+	}
+
+	&--block{
+		display: block;
+	}
+
 	&--logo{
 		display: inline-block;
 		margin: 0;
@@ -63,15 +71,14 @@
 		color: #006699;
 	}
 
-	&__date{
-		display: block;
-		font-size: 15px;
-		font-weight: 400;
+	&__sml{
+		font-size: 0.9rem;
+		vertical-align: middle;
 		margin-bottom: 0;
 		
 		line-height: 1.8;
 		word-spacing: 2px;
-		color: #666666;
+		color: black;
 	}
 
 	&__error-text{
@@ -88,8 +95,7 @@
 	}
 
 	&__text{
-	
-		display: block;
+
 		font-weight: 400;
 		font-size: 16px;
 		line-height: 1.6;
@@ -131,6 +137,11 @@
 		font-size: 1.1rem;
 	}
 
+	&--dull{
+		color: #575757;
+    	font-weight: bold;
+	}
+
 	strong {
 		font-weight: 400;
 	}
@@ -149,6 +160,10 @@
 
 	&--b-margin-large {
 		margin-bottom: 1.5em;
+	}
+
+	&--l-margin-large {
+		margin-left: 1.5em;
 	}
 
 	&--no-t-margin {

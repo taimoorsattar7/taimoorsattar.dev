@@ -11,6 +11,11 @@
 	text-decoration: none;
 	transition: all 1s ease;
 
+	a{
+		text-decoration: none;
+		color: black;
+	}
+
 	&--small{
 		background-color: red;
 
@@ -21,5 +26,17 @@
 			transition: all 0.01s ease;
 			background-color: #e00000;
 		}
+	}
+
+	&__simple{
+		border: 1px solid #000000;
+		border-radius: 3px;
+		background-color: #ffffff;
+		box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2);
+		text-shadow: 0 1px 0 rgba(220, 128, 105, 0.7), 0 -1px rgba(138, 66, 49, 0.5);
+	}
+
+	&__r-margin{
+		margin-right: 15px;
 	}
 }

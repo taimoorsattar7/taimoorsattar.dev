@@ -11,10 +11,6 @@ published: true
 
 description: WordPress is a free CMS(Content Management System), power up most of the website and is used by many web community.
 
-canonical_url: https://www.underlinejobs.com/blogs/wordpress/
-
-cover_image: https://www.underlinejobs.com/wp-content/uploads/2019/03/WordPress-Blog.jpg
-
 ---
 
 Question May be arising in your mind about WordPress and I will answer one by one.

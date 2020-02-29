@@ -1,5 +1,6 @@
 import React from "react"
 
+
 //const contactImg = React.lazy(() => import('../images/contact.jpg'));
 
 import SEO from '../components/SEO'
