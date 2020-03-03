@@ -5,6 +5,7 @@
   "author": "Taimoor Sattar <taimoorsattar7@gmail.com>",
   "dependencies": {
     "gatsby": "^2.13.27",
+    "gatsby-plugin-google-analytics": "^2.1.36",
     "gatsby-plugin-netlify-cms": "^4.1.6",
     "gatsby-plugin-react-helmet": "^3.1.2",
     "gatsby-plugin-sass": "^2.1.3",
