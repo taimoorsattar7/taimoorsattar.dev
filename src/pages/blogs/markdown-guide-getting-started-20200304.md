@@ -9,8 +9,6 @@ tags:
   - guide
 featuredpost: false
 ---
- 
-
 Markdown is the lightweight, plain text language that you can use to add formatting to your document. The best part of Markdown is that you don't need to download anything; plain text editor is enough. Using Markdown, we can convert text to HTML without requiring the skills of HTML and CSS. Rich text WYSIWYG (what you see is what you get) used in the same terminology as markdown but in a different method. Markdown is clean and simple to look in simple plain text.
 
 Here are some Markdown document applications that are by default present on your system:
