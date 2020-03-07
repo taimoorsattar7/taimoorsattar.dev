@@ -19,18 +19,43 @@ related:google.com
 
 ## Check File Type
 
-```
-jobs filetype:pdf
-```
+There may be a time when you want to search relate to file type. For example, you want to search `resume` for want to `.docs` or `pdf` you can write the command as following
 
-## Including Excluding the category
+```
+Resume filetype:pdf
+Resume filetype:docs
+```
+There are also other files types also, some are mention below.
 
+- filetype:swf (Adobe Flash File)
+- filetype:pdf (Portable Document Format)
+- filetype:ps (Adobe PostScript)
+- filetype:dwf (AutoDesk Design Web Format)
+- filetype:kml (Google Earth)
+- filetype:xls or filetype:xlsx (Microsoft Excel)
+- filetype:ppt or filetype:pptx (Microsoft PowerPoint)
+- filetype:doc or filetype:docx (Microsoft Word)
+- filetype:odp (OpenOffice Presentation)
+- filetype:ods (OpenOffice Spreadsheet)
+- filetype:odt (OpenOffice Text)
+- filetype:rtf (Rich Text Format)
+- filetype:txt or filetype:text (Text)
+- filetype:wpm (Wireless Markup Language)
+- filetype:xml (Extensible Markup Language)
+
+## Restrict the Word in the search
+
+I f you want to restrict the word in the search engine
 
 ```
 1. book +science
 2. book -science
 ```
 First (1) search the books that are related to the topic science. Second (2) search the books that are **not** related to science.
+
+## Title specific Search
+
+You
 
 Intitle: pakistan
 allintitle: pakistan
