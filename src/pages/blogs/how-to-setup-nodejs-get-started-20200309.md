@@ -10,9 +10,7 @@ tags:
 featuredpost: false
 ---
 NodeJs is open sources, cross platform run-time environment for writing server side application.
-You can install nodeJs by visiting to their official website.
-
-You can 
+You can install nodeJs by visiting to their official website.  Follow the terms and condition and 
 
 To run JS file using Node, type this command as shown below: 
 ```
