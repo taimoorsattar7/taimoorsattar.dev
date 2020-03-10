@@ -41,7 +41,7 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
-``
+```
 
 To run the JS file using Node, type this command as shown below: 
 
