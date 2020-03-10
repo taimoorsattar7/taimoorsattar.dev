@@ -9,19 +9,19 @@ tags:
   - setup
 featuredpost: false
 ---
-NodeJs is open sources, cross platform run-time environment for writing server side application. To start writing your Node Js script, you first have to install node js on your system.
-You can install nodeJs by visiting to their [official website](https://nodejs.org/en). By default, NodeJs comes with npm (Node Package Manager) that install on your system. Follow their terms and condition and proceed to install.
+NodeJs is open sources, cross-platform run-time environment for writing server-side application. To start writing your Node js script, you first have to install node js on your system. You can install nodeJs by visiting their [official website](https://nodejs.org/en/download). By default, NodeJs come with npm (Node Package Manager) that installs on your system. Follow their terms and condition and proceed to install Node on your system.
 
-After you completed, test that NodeJs is properly working on your system by writing below commands on the `terminal`. [git-bash](https://git-scm.com/downloads) terminal is also option to write command on your system.
+After installation, test NodeJs is working on your system by below command on the terminal. git-bash terminal is also option to write command on your system.
 
 ```
 ~ node -v
 ~ npm -v
 ```
 
-## USE NODE JS
+## Use Node
 
-Now you have install NodeJs on your system. Now start writing you node JS script. Make a file name `index.js` on your system directory. Copy and Paste simple script that prints `Hello World` when you hit the url `127.0.0.1:3000` as shown below:
+Now you have to install NodeJs on your system. Now start writing your node JS script. Make a file name `index.js` on your system directory. Copy and Paste simple script as shown below in `index.js`. It prints `Hello World` when you hit the URL `127.0.0.1:3000` as shown below:
+
 
 ```
 const http = require("http");
@@ -41,24 +41,49 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
-``` 
+``
 
-To run JS file using Node, type this command as shown below: 
+To run the JS file using Node, type this command as shown below: 
+
 ```
 node index.js
-```
+```
 
-## USE NPM
+## Use NPM
 
-NPM stands for `node package manager`. NPM is responsible for managing your package that you can plugin into your code / project. You can use these packages in your test, staging and production environment. Express is also Node package; fast, unopinionated, minimalist web framework for Node.js
+NPM stands for the `node package manager`. NPM handles managing your package that you can plugin into your code/project. You can use these packages in your test, staging and production environment. For Example, Express is also Node package; fast, unopinionated, minimalist web framework for Node.js
 
-Dependencies information are stored in the file name `package.json` that contain information about package name, version, production and development dependencies, etc. TO create you `package.json` file, type the command as show below:
+The information for packages stored in the file name `package.json`. This file has information about package name, version, production and development dependencies, etc.
 
-```
+To create your `package.json` file, type the command as shown below:
+```
 npm init
-```
+```
+Above command will ask you about the basic information and you will be ready to go. `npm init -y` command will omit the question from you, and create `package.json` with default template.
 
-You can install express package by the command
-```
+You can install an express package by the command
+
+```
 npm install express
+```
+
+After the installation of an express package, you can use it in the node by the command `require('express')`.
+
 ```
+const express = require('express')
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+});
+
+app.listen(3000, () => {
+  console.log('Example app listening on port 3000!')
+});
+```
+
+The above script prints out Hello World! when it hit the browser at URL `http://127.0.0.1:8000`.
+
+## Summary
+
+You can use Node to write the server-side script. NPM (Node Package Manager) comes along when you install Node.
