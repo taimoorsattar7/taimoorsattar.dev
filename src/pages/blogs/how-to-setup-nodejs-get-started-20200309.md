@@ -50,4 +50,15 @@ node index.js
 
 ## USE NPM
 
-NPM stands for `node package manager`. NPM is responsible for managing your package taht you need to plugin to your code / project. All these package manager 
+NPM stands for `node package manager`. NPM is responsible for managing your package that you can plugin into your code / project. You can use these packages in your test, staging and production environment. Express is also Node package; fast, unopinionated, minimalist web framework for Node.js
+
+Dependencies information are stored in the file name `package.json` that contain information about package name, version, production and development dependencies, etc. TO create you `package.json` file, type the command as show below:
+
+```
+npm init
+```
+
+You can install express package by the command
+```
+npm install express
+```
