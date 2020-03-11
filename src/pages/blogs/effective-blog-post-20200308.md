@@ -48,9 +48,11 @@ Below mention are some of the mistakes that are common in writings.
 - Punctuation in sentence
 - Wrong word usage
 
-You can avoid mistake in writing by:
+You can avoid mistake in writing
+ by:
 
-- Proofreading
+- 
+Proofreading
 - No repetition of words
 - Use correct pronoun
 - Write to the point
