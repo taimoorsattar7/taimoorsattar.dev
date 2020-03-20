@@ -1,5 +1,5 @@
 ---
-title: javascript date format
+title: How to format Date in JavaScript that looks Clean
 description: >-
   Javascript have a built in object called `Date`. `Date` object in javascript
   is used to work with Date and Time.
@@ -16,7 +16,7 @@ var d = new Date();
 alert( d ); // shows current date/time
 ```
 
-The output will be like: `Tue Mar 17 2020 21:53:21 GMT+0300 (Arabian Standard Time)`. Date and Time may vary depending on your execution of the command.
+The output will be like: `Tue Mar 17 2020 21:53:21 GMT+0300 (Arabian Standard Time)`. Date and Time may vary depending on your time to execution of the command.
 
 You can return you the custom date by writing 7 numbers specified year, month, day, hour, minute, second, and millisecond (in sequence):
 
