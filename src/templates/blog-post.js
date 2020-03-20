@@ -33,18 +33,17 @@ const format_date = (date) => {
 const BlogPost = ({data}) => {
     const url = typeof window !== 'undefined' ? window.location.href : '';
     const post = data.markdownRemark;
-    const siteURL = data.site.host;
 
 return (<>
 
     <PrimaryLayout>
     <SEO 
         id = {post.id}
-        url = {siteURL + post.fields.slug}
+        url = {post.fields.slug}
         title = {post.frontmatter.title}
         description = {post.frontmatter.description}
         keywords = {post.frontmatter.keywords}
-        image = {siteURL + post.frontmatter.featuredimage}
+        image = {post.frontmatter.featuredimage}
         date = {post.frontmatter.date}
         modifiedDate = {post.frontmatter.date}
         schemaType = "blog"
@@ -151,9 +150,5 @@ query($slug: String!){
             slug
           }
     }
-    site {
-        host
-        port
-      }
 }
 `
