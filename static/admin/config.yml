@@ -17,7 +17,7 @@ collections:
   - name: blog
     label: Blog
     folder: "src/pages/blogs"
-    slug: "{{slug}}-{{year}}{{month}}{{day}}"
+    slug: "{{slug}}"
     author: "{{author}}"
     create: true
     fields:

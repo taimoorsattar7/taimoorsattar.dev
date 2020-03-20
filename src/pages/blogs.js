@@ -44,9 +44,8 @@ const Blogs = ({data}) => {
         <h1 className="headline headline--b-margin-small">Recent Blogs</h1>
         
         {posts.map(post=>{
-              return(<>
-
-                <div className="site-banner__post-block">
+              return(
+                <div  key={post.id} className="site-banner__post-block">
 
                   <Link to={post.fields.slug}>
                     
@@ -56,9 +55,7 @@ const Blogs = ({data}) => {
                     </span>
 
                     </Link>
-                </div>
-
-                </>)
+                </div>)
         })}
         
       </div>
@@ -84,6 +81,7 @@ export const query = graphql`
           fields{
             slug
           }
+          id
         }
       }
   }

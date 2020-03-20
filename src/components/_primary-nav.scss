@@ -136,11 +136,16 @@
     }
   
     .footer-links a{
-      color: black;
+      color: #848484;
       display: block;
+      img{
+        width: 30px;
+        height: auto;
+      }
       &:hover{
         cursor: pointer;
-        color: #0077B2;
+        font-weight: 500;
+        color: black;
       }
     }
     

@@ -1,0 +1,25 @@
+.flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+    &--inline{
+        display: inline-flex;
+    }
+
+    li, span, div{
+        list-style: none;
+        flex: 1;
+    }
+
+    &__large{
+        flex-grow: 2;
+    }
+
+    &__logo{
+        width: 30px;
+        height: auto;
+    }
+}

@@ -33,17 +33,22 @@ const format_date = (date) => {
 const BlogPost = ({data}) => {
     const url = typeof window !== 'undefined' ? window.location.href : '';
     const post = data.markdownRemark;
-    
+    const siteURL = data.site.host;
+
 return (<>
+
     <PrimaryLayout>
     <SEO 
+        id = {post.id}
+        url = {siteURL + post.fields.slug}
         title = {post.frontmatter.title}
         description = {post.frontmatter.description}
         keywords = {post.frontmatter.keywords}
-        image = {post.frontmatter.cover_image}
-    />
-
-    
+        image = {siteURL + post.frontmatter.featuredimage}
+        date = {post.frontmatter.date}
+        modifiedDate = {post.frontmatter.date}
+        schemaType = "blog"
+    />    
 
     <div className="wrapper wrapper--narrow">
         
@@ -57,14 +62,14 @@ return (<>
        
         <img 
             className="blogPost__profile"
-            src={"https://en.gravatar.com/userimage/79583073/62db78fcd1392e6b7a17e6cb82bffbd8?size=100"}
+            src={"https://en.gravatar.com/userimage/79583073/1db067b0745be884c364c25811e1caa9.jpg?size=100"}
             alt="profile" />
         <span className="headline headline__sml headline--dull">
             Taimoor Sattar
         </span>
         <span>・</span>
         <time className="headline headline__sml  headline--dull"
-              datetime={post.frontmatter.date}> 
+              dateTime={post.frontmatter.date}> 
             {format_date(post.frontmatter.date)}
         </time>
 
@@ -73,7 +78,8 @@ return (<>
             {
                 post.frontmatter.featuredimage &&
                 <img className="blogPost__img-main"
-                     src={post.frontmatter.featuredimage} />
+                     src={post.frontmatter.featuredimage}
+                     alt={post.frontmatter.title} />
             }
 
             <div className="headline headline__text"
@@ -87,8 +93,7 @@ return (<>
         <div className="btn btn__simple btn__r-margin">
 
             <a href={`https://www.facebook.com/sharer.php?u=${url}`}
-                rel="nofollow"
-                target="_blank">
+                rel="nofollow">
 
                 <span className="count">Share on Facebook</span>
             </a>
@@ -101,7 +106,6 @@ return (<>
             <a href={`https://twitter.com/intent/tweet?original_referer=${url}`}
                 className="socialite twitter"
                 rel="nofollow"
-                target="_blank"
                 title="Share on Twitter">
                 <span className="count">Share on Twitter</span>
             </a>
@@ -112,7 +116,7 @@ return (<>
         <div className="btn btn__simple btn__r-margin">
 
             <a href={`https://www.linkedin.com/cws/share?url=${url}`}
-                rel="nofollow" target="_blank">
+                rel="nofollow">
                 <span className="count">Share on Linkedin</span>
             </a>
 
@@ -139,8 +143,17 @@ query($slug: String!){
           	date
           	keywords
           	description
-          	featuredimage 	
+            featuredimage
+            author
         }
+        id
+        fields {
+            slug
+          }
     }
+    site {
+        host
+        port
+      }
 }
 `

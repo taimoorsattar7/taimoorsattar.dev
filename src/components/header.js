@@ -33,10 +33,10 @@ const Header = () => {
 
                 <div 
                     onClick={() => handleHamBurger(!hamBurger)} 
-                    class={hamBurger    ? "site-header__menu-icon" 
+                    className={hamBurger    ? "site-header__menu-icon" 
                                         : "site-header__menu-icon--close-x"}>
 
-                    <div class="site-header__menu-icon__middle"></div>
+                    <div className="site-header__menu-icon__middle"></div>
 
                 </div>
 

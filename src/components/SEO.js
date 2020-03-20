@@ -4,7 +4,15 @@ import { StaticQuery, graphql } from "gatsby"
 
 import logo from "../images/logo.png"
 
-const SEO = ({ title, description, keywords, image}) => (
+const SEO = ({  id,
+                url,
+                title,
+                description,
+                keywords,
+                image,
+                date,
+                modifiedDate,
+                schemaType}) => (
   <StaticQuery
     query={query}
     render={({
@@ -13,9 +21,40 @@ const SEO = ({ title, description, keywords, image}) => (
           defaultTitle,
           defaultDescription,
           defaultKeywords,
+          defaultURL,
+          defaultAuthor
         },
       },
     }) => {
+
+      const main_schema = {
+        "@context":"http://schema.org",
+        "@type":"Person",
+        "name":"Taimoor Sattar",
+        "url":"https://taimoorsattar.dev",
+        "sameAs":[
+        	"https://www.linkedin.com/in/taimoorsattar",
+        	"https://twitter.com/taimoorsattar7"
+        ]
+      }
+
+      const blog_schema = {
+          "@context":"http://schema.org",
+          "@type":"BlogPosting",
+          "@id": id,
+          "headline": title || defaultTitle,
+          "description": description || defaultDescription,
+          "thumbnailUrl": image,
+          "author": defaultAuthor,
+          "datePublished": date,
+          "dateModified": date,
+          "image": image,
+          "publisher": [{"@type": "Person",
+                  "name": defaultAuthor || "Taimoor Sattar"
+                }],
+          "mainEntityOfPage": url
+        }
+
       const seo = {
         title: title || defaultTitle,
         description: description || defaultDescription,
@@ -24,6 +63,21 @@ const SEO = ({ title, description, keywords, image}) => (
       }
       return (
         <Helmet>
+
+          <script type="application/ld+json">
+            {JSON.stringify(main_schema)}
+          </script>
+
+          {
+            schemaType==="blog" ?
+            (
+              <script type="application/ld+json">
+                {JSON.stringify(blog_schema)}
+              </script>
+            ) : ""
+          }
+          
+
           <title>{seo.title}</title>
           <link rel="icon" type="image/png" href={logo}></link>
           <meta name="image" content={seo.image} />
@@ -31,6 +85,7 @@ const SEO = ({ title, description, keywords, image}) => (
           <meta name="keywords" content={seo.keywords} />
           <meta name="robots" content="index,follow" />
           <html lang="en" />
+
         </Helmet>
       )
     }}
@@ -46,6 +101,8 @@ const query = graphql`
         defaultTitle: title
         defaultDescription: description
         defaultKeywords: keywords
+        defaultURL: siteUrl
+        defaultAuthor: author
       }
     }
   }

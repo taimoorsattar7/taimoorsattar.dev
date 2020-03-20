@@ -1,12 +1,18 @@
 .footer{
-	max-width: 960px;
-	margin: 0 auto;
-	background-color: #E0E7EB;
-	border: 1.5px solid #B1C3CD;
-	border-bottom: none;
+	position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+	text-align: center;
+    padding-bottom: 3rem;
+	
+	&__logo{
+		display: inline-block;
+		width: 40px;
+		height: auto;
+		transform: rotate(25%);
+	}
 
-	padding-top: 40px;
-	padding-bottom: 120px;
 	&__content{
 		text-align: center;
 

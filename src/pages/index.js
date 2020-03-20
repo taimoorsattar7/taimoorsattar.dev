@@ -49,25 +49,13 @@ const IndexPage = ({data}) => {
 
       <div className="wrapper wrapper--narrow wrapper--no-padding">
 
-        <div className="site-banner__tech">
-        
-          <img src="/img/tech/javascript.png" alt="javascript" />
-          <img src="/img/tech/gatsby.png" alt="gatsby" />
-          <img src="/img/tech/reactjs.svg" alt="reactjs" />
-          <img src="/img/tech/wordpress.svg" alt="wordpress" />
-          <img src="/img/tech/svelte.png" alt="svelte" />
-          <img src="/img/tech/netlify.png" alt="netlify" />
-
-
-        </div>
-
         <div className="site-banner__post">
 
           <h2 className="headline headline__feature">Feature Post</h2>
 
   {posts.map(post=>{
     return(
-      <div className="site-banner__post-block">
+      <div key={post.id} className="site-banner__post-block">
         <Link to={post.fields.slug}>
           <h2 className="headline headline__medium">
             {post.frontmatter.title}
@@ -79,8 +67,6 @@ const IndexPage = ({data}) => {
           </Link>
       </div>)
   })}
-
-          
 
         </div>
 
@@ -107,6 +93,7 @@ export const query = graphql`{
       fields {
         slug
       }
+      id
     }
   }
 }

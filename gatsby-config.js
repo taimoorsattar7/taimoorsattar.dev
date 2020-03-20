@@ -3,7 +3,7 @@ module.exports = {
     siteUrl: `https://taimoorsattar.dev`,
     title: `Taimoor Sattar`,
     description: `Profile: taimoorsattar.com`,
-    author: `@taimoorsattar7`,
+    author: `Taimoor Sattar`,
     keywords: "taimoorsattar, taimoor, profile, front-end",
     image: './static/ocean.jpg'
   },
