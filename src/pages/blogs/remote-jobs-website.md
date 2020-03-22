@@ -1,9 +1,8 @@
 ---
-title: remote jobs website
+title: Remote Jobs website you can trust in 2020
 description: >-
-  Searching for remote jobs is the good option to work remotely at home. Before
-  you are applying for the remote jobs, make sure you have something to present
-  in your application.
+  Searching for remote jobs is a good option to work remotely at home. Eliminate
+  the 9-5 office job timing in remote work.
 date: 2020-03-22T17:41:09.995Z
 tags:
   - remote jobs
@@ -19,9 +18,7 @@ Searching for remote jobs is a good option to work remotely at home. There are t
 - Be more productive in your work and give more time to family.
 - You can earn an extra amount of working remotely.
 
-Now, there are tons of jobs board where you can find jobs listing. Different remote websites listings result in different categories of jobs. Categories may include design, Programming, Customer support, Copywriting, and legal, etc. Below are listed websites to find your remote jobs
-
-https://remote.com/jobs
+Now, there are tons of jobs board where you can find jobs listing. Different remote websites listings result in different categories of jobs. Categories may include design, Programming, Customer support, Copywriting, and legal, etc. Below are listed websites to find your remote jobs.
 
 |Sr# | Remote Websites | Links | Category  | 
 |:--- |:---- |:----:| ----:|
