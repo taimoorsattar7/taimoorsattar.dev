@@ -8,10 +8,6 @@ tags:
   - remote jobs
 featuredpost: true
 ---
-slug: Remote Jobs websites
-
-Remote Jobs website you can trust in 2020
-
 Searching for remote jobs is a good option to work remotely at home. There are tons of reasons to should go searching for remote jobs; some are listed below:
 
 - Eliminate the 9-5 office job timing
