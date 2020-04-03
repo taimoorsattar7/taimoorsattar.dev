@@ -1,5 +1,5 @@
 ---
-title: Document your repository in GitHub
+title: How to Document your repository in GitHub?
 description: >-
   Documentation of your repo will help you in many aspects. When you link your
   repo to the hiring team, they will better understand what your code is doing.
