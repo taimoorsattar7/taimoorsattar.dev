@@ -3,11 +3,11 @@ backend:
   repo: taimoorsattar7/taimoorsattar.dev
   branch: master
   commit_messages:
-    create: 'Create {{collection}} “{{slug}}”'
-    update: 'Update {{collection}} “{{slug}}”'
-    delete: 'Delete {{collection}} “{{slug}}”'
-    uploadMedia: '[skip ci] Upload “{{path}}”'
-    deleteMedia: '[skip ci] Delete “{{path}}”'
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
 
 media_folder: static/img
 public_folder: /img
@@ -25,8 +25,34 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { name: date, label: Date, widget: date }
       - { name: body, label: Body, widget: markdown }
-      - {label: Tags, name: tags, widget: list}
-      - {label: Featured Post, name: featuredpost, widget: boolean, default: false}
-      - {label: Featured Image, name: featuredimage, widget: image, required: false}
-      
-      
+      - { label: Tags, name: tags, widget: list }
+      - {
+          label: Featured Post,
+          name: featuredpost,
+          widget: boolean,
+          default: false,
+        }
+      - {
+          label: Featured Image,
+          name: featuredimage,
+          widget: image,
+          required: false,
+        }
+  - name: page
+    label: page
+    folder: "src/pages"
+    slug: "{{slug}}"
+    author: "{{author}}"
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { label: "Description", name: "description", widget: "string" }
+      - { name: date, label: Date, widget: date }
+      - { name: body, label: Body, widget: markdown }
+      - { label: Tags, name: tags, widget: list }
+      - {
+          label: Featured Image,
+          name: featuredimage,
+          widget: image,
+          required: false,
+        }

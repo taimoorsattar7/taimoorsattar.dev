@@ -150,8 +150,21 @@
 		color: #006699;
 	}
 
+	&--white{
+		color: white;
+	}
+
+	&--cap{
+		text-transform: capitalize;
+	}
+
 	&--b-margin-small {
 		margin-bottom: .5em;
+	}
+
+	&--dotted{
+		text-decoration-line: underline;
+		text-decoration-style: dotted;
 	}
 
 	&--b-margin-medium {

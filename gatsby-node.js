@@ -43,7 +43,6 @@ exports.onCreatePage = async ({ page, actions }) => {
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
 
   return graphql(`
   {
@@ -56,20 +55,34 @@ exports.createPages = ({ graphql, actions }) => {
     }
   }
   `).then(result => {
-
     if (result.errors) {
       throw result.errors
     }
 
     result.data.allMarkdownRemark.nodes.forEach(node => {
-      createPage({
-        
-        path: node.fields.slug,
-        component: blogPostTemplate,
-        context: {
-          slug: node.fields.slug,
-        },
-      })
+      let slug = node.fields.slug;
+
+      if (slug.includes("/blogs")) {
+        createPage({
+
+          path: node.fields.slug,
+          component: path.resolve(`src/templates/blog-post.js`),
+          context: {
+            slug: node.fields.slug,
+          },
+        })
+      } else {
+        createPage({
+
+          path: node.fields.slug,
+          component: path.resolve(`src/templates/page.js`),
+          context: {
+            slug: node.fields.slug,
+          },
+        })
+      }
+
     })
   })
 }
+
