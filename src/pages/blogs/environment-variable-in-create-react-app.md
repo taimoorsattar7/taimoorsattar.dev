@@ -1,5 +1,5 @@
 ---
-title: Environment variable in create-react-app
+title: How to define environment variable in create-react-app?
 description: Environment Variable works differently in create-react-app. To
   access the environment variable in your app, you have to add the prefix
   REACT_APP_ before defining your variable.
