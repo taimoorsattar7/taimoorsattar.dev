@@ -1,5 +1,5 @@
 ---
-title: posted my first website development course
+title: I posted my first website development course
 description: This course bundles with learning the core concept of website
   development and a way to earn passive income.
 date: 2020-12-05T13:02:20.366Z
