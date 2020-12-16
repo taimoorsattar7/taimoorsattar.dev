@@ -22,3 +22,5 @@ So how you can overcome this? You need to prerender the create-react-app. To pre
 
 - [React SnapShot](https://www.npmjs.com/package/react-snapshot)
 - [React Snap](https://www.npmjs.com/package/react-snap)
+
+The above plugins work well if you are not using Windows / local storage objects in your project (Javascript). [gatsbyjs](https://www.gatsbyjs.com) and [nextjs](https://nextjs.org) are the frameworks that are built on React with SEO friendly pre-rendered website.
