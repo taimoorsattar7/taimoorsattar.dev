@@ -8,24 +8,30 @@ tags:
   - trick
 featuredpost: false
 ---
-Google is one of the most popular search engine and millions of people use Google search for different reason. Most of the people type search query in simple way. Today there are millions of content website present; searching for right content website for your need required you should know the tips and tricks of search engine. Below are mention tips and tricks you can use to improve your search experience.
+Google is one of the most popular search engines and millions of people use Google to search for different queries. Today there are millions of content websites present; searching for the right content for your need required you should know the tips and tricks of search engine. Below mentioned are some tips and tricks to improve your search experience.
 
-## Search for Related websites
-When you want to search the website of similar category that relate to your website you can type. You can type such query in the Google.
+## Search for a similar niche
+
+When searching for websites that relate to a similar niche, you can type the below command in the search bar.
 
 ```
 related:google.com
 ```
 
+The above search query results in websites that have a similar niche to google.com.
+
 ## Check File Type
 
-There may be a time when you want to search relate to file type. For example, you want to search `resume` for want to `.docs` or `pdf` you can write the command as following
+To search for specific files type in Google, you can type the below query in the Google search bar: 
 
 ```
 Resume filetype:pdf
 Resume filetype:docs
 ```
-There are also other files types also, some are mention below.
+
+The above query results for resume in `.docs` or `pdf` format.
+
+There are also other file types as mention below.
 
 - filetype:swf (Adobe Flash File)
 - filetype:pdf (Portable Document Format)
@@ -45,17 +51,17 @@ There are also other files types also, some are mention below.
 
 ## Exact Phrase Search
 
-If you are looking to search for exact words or sentence than you have to enclose the query in `"quotation"`
+To search for exact words or sentences, then you have to enclose the query in `"quotation"` as below.
 
 ```
 "I am looking google"
 “May * be with you”
 ```
-* symbol in above example will search for any words / sentence that comes in between.
+* symbol in the above query results for any words/sentence that comes in between.
 
 ## Restrict the Word in the search
 
-If you want to restrict some content in the search engine; you can use `+` or `-` symbol in the search engine as shown below.
+If you want to restrict some content in the search engine; you can use the `+` or `-` symbol in the search engine as shown below.
 
 ```
 1. book +science
@@ -63,9 +69,9 @@ If you want to restrict some content in the search engine; you can use `+` or `-
 3. news -site:cnn.com
 4. healthy ~ food
 ```
-First (1) search the books that are related to the topic science. Second (2) search the books that are **not** related to science. Thirld (3) restrict any content from **CNN website**. Fourth (4) search for healthy that are related to the topic of food.
+First (1) search the books that are related to the topic of science. Second (2) search the books that are **not** related to science. Third (3) restrict any content from **CNN website**. Fourth (4) search for health that is related to the topic of food.
 
-## Title specific Search
+## Title-specific Search
 
 If you want the search engine to look for specific title word in search engine
 
@@ -74,7 +80,7 @@ allintitle: pakistan
 
 ## Social Search query
 
-Social search are used
+Social search is used
 ```
 @google
 ```
@@ -82,11 +88,11 @@ Social search are used
 
 Coffee nearby
 
-## Site extension specific search 
+## Site extension-specific search 
 
 Book site:.edu
 
-## Time in specific region
+## Time in a specific region
 
 ```
 time <city>
@@ -101,9 +107,5 @@ define: <keyword>
 - 32*10
 - cos(x)
 
-```
-
-## Fresh content Search
-
-If you search on google 
+``` 
 
