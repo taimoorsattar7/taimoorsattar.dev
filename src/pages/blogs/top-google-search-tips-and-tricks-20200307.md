@@ -1,24 +1,26 @@
 ---
-title: 8 Google Search Tips and Tricks
-description: Top Google Search Tips and Tricks
+title: Tips related to Google search
+description: Google is one of the most popular search engines. We use Google to
+  search for different queries.
 date: 2020-03-07T18:19:11.389Z
 tags:
+  - google
   - search
-  - tip
-  - trick
+  - tips
 featuredpost: false
+featuredimage: /img/document.jpg
 ---
-Google is one of the most popular search engines and millions of people use Google to search for different queries. Today there are millions of content websites present; searching for the right content for your need required you should know the tips and tricks of search engine. Below mentioned are some tips and tricks to improve your search experience.
+Google is one of the most popular search engines. We use Google to search for different queries. Below we cover some tips and tricks to improve your search experience.
 
 ## Search for a similar niche
 
-When searching for websites that relate to a similar niche, you can type the below command in the search bar.
+When to search for websites that relate to a similar niche, you can type the below command in the search bar.
 
 ```
 related:google.com
 ```
 
-The above search query results in websites that have a similar niche to google.com.
+The above search query results in websites that have a similar niche to **google.com**.
 
 ## Check File Type
 
@@ -57,7 +59,8 @@ To search for exact words or sentences, then you have to enclose the query in `"
 "I am looking google"
 “May * be with you”
 ```
-* symbol in the above query results for any words/sentence that comes in between.
+
+`*` symbol in the above query results for any words/sentence that comes in between.
 
 ## Restrict the Word in the search
 
@@ -71,41 +74,23 @@ If you want to restrict some content in the search engine; you can use the `+` o
 ```
 First (1) search the books that are related to the topic of science. Second (2) search the books that are **not** related to science. Third (3) restrict any content from **CNN website**. Fourth (4) search for health that is related to the topic of food.
 
-## Title-specific Search
+## Specific search for the website 
 
-If you want the search engine to look for specific title word in search engine
 
-Intitle: pakistan
-allintitle: pakistan
+To search for queries that relate to the specific website, type the search query as below. 
 
-## Social Search query
-
-Social search is used
 ```
-@google
-```
-
-
-Coffee nearby
-
-## Site extension-specific search 
-
 Book site:.edu
 
-## Time in a specific region
-
+blog site:quora.com
 ```
-time <city>
-```
-
-define: <keyword>
-
 
 ## Perform mathematical operation
 
+
+To perform the mathematical operation in the search engine, type the equation as below:
+  
 ```
 - 32*10
 - cos(x)
-
-``` 
-
+```
