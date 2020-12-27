@@ -1,5 +1,5 @@
 ---
-title: Tips related to Google search
+title: 6 Tips related to Google search
 description: Google is one of the most popular search engines. We use Google to
   search for different queries.
 date: 2020-03-07T18:19:11.389Z
