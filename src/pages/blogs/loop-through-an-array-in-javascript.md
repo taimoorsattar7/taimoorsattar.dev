@@ -1,5 +1,5 @@
 ---
-title: loop through an array in JavaScript
+title: How to loop through an array in JavaScript
 description: In JavaScript, we use the loop to iterate over an array. We will
   discuss about Traditional and forEach loop method in Javascript
 date: 2020-12-28T17:11:37.030Z
@@ -9,7 +9,6 @@ tags:
 featuredpost: false
 featuredimage: /img/strings-loop.jpg
 ---
-How to loop in an array using JavaScript
 There are different ways to loop in an array using JavaScript. In JavaScript, we use the loop to iterate over an array. We will discuss two methods in JavaScript to loop in an array as below:
 
 * Traditional Loop
