@@ -1,5 +1,5 @@
 ---
-title: validate email address using regex in JavaScript
+title: How to validate email address using regex in JavaScript
 description: We can define regular expressions to match the patterns in strings.
   To validate the email address, we can define the regex expression.
 date: 2020-12-28T18:32:32.903Z
