@@ -1,5 +1,5 @@
 ---
-title: media queries in CSS
+title: How to use media queries in CSS
 description: Media queries used to assign custom styling based on browser width.
 date: 2020-12-29T17:21:26.363Z
 tags:
