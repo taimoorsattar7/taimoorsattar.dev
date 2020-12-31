@@ -1,46 +1,72 @@
 ---
-title: css variables
-description: css variables
+title: How to define variables in CSS
+description: CSS variables are the value that can be reused throughout the
+  entire document and it saves from the reputation of values.
 date: 2020-12-30T19:58:45.166Z
+tags:
+  - CSS
+  - variables
 featuredpost: false
 ---
-To declare the CSS variable inside of **:root** selector for global scope. If the CSS variable is defined in the selector **:root**, it is accessible through the entire document. 
+CSS variables are the value that can be reused throughout the entire document and it saves from the reputation of values. We can also create CSS variables with local or global scope.
+
+To understand more about CSS variables, we work on an example to define the CSS variable for button color.
+
+So, In the HTML, paste the below code:
+
+```html
+<button type="button">
+  I'm a button
+</button>
+
+<div class="insideDIV">
+  <button type="button">
+    I'm another button
+  </button>
+</div>
+```
+
+The above HTML displays two (2) buttons. The second button is wrapped inside of the div.
+
+Define the CSS variable inside of **:root** selector for global scope. CSS variables defined in the selector **:root** is accessible through the entire document. In the CSS, paste the below code to define the CSS variable.
 
 ```css
 :root {
-  --blue: #1e90ff;
-  --white: #ffffff;
+  --prime-color: #1e90ff;
 }
 ```
 
-The `var()` function in CSS is used to insert the value of CSS variables. To use the value of Styling, we can define it as fo
+The `var()` function in CSS used to insert the value of CSS variables. We can use the CSS variable as below:
 
 ```css
-button {
-  background-color: var(--white);
-  color: var(--blue);
-  border: 1px solid var(--blue);
-  padding: 5px;
+button{
+  background-color: var(--prime-color);
+  color: white;
+  
+  padding: 5px 7px;
+  margin: 0;
+  border-radius: 4px;
 }
 ```
 
-You can also set the your own value if CSS varible is not define as below:
+We can also add further checks in the `var()` function. If the `prime-color` variable is not defined, then we can use the red color. 
 
 ```
-.two {
-  color: var(--my-var, red); /* Red if --my-var is not defined */
+.button {
+  background-color: var(--prime-color, red);
 }
 ```
 
-We can also change the CSS value define at the `:root` at the parent element as below:
+We can also change the CSS varible value in the local scope as below:
 
 ```css
-:root {
-  --blue: yellow;
-  --white: red;
+.insideDIV{
+  --prime-color: orange;
 }
 ```
+
+Now the button that's wrapped inside of the div has the background color of orange.
 
 ## Why the need for CSS variables?
 
-The advantage of CSS variables is that it can website layout more flexible. For example, to change the website color theme from Dark to light theme CSS variables are really handy. We don't need to manually change each and every value as we just need to change the single value of CSS varible.
+The advantage of CSS variables is that it can website layout more flexible. For example, to change the website color theme from Dark to light theme CSS variables are really handy. We don't need to manually change each and every value as we just need to change the value of CSS variables.
