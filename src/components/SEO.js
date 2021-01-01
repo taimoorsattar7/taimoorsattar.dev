@@ -2,6 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { StaticQuery, graphql } from "gatsby"
 
+
 import logo from "../images/logo.png"
 
 const SEO = (
@@ -22,17 +23,19 @@ const SEO = (
           defaultTitle,
           defaultDescription,
           defaultKeywords,
-          defaultURL,
+          siteUrl,
           defaultAuthor
         },
       },
     }) => {
 
+
+
       const main_schema = {
         "@context": "http://schema.org",
         "@type": "Person",
         "name": "Taimoor Sattar",
-        "url": "https://taimoorsattar.dev",
+        "url": siteUrl,
         "sameAs": [
           "https://www.linkedin.com/in/taimoorsattar",
           "https://twitter.com/taimoorsattar7"
@@ -61,8 +64,8 @@ const SEO = (
         title: title || defaultTitle,
         description: description || defaultDescription,
         keywords: keywords || defaultKeywords,
-        image: image ? (window.location.origin + image) : "",
-        url: window.location.origin + window.location.pathname
+        image: siteUrl + image,
+        url: siteUrl + url
       }
 
       return (
@@ -129,7 +132,7 @@ const query = graphql`
         defaultTitle: title
         defaultDescription: description
         defaultKeywords: keywords
-        defaultURL: siteUrl
+        siteUrl: siteUrl
         defaultAuthor: author
       }
     }
