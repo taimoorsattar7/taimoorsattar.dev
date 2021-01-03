@@ -1,5 +1,5 @@
 ---
-title: Guide to the customs data attributes
+title: Guide to the HTML custom data attributes
 description: Data attribute allows storing/embed an extra bit of information
   private in HTML elements.
 date: 2021-01-02T16:46:28.770Z
