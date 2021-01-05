@@ -1,5 +1,5 @@
 ---
-title: preview an image using Javascript
+title: How to preview an image using Javascript
 description: We can use the blob object in JavaScript to preview an image. It is
   useful in scenarios when you want your user to preview the image post before
   uploading it to the server.
