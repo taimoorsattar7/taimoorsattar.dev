@@ -64,7 +64,7 @@ const SEO = (
         title: title || defaultTitle,
         description: description || defaultDescription,
         keywords: keywords || defaultKeywords,
-        image: siteUrl + image,
+        image: image ? (siteUrl + image) : (siteUrl + "/img/banner.jpg"),
         url: siteUrl + url
       }
 
