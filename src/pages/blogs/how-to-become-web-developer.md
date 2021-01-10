@@ -1,5 +1,5 @@
 ---
-title: How to become web developer
+title: How to become a web developer in 2021
 description: To learn about web development in 2021, you have to understand what
   makes up the websites.
 date: 2021-01-10T18:23:06.800Z
@@ -61,4 +61,4 @@ To share your local project with the public, you need to host it on the hosting 
 - [vercel](https://vercel.com)
 - [Google Cloud Run](https://cloud.google.com/run)
 
-There are different architectures in which to host your website on the public server. You may choose monolithic or microservices architecture to host your website. There main difference between the two architectures is that where you want all of your application services in one place(server) or host service in a different place (server). You can host your front-end application service on one server and back-end service on another server.
+There are different architectures in which to host your website on the public server. You may choose monolithic or microservices architecture to host your website. There main difference between the two architectures is that where you want all of your application services in one place(server) or host service in a different place (server). You can host your front-end application service on one server and back-end service on another server.
