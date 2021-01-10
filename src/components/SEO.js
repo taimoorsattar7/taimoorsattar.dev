@@ -48,11 +48,11 @@ const SEO = (
         "@id": id,
         "headline": title || defaultTitle,
         "description": description || defaultDescription,
-        "thumbnailUrl": image || logo,
+        "thumbnailUrl": image ? (siteUrl + image) : (siteUrl + "/img/banner.jpg"),
         "author": defaultAuthor,
         "datePublished": date,
         "dateModified": date,
-        "image": image || logo,
+        "image": image ? (siteUrl + image) : (siteUrl + "/img/banner.jpg"),
         "publisher": [{
           "@type": "Person",
           "name": defaultAuthor || "Taimoor Sattar"
