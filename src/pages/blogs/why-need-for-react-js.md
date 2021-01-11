@@ -6,6 +6,7 @@ description: React is a UI library that helps you manage a lot of things easier
 date: 2021-01-11T14:38:46.362Z
 tags:
   - react
+  - javascript
 featuredpost: false
 ---
 Javascript is used to add content dynamically without refreshing the page while HTML and CSS load the content on the initial page load.
@@ -32,30 +33,22 @@ h1{ font-size: 20px; }
 p{ font-size: 12px; }
 ```
 
-The **Javascript** is the programming language of **browser**. Javascript is used for dynamic content appearing without refreshing the page. JavaScript was designed to add interactivity to HTML pages. Javascript could be used to:
-
-Add multimedia elements such as showing, hiding, changing, creating an image, do something on user action, etc.
-Form processing such as modifying the contents of the form, user input validation etc.
-JavaScript makes it possible to create dynamic page contents.
-
+The **Javascript** is the programming language of **browser**. Javascript is used for dynamic content appearing without refreshing the page. JavaScript was designed to add interactivity to HTML pages.
 
 ## why React?
 
-React is a UI library that helps you manage a lot of things easier with features like Virtual DOM(normal DOM updates are slow), handling data with states, component-based structure, etc.
-
-To understand why React is useful; we write **todo examples** in two different approaches using Javascript.
-
+React is a UI library that helps you manage a lot of things easier with features like Virtual DOM(normal DOM updates are slow), handling data with states, component-based structure, etc.
 
 In Javascript, we have two approaches for writing the application:
 
 - DOM focused approach
 - Data declarative view approach
 
-DOM focused approach
+## DOM focused approach
 
 DOM approach working with DOM and working with DOM is slow. In this approach, code is fragmented; some in Javascript, some in HTML.
 
-Data declarative approach
+## Data declarative approach
 
 Data declarative approach contains a render function that contains UI complete. It is a much faster approach than the DOM approach. but...
 
