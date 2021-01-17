@@ -1,5 +1,5 @@
 ---
-title: rank on traffic keywords with SEO
+title: How to rank on traffic keywords with SEO
 description: There are millions of websites on the internet, struggling to rank
   on the first page of Google for traffic keywords. Ranking in Google is a
   long-term strategy, not a short-term strategy.
