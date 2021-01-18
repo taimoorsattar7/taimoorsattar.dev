@@ -1,5 +1,5 @@
 ---
-title: box model in CSS
+title: Box model in CSS
 description: "HTML elements are considered as boxes that take some area. We can
   explain the HTML element area in CSS as box model. "
 date: 2021-01-18T17:31:23.338Z
