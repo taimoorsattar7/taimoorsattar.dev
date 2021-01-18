@@ -1,5 +1,5 @@
 ---
-title: Responsive Image
+title: "How to create Responsive Image "
 description: Images are visuals that display on the browser. Responsive image
   responds to different screen size and pixel ratio.
 date: 2021-01-18T06:45:59.503Z
