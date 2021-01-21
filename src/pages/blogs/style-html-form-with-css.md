@@ -1,5 +1,5 @@
 ---
-title: style HTML form with CSS
+title: How to style HTML form with CSS
 description: HTML forms are used for user input/interaction. We can style the
   HTML form using CSS. In this blog, we style the HTML form with a search icon
   wrap inside it.
