@@ -32,8 +32,6 @@ By default, the HTML form has a default blue outline. You can remove the outline
 
 Position in CSS defines the position of HTML elements related to the reference (that we can define). As you see in the below picture, the search icon is on the right of the input. This is possible by the use of position CSS property.
 
-![Search](https://storage.googleapis.com/masterpro/code/responsive-design/position-search.png)
-
 In the HTML, we can write the code as below:
 
 ```html
