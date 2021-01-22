@@ -1,5 +1,5 @@
 ---
-title: custom scrollbar in CSS
+title: Custom scrollbar in CSS
 description: You can customize the scrollbar in CSS using pseudo-elements with
   WebKit browsers
 date: 2021-01-22T13:00:52.553Z
