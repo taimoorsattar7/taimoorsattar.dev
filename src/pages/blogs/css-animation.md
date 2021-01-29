@@ -1,5 +1,5 @@
 ---
-title: css animation
+title: Guide to CSS animation
 description: The CSS animation is the smooth transition of an object from one
   style to another.
 date: 2021-01-29T06:03:37.094Z
