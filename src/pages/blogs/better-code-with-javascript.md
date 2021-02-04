@@ -1,5 +1,5 @@
 ---
-title: Better Code with Javascript
+title: Write Better Code with Javascript
 description: Javascript is a language that's understood by the browser. You need
   to make your JavaScript code more readable in fewer lines of code.
 date: 2021-01-31T00:37:09.804Z
