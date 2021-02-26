@@ -123,6 +123,10 @@ const BlogPost = ({ data }) => {
 
                     </div>
 
+                    <iframe title="Substack" src="https://taimoor.substack.com/embed" width="480" height="320" Style={"display:block;border:1px solid #EEE; background:white;margin:auto;margin-top: 50px;"} frameborder="0" scrolling="no">
+
+                    </iframe>
+
                 </div>
 
             </div>
