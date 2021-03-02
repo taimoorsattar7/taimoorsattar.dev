@@ -1,12 +1,11 @@
 import React from 'react';
 
 import SEO from '../components/SEO'
-import PrimaryLayout from '../templates/primarylayout'
+import PrimaryLayout from './primarylayout'
 
 import { graphql } from 'gatsby'
 import '../components/_blog-post.scss'
 import '../components/_social.scss'
-// import '../styles/markdown.scss'
 
 const month_name = (num) => {
     const monthName = {
@@ -32,7 +31,8 @@ const format_date = (date) => {
     return format_date;
 }
 
-const BlogPost = ({ data }) => {
+
+const BookPost = ({ data }) => {
     const url = typeof window !== 'undefined' ? window.location.href : '';
     const post = data.markdownRemark;
 
@@ -79,7 +79,7 @@ const BlogPost = ({ data }) => {
                             alt={post.frontmatter.title} />
                     }
 
-                    <div className="markdown headline headline__text"
+                    <div className="headline headline__text"
                         dangerouslySetInnerHTML={{ __html: post.html }}></div>
                 </div>
 
@@ -133,11 +133,11 @@ const BlogPost = ({ data }) => {
     </>);
 };
 
-export default BlogPost;
+export default BookPost;
 
 export const query = graphql`
 query($slug: String!){
-    markdownRemark(fields: {slug: {eq: $slug, regex: "/blogs/"}}){
+    markdownRemark(fields: {slug: {eq: $slug, regex: "/book/"}}){
         html
         frontmatter{
             title

@@ -2,12 +2,14 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://taimoorsattar.dev`,
     title: `Taimoor Sattar`,
-    description: `Profile: taimoorsattar.com`,
+    description: `Full-Stack developer`,
     author: `Taimoor Sattar`,
     keywords: "taimoorsattar, taimoor, profile, front-end",
     image: './static/ocean.jpg'
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-netlify-cms`,
@@ -77,6 +79,20 @@ module.exports = {
       options: {
         name: `src`,
         path: `${__dirname}/src/pages`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content`,
+        name: `book`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
       },
     },
     {

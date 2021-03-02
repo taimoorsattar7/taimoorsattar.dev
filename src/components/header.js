@@ -30,6 +30,7 @@ const Header = () => {
                     ⚡<a rel="sponsored"
                         href="https://keynotes.dev/c/build-profitable-websites"
                         target="_blank"
+                        rel="noreferrer"
                         className="headline headline__text headline--white">
                         Enroll "Build Profitable Websites" course
                     </a>⚡
