@@ -16,9 +16,10 @@ publish_mode: editorial_workflow
 collections:
   - name: blog
     label: Blog
-    folder: "src/pages/blogs"
-    slug: "{{slug}}"
+    folder: "content/blogs"
+    slug: "index"
     author: "{{author}}"
+    path: '{{title}}/index'
     create: true
     fields:
       - { name: title, label: Title }
@@ -58,7 +59,7 @@ collections:
         }
   - name: 'book'
     label: 'Book'
-    folder: 'content/book'
+    folder: 'content/books'
     create: true
     slug: 'index'
     author: "{{author}}"
@@ -73,6 +74,7 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: body, label: Body, widget: markdown }
       - { label: Tags, name: tags, widget: list }
+      - { label: "Buy Link", name: buyLink, widget: text }
       - {
           label: Featured Image,
           name: featuredimage,

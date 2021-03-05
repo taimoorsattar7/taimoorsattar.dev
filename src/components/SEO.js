@@ -1,20 +1,20 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import { StaticQuery, graphql } from "gatsby"
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
 
+import logo from '../images/logo.png';
 
-import logo from "../images/logo.png"
-
-const SEO = (
-  { id,
-    url,
-    title,
-    description,
-    keywords,
-    image,
-    date,
-    modifiedDate,
-    schemaType }) => (
+const SEO = ({
+  id,
+  url,
+  title,
+  description,
+  keywords,
+  image,
+  date,
+  modifiedDate,
+  schemaType,
+}) => (
   <StaticQuery
     query={query}
     render={({
@@ -24,65 +24,62 @@ const SEO = (
           defaultDescription,
           defaultKeywords,
           siteUrl,
-          defaultAuthor
+          defaultAuthor,
         },
       },
     }) => {
-
-
-
       const main_schema = {
-        "@context": "http://schema.org",
-        "@type": "Person",
-        "name": "Taimoor Sattar",
-        "url": siteUrl,
-        "sameAs": [
-          "https://www.linkedin.com/in/taimoorsattar",
-          "https://twitter.com/taimoorsattar7"
-        ]
-      }
+        '@context': 'http://schema.org',
+        '@type': 'Person',
+        name: 'Taimoor Sattar',
+        url: siteUrl,
+        sameAs: [
+          'https://www.linkedin.com/in/taimoorsattar',
+          'https://twitter.com/taimoorsattar7',
+        ],
+      };
 
       const blog_schema = {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "@id": id,
-        "headline": title || defaultTitle,
-        "description": description || defaultDescription,
-        "thumbnailUrl": image ? (siteUrl + image) : (siteUrl + "/img/banner.jpg"),
-        "author": defaultAuthor,
-        "datePublished": date,
-        "dateModified": date,
-        "image": image ? (siteUrl + image) : (siteUrl + "/img/banner.jpg"),
-        "publisher": [{
-          "@type": "Person",
-          "name": defaultAuthor || "Taimoor Sattar"
-        }],
-        "mainEntityOfPage": url
-      }
+        '@context': 'http://schema.org',
+        '@type': 'BlogPosting',
+        '@id': id,
+        headline: title || defaultTitle,
+        description: description || defaultDescription,
+        thumbnailUrl: image ? siteUrl + image : siteUrl + '/img/banner.jpg',
+        author: defaultAuthor,
+        datePublished: date,
+        dateModified: date,
+        image: image ? siteUrl + image : siteUrl + '/img/banner.jpg',
+        publisher: [
+          {
+            '@type': 'Person',
+            name: defaultAuthor || 'Taimoor Sattar',
+          },
+        ],
+        mainEntityOfPage: url,
+      };
 
       const seo = {
         title: title || defaultTitle,
         description: description || defaultDescription,
         keywords: keywords || defaultKeywords,
-        image: image ? (siteUrl + image) : (siteUrl + "/img/banner.jpg"),
-        url: siteUrl + url
-      }
+        image: image ? siteUrl + image : siteUrl + '/img/banner.jpg',
+        url: siteUrl + url,
+      };
 
       return (
         <Helmet>
-
           <script type="application/ld+json">
             {JSON.stringify(main_schema)}
           </script>
 
-          {
-            schemaType === "blog" ?
-              (
-                <script type="application/ld+json">
-                  {JSON.stringify(blog_schema)}
-                </script>
-              ) : ""
-          }
+          {schemaType === 'blog' ? (
+            <script type="application/ld+json">
+              {JSON.stringify(blog_schema)}
+            </script>
+          ) : (
+            ''
+          )}
 
           <title>{seo.title}</title>
           <meta property="title" content={seo.title} />
@@ -93,37 +90,34 @@ const SEO = (
           <meta name="robots" content="index,follow" />
           <html lang="en" />
 
-
-          <meta property='og:type' content='article' />
-          <meta property='og:locale' content='en_US' />
+          <meta property="og:type" content="article" />
+          <meta property="og:locale" content="en_US" />
           {/* <meta property='og:image:height' content='630' />
           <meta property='og:image:width' content='1200' /> */}
-          <meta property='og:site_name' content='Taimoor Sattar' />
-          <meta property='og:title' content={seo.title} />
-          <meta property='og:description' content={seo.description} />
-          <meta property='og:url' content={seo.url} />
+          <meta property="og:site_name" content="Taimoor Sattar" />
+          <meta property="og:title" content={seo.title} />
+          <meta property="og:description" content={seo.description} />
+          <meta property="og:url" content={seo.url} />
 
-          <meta property='og:image' content={seo.image} />
-          <meta property='og:og:image:alt' content={seo.title} />
+          <meta property="og:image" content={seo.image} />
+          <meta property="og:og:image:alt" content={seo.title} />
 
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:url" content={seo.url} />
+          <meta name="twitter:title" content={seo.title} />
+          <meta name="twitter:description" content={seo.description} />
 
-          <meta name='twitter:card' content='summary_large_image' />
-          <meta name='twitter:url' content={seo.url} />
-          <meta name='twitter:title' content={seo.title} />
-          <meta name='twitter:description' content={seo.description} />
-
-          <meta name='twitter:image' content={seo.image} />
-          <meta name='twitter:image:alt' content={seo.title} />
+          <meta name="twitter:image" content={seo.image} />
+          <meta name="twitter:image:alt" content={seo.title} />
 
           <meta property="fb:app_id" content="217416985985327" />
-
         </Helmet>
-      )
+      );
     }}
   />
-)
+);
 
-export default SEO
+export default SEO;
 
 const query = graphql`
   {
@@ -137,4 +131,4 @@ const query = graphql`
       }
     }
   }
-`
+`;

@@ -1,16 +1,13 @@
-import React from "react"
+import React from 'react';
 
-import PrimaryLayout from '../templates/primarylayout'
+import PrimaryLayout from '../templates/primarylayout';
 
 const Resources = () => {
+  return (
+    <>
+      <PrimaryLayout></PrimaryLayout>
+    </>
+  );
+};
 
-  return (<>
-    <PrimaryLayout>
-    
-    </PrimaryLayout>
-
-  </>)
-}
-
-export default Resources
-
+export default Resources;

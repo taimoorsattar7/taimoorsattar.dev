@@ -91,7 +91,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/assets`,
+        path: `${__dirname}/assets`,
         name: `assets`,
       },
     },
@@ -107,10 +107,21 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [{ resolve: `gatsby-remark-prismjs`, },],
+        plugins: [
+          `gatsby-remark-autolink-headers`,
+          { resolve: `gatsby-remark-prismjs`, },
+          `gatsby-remark-smartypants`,
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+            }
+          }
+        ],
       },
     },
     `gatsby-plugin-react-helmet`,
