@@ -1,6 +1,6 @@
 ---
-title: Host on GitHub pages
-description: You can use  pages to host your static files
+title: How to host static site on GitHub pages
+description: GitHub pages is used to host your static files like HTML, CSS and JavaScript.
 date: 2021-03-16T02:50:12.321Z
 tags:
   - Github Pages
