@@ -1,11 +1,17 @@
 import React from 'react';
 
+import Image from "gatsby-image"
+
 import SEO from '../components/SEO';
 import PrimaryLayout from './primarylayout';
+import Pricetable from '../components/Pricetable';
+import Bio from '../components/bio';
 
 import { graphql } from 'gatsby';
 import '../components/_blog-post.scss';
 import '../components/_social.scss';
+import '../components/_img.scss';
+
 
 const month_name = num => {
   const monthName = {
@@ -25,6 +31,8 @@ const month_name = num => {
   return monthName[num];
 };
 
+
+
 const format_date = date => {
   let date_var = new Date(date);
   var format_date = `${month_name(
@@ -36,6 +44,7 @@ const format_date = date => {
 const BookPost = ({ data }) => {
   const url = typeof window !== 'undefined' ? window.location.href : '';
   const post = data.markdownRemark;
+  let featureImg = post.frontmatter?.featuredimage?.childImageSharp?.fluid;
 
   return (
     <>
@@ -58,32 +67,27 @@ const BookPost = ({ data }) => {
               {post.frontmatter.title}
             </h1>
 
+            {featureImg && (
+
+              <Image fluid={featureImg} className="img img__float-r img__350w" />
+
+            )}
+
             <div className="blogPost__info">
               <span className="headline headline__sml headline--dull">
                 Taimoor Sattar
               </span>
-              <span>・</span>
-              <time
-                className="headline headline__sml  headline--dull"
-                dateTime={post.frontmatter.date}
-              >
-                {format_date(post.frontmatter.date)}
-              </time>
             </div>
-
-            {post.frontmatter.featuredimage && (
-              <img
-                className="blogPost__img-main"
-                src={post.frontmatter.featuredimage}
-                alt={post.frontmatter.title}
-              />
-            )}
 
             <div
               className="headline headline__text"
               dangerouslySetInnerHTML={{ __html: post.html }}
             ></div>
           </div>
+
+          <Bio />
+
+          <Pricetable />
 
           <div className="blogscontent__socialite">
             <div className="btn btn__simple btn__r-margin">
@@ -127,6 +131,8 @@ const BookPost = ({ data }) => {
               scrolling="no"
             ></iframe>
           </div>
+
+
         </div>
       </PrimaryLayout>
     </>

@@ -1,0 +1,126 @@
+@import '../styles/mixin';
+
+:root {
+  --gold: #ffc600;
+  --border-size: 0.125rem;
+}
+
+.container {
+
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: auto;
+
+    width: 100%;
+    margin-top: 45px;
+    margin-bottom: 45px;
+
+  .plan {
+
+    @include atMinMedium{
+      margin-top: 0;
+    }
+
+    position: relative;
+    background: #fff;
+    padding: 0 20px;
+    width: 100%;
+    text-align: center;
+    word-break: break-word;
+    margin: 0 0.8rem;
+    padding: 0rem;
+    width: 15rem;
+    border: var(--border-size) solid #000;
+    box-shadow: 0 -10px 15px -15px #666;
+    margin-top: 50px;
+
+    
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      top: 0;
+      left: 0;
+      display: block;
+
+      z-index: -1;
+      transition: all 0.5s ease;
+    }
+    &:hover::after {
+      --length: 2%;
+      transform: translateX(var(--length)) translateY(var(--length));
+    }
+    &.popular::before {
+      content: "Popular";
+      position: absolute;
+      background: var(--gold);
+      width: 100%;
+      height: 2rem;
+      line-height: 2;
+      top: -2rem;
+      left: calc(-1 * var(--border-size));
+      border: var(--border-size) solid #000;
+      transform: scale(0.95);
+      z-index: -1;
+    }
+    &__body {
+      padding: 2rem 0.5rem 2rem 0.5rem;
+      border-bottom: var(--border-size) solid #000;
+    }
+
+    &__title {
+      font-size: 0.9rem;
+    }
+
+    &__price {
+      font-weight: 600;
+      font-size: 3rem;
+      .month {
+        font-size: 0.8rem;
+        color: #666;
+      }
+    }
+
+    &__items {
+      ul {
+        list-style-type: none;
+        padding: 0;
+        padding-left: 1.5rem;
+        font-size: 0.9rem;
+        li {
+          text-align: left;
+          margin-top: 0.25rem;
+        }
+      }
+    }
+
+    button {
+      width: 100%;
+      border: 2px solid #000;
+      border-width: var(--border-size);
+      padding: 0.5rem 1.375rem;
+      background: #fff;
+      font-weight: 600;
+      margin: 1rem 0 2rem 0;
+      outline: none;
+      cursor: pointer;
+      &:focus {
+        border-radius: 0;
+      }
+      &:hover {
+        background: #eee;
+      }
+    }
+  }
+
+  .bold {
+    font-weight: bold;
+    text-shadow: 0 0;
+  }
+}

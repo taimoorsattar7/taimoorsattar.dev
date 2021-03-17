@@ -70,6 +70,20 @@ collections:
       preview: false
     fields:
       - { name: title, label: Title }
+      - label: "Pricing Table"
+        name: "Pricing"
+        minimize_collapsed: true
+        widget: "list"
+        fields:
+          - {label: Name, name: name, widget: string, default: "name"}
+          - {label: Price, name: price, widget: number, default: "Pricing"}
+          - label: "Interval"
+            name: "interval"
+            widget: "select"
+            options: ["month", "6 month", "year"]
+          - {label: Button Text, name: btntxt, widget: string }
+          - {label: Button Link, name: btnlink, widget: string }
+          - {label: Exerpt, name: exerpt, widget: string }
       - { label: "Description", name: "description", widget: "string" }
       - { name: date, label: Date, widget: date }
       - { name: body, label: Body, widget: markdown }
