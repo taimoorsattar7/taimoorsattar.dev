@@ -58,7 +58,7 @@ const SEO = ({
       };
 
       const seo = {
-        title: title || name,
+        title: title,
         description: description || defaultDescription,
         keywords: keywords || defaultKeywords,
         image: image ? siteUrl + image : siteUrl + '/img/banner.jpg',
