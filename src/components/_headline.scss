@@ -73,11 +73,9 @@
 
 	&__sml{
 		font-size: 0.9rem;
-		vertical-align: middle;
 		margin-bottom: 0;
 		
 		line-height: 1.8;
-		word-spacing: 2px;
 		color: black;
 	}
 
@@ -153,6 +151,10 @@
 		color: white;
 	}
 
+	&--b{
+		font-weight: bold;
+	}
+
 	&--cap{
 		text-transform: capitalize;
 	}
@@ -184,6 +186,15 @@
 
 	&--mid{
 		text-align: center;
+	}
+
+	&--left{
+		text-align: left !important;
+	}
+
+	&--no-decor{
+		color: black;
+		text-decoration: none;
 	}
 
 }

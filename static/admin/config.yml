@@ -75,23 +75,25 @@ collections:
         minimize_collapsed: true
         widget: "list"
         fields:
-          - {label: Name, name: name, widget: string, default: "name"}
-          - {label: Price, name: price, widget: number, default: "Pricing"}
-          - label: "Interval"
+          - {label: NAME, name: name, widget: string, default: "name"}
+          - {label: PRICE, name: price, widget: number, default: "Pricing"}
+          - { label: "CURRENCY", name: buyLink, widget: text }
+          - label: "INTERVAL"
             name: "interval"
             widget: "select"
             options: ["month", "6 month", "year"]
-          - {label: Button Text, name: btntxt, widget: string }
-          - {label: Button Link, name: btnlink, widget: string }
-          - {label: Exerpt, name: exerpt, widget: string }
-      - { label: "Description", name: "description", widget: "string" }
-      - { name: date, label: Date, widget: date }
-      - { name: body, label: Body, widget: markdown }
-      - { label: Tags, name: tags, widget: list }
-      - { label: "Buy Link", name: buyLink, widget: text }
+          - {label: BUTTON TEXT, name: btntxt, widget: string }
+          - {label: BUTTON LINK, name: btnlink, widget: string }
+          - {label: EXERPT, name: exerpt, widget: string }
+      - { label: "EXERPT", name: "exerpt", widget: "string" }
+      - { name: date, label: DATE, widget: date }
+      - { name: body, label: BODY, widget: markdown }
+      - { label: Tags, name: TAGS, widget: list }
+      - { label: "BUY LINK", name: buyLink, widget: text }
       - {
-          label: Featured Image,
+          label: FEATURE IMAGE,
           name: featuredimage,
           widget: image,
           required: false,
         }
+      - {label: "POPULAR", name: "popular", widget: "boolean", default: false}

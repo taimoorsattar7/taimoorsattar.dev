@@ -5,13 +5,13 @@ import Image from "gatsby-image"
 import SEO from '../components/SEO';
 import PrimaryLayout from './primarylayout';
 import Pricetable from '../components/Pricetable';
-import Bio from '../components/bio';
 
 import { graphql } from 'gatsby';
 import '../components/_blog-post.scss';
 import '../components/_social.scss';
 import '../components/_img.scss';
-
+import '../styles/_btn.scss';
+import '../styles/markdown.scss';
 
 const month_name = num => {
   const monthName = {
@@ -44,7 +44,9 @@ const format_date = date => {
 const BookPost = ({ data }) => {
   const url = typeof window !== 'undefined' ? window.location.href : '';
   const post = data.markdownRemark;
-  let featureImg = post.frontmatter?.featuredimage?.childImageSharp?.fluid;
+  // let featureImg = post.frontmatter?.featuredimage?.childImageSharp?.fluid;
+
+  let featureImg = "/img/cover.jpg"
 
   return (
     <>
@@ -63,31 +65,50 @@ const BookPost = ({ data }) => {
 
         <div className="wrapper wrapper--narrow">
           <div className="blogPost">
-            <h1 className="headline headline--b-margin-large">
+            <h1 className="headline">
               {post.frontmatter.title}
             </h1>
 
-            {featureImg && (
+            <div className="blogPost__info">
 
-              <Image fluid={featureImg} className="img img__float-r img__350w" />
+              <span className="headline headline__sml headline--dull">
+                <a className="headline--no-decor" href="/">
+                  Taimoor Sattar
+                </a>
+              </span>
+
+            </div>
+
+            <p className="headline headline__text headline--b-margin-medium headline--dull">
+              {post.frontmatter.exerpt}
+            </p>
+
+            <div>
+              <a className="headline--no-decor" href="#pricing">
+                <button className="btn btn--ctr-Atmed btn__r-margin">
+                  <span className="headline headline__text headline--b">
+                    BUY THE BOOK
+                  </span>
+                </button>
+              </a>
+
+            </div>
+
+            {true && (
+
+              <img className="img img__float-r img__300w" src={featureImg} />
+
+              // <Image fluid={featureImg} className="img img__float-r img__350w" />
 
             )}
 
-            <div className="blogPost__info">
-              <span className="headline headline__sml headline--dull">
-                Taimoor Sattar
-              </span>
-            </div>
-
             <div
-              className="headline headline__text"
+              className="headline headline__text markdown"
               dangerouslySetInnerHTML={{ __html: post.html }}
             ></div>
           </div>
 
-          <Bio />
-
-          <Pricetable />
+          <Pricetable pricing={post.frontmatter?.pricing} />
 
           <div className="blogscontent__socialite">
             <div className="btn btn__simple btn__r-margin">
@@ -149,9 +170,18 @@ export const query = graphql`
         title
         date
         keywords
-        description
+        exerpt
         featuredimage
         author
+        pricing {
+          btntxt
+          btnlink
+          exerpt
+          name
+          price
+          interval
+          popular
+        }
       }
       id
       fields {

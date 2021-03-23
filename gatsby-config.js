@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
     siteUrl: `https://taimoorsattar.dev`,
-    title: `Taimoor Sattar`,
-    description: `Full-Stack developer`,
+    name: `Taimoor Sattar`,
+    title: `Full-Stack developer`,
+    exerpt: `I'm full-stack developer, experience in writing websites in JavaScript, node and CSS. But, better I am a problem solver. I used to break down large chunck of problem into small puzzle pieces.
+    `,
     author: `Taimoor Sattar`,
     keywords: "taimoorsattar, taimoor, profile, front-end",
     image: './static/ocean.jpg'
@@ -85,7 +87,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content`,
-        name: `book`,
+        name: `content`,
       },
     },
     {

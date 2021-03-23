@@ -20,25 +20,6 @@ const Header = () => {
 
   return (
     <>
-      <div
-        className="
-                page__bg-black page__p-bottom-m page__p-top-m
-                headline--mid"
-      >
-        <div className="wrapper wrapper--narrow">
-          ⚡
-          <a
-            rel="sponsored"
-            href="https://keynotes.dev/c/build-profitable-websites"
-            target="_blank"
-            rel="noreferrer"
-            className="headline headline__text headline--white"
-          >
-            Enroll "Build Profitable Websites" course
-          </a>
-          ⚡
-        </div>
-      </div>
       <header className="site-header">
         <div
           className={

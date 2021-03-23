@@ -7,12 +7,6 @@ import SEO from '../components/SEO';
 import { graphql } from 'gatsby';
 import { Link } from 'gatsby';
 
-const info = {
-  title: `I'm Taimoor Sattar`,
-  about:
-    'I love to write code in an accessible and intuitive way.',
-};
-
 const month_name = num => {
   const monthName = {
     '0': 'Jan',
@@ -41,13 +35,14 @@ const format_date = date => {
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes;
+  const siteMeta = data.allSite.nodes;
 
   return (
     <>
       <PrimaryLayout>
         <SEO />
 
-        <Banner data={info}></Banner>
+        <Banner data={siteMeta}></Banner>
 
         <div className="wrapper wrapper--narrow wrapper--no-padding">
           <div className="site-banner__post">
@@ -84,7 +79,7 @@ const IndexPage = ({ data }) => {
 export default IndexPage;
 
 export const query = graphql`
-{
+query MyQuery {
   allMarkdownRemark(limit: 10) {
     nodes {
       frontmatter {
@@ -99,6 +94,19 @@ export const query = graphql`
         slug
       }
       id
+    }
+  }
+  allSite {
+    nodes {
+      siteMetadata {
+        name
+        description
+        exerpt
+        image
+        keywords
+        siteUrl
+        title
+      }
     }
   }
 }

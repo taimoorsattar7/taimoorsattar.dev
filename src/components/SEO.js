@@ -23,8 +23,7 @@ const SEO = ({
           defaultTitle,
           defaultDescription,
           defaultKeywords,
-          siteUrl,
-          defaultAuthor,
+          siteUrl
         },
       },
     }) => {
@@ -46,21 +45,20 @@ const SEO = ({
         headline: title || defaultTitle,
         description: description || defaultDescription,
         thumbnailUrl: image ? siteUrl + image : siteUrl + '/img/banner.jpg',
-        author: defaultAuthor,
         datePublished: date,
         dateModified: date,
         image: image ? siteUrl + image : siteUrl + '/img/banner.jpg',
         publisher: [
           {
             '@type': 'Person',
-            name: defaultAuthor || 'Taimoor Sattar',
+            name: 'Taimoor Sattar',
           },
         ],
         mainEntityOfPage: url,
       };
 
       const seo = {
-        title: title || defaultTitle,
+        title: title || name,
         description: description || defaultDescription,
         keywords: keywords || defaultKeywords,
         image: image ? siteUrl + image : siteUrl + '/img/banner.jpg',
@@ -123,11 +121,11 @@ const query = graphql`
   {
     site {
       siteMetadata {
+        name
         defaultTitle: title
         defaultDescription: description
         defaultKeywords: keywords
         siteUrl: siteUrl
-        defaultAuthor: author
       }
     }
   }

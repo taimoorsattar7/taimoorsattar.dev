@@ -55,7 +55,7 @@ const BlogPost = ({ data }) => {
 
         <div className="wrapper wrapper--narrow">
           <div className="blogPost">
-            <h1 className="headline headline--b-margin-large">
+            <h1 className="headline">
               {post.frontmatter.title}
             </h1>
 

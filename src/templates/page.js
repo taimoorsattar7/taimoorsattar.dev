@@ -5,7 +5,7 @@ import PrimaryLayout from '../templates/primarylayout';
 
 import { graphql } from 'gatsby';
 import '../components/_blog-post.scss';
-import '../components/_btn.scss';
+import '../styles/_btn.scss';
 
 const Page = ({ data }) => {
   const url = typeof window !== 'undefined' ? window.location.href : '';
