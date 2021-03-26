@@ -38,7 +38,6 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social
 
   const avatar = data?.avatar?.childImageSharp?.fixed
-  console.log(avatar);
 
   return (
     <div className="bio">
