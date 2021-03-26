@@ -3,7 +3,7 @@ module.exports = {
     title: `Taimoor Sattar Blog`,
     author: {
       name: `Taimoor Sattar`,
-      summary: `I'm full-stack developer, experience in writing websites in JavaScript, node and CSS. But, better I am a problem solver. I used to break down large chunck of problem into small puzzle pieces..`,
+      summary: `I'm Taimoor Sattar, full-stack developer. I've experience to develop websites in JavaScript, Node and CSS. But, better I am a problem solver. I used to break down large chunck of problem into small puzzle pieces.`,
     },
     description: `A blog demonstrating what Gatsby can do.`,
     siteUrl: `https://taimoorsattar.dev`,

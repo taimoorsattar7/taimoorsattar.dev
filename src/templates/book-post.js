@@ -67,7 +67,7 @@ const BookPost = ({ data, location }) => {
           }
 
           <div
-            className="headline headline__text markdown"
+            className="headline headline__text"
             dangerouslySetInnerHTML={{ __html: post.html }}
           ></div>
         </div>

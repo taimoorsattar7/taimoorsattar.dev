@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PrimaryLayout from '../templates/primarylayout';
-import SEO from '../components/SEO';
+import SEO from '../components/seo';
 
 import { Link } from 'gatsby';
 import { graphql } from 'gatsby';

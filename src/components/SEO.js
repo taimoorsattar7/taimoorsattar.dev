@@ -22,7 +22,7 @@ const SEO = ({ title, description, image, lang, meta }) => {
   )
 
   const metaSiteUrl = site.siteMetadata.siteUrl
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = site.siteMetadata.description || description
   const metaImage = image;
   const defaultTitle = site.siteMetadata?.title
 
