@@ -31,7 +31,7 @@ const format_date = date => {
   return format_date;
 };
 
-const Blogs = ({ data }) => {
+const Blogs = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes;
 
   return (

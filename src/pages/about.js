@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from "../components/layout"
 
 
-const IndexPage = () => (
+const IndexPage = ({ location }) => (
   <Layout location={location}>
 
     <div className="wrapper wrapper--narrow">
