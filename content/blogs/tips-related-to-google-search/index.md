@@ -8,7 +8,6 @@ tags:
   - search
   - tips
 featuredpost: false
-featuredimage: /img/document.jpg
 ---
 Google is one of the most popular search engines. We use Google to search for different queries. Below we cover some tips and tricks to improve your search experience.
 

@@ -9,7 +9,6 @@ tags:
   - responsive
   - image
 featuredpost: false
-featuredimage: null
 ---
 Images are visuals that display on the browser. Responsive image responds to different screen size and pixel ratio.
 
@@ -42,12 +41,12 @@ We don't need to display the same image on different screen sizes e.g. desktop, 
 
 We need to load the small-size image on a small screen e.g. Mobile for fast page load. To achieve this, we have to create image with different file size, dpi, and dimension ratios.
 
-|Sr# | Dimension (width x height) | Pixel ratio (width / height) | image src | 
-|:--- |:---- |:----:|:----:|
-|mobile-1x.| 400x400 | 1:1 | [copy image link](https://i.picsum.photos/id/1/400/400.jpg?hmac=lOytrN6lDOH_Yx7NwwGIaCtxp6pyuH2V4hD6Eac-VI0) |
-|mobile-2x.| 800x800 | 1:1 | [copy image link](https://i.picsum.photos/id/1/800/800.jpg?hmac=UF7Y-1Oxv1yesEXGfDd1wixbr41dJs6Osx-YS-2TLvM) |
-|desktop-1x.| 1200x600 | 2:1 | [copy image link](https://i.picsum.photos/id/1/1200/600.jpg?hmac=7xDzyVlLdITHaM66cy-yrgS6i437QYFJJ1PNYcJTO3Y) |
-|desktop-2x.| 1600x800 | 2:1 | [copy image link](https://i.picsum.photos/id/1/1600/800.jpg?hmac=LXp6QsSJavPlkMiVw9XVNVVgy3EWw2paL3BP0O4iFfs) |
+| Sr#         | Dimension (width x height) | Pixel ratio (width / height) |                                                   image src                                                   |
+| :---------- | :------------------------- | :--------------------------: | :-----------------------------------------------------------------------------------------------------------: |
+| mobile-1x.  | 400x400                    |             1:1              | [copy image link](https://i.picsum.photos/id/1/400/400.jpg?hmac=lOytrN6lDOH_Yx7NwwGIaCtxp6pyuH2V4hD6Eac-VI0)  |
+| mobile-2x.  | 800x800                    |             1:1              | [copy image link](https://i.picsum.photos/id/1/800/800.jpg?hmac=UF7Y-1Oxv1yesEXGfDd1wixbr41dJs6Osx-YS-2TLvM)  |
+| desktop-1x. | 1200x600                   |             2:1              | [copy image link](https://i.picsum.photos/id/1/1200/600.jpg?hmac=7xDzyVlLdITHaM66cy-yrgS6i437QYFJJ1PNYcJTO3Y) |
+| desktop-2x. | 1600x800                   |             2:1              | [copy image link](https://i.picsum.photos/id/1/1600/800.jpg?hmac=LXp6QsSJavPlkMiVw9XVNVVgy3EWw2paL3BP0O4iFfs) |
 
 For reference, you can use the above image src. The reference image source is from [picsum.photos](https://picsum.photos). If you want more customization, you can use software like PhotoShop, etc.
 

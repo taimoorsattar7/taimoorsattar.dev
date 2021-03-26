@@ -1,113 +1,93 @@
-import React from 'react';
+import React from "react"
+import { Link, graphql } from "gatsby"
 
-import Banner from '../components/banner';
-import PrimaryLayout from '../templates/primarylayout';
-import SEO from '../components/SEO';
+import Bio from "../components/bio"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
-import { graphql } from 'gatsby';
-import { Link } from 'gatsby';
+const BlogIndex = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const posts = data.allMarkdownRemark.nodes
 
-const month_name = num => {
-  const monthName = {
-    '0': 'Jan',
-    '1': 'Feb',
-    '2': 'Mar',
-    '3': 'Apr',
-    '4': 'May',
-    '5': 'Jun',
-    '6': 'Jul',
-    '7': 'Aug',
-    '8': 'Sep',
-    '9': 'Oct',
-    '10': 'Nov',
-    '11': 'Dec',
-  };
-  return monthName[num];
-};
-
-const format_date = date => {
-  let date_var = new Date(date);
-  var format_date = `${month_name(
-    date_var.getUTCMonth()
-  )} ${date_var.getDate()},${date_var.getFullYear()}`;
-  return format_date;
-};
-
-const IndexPage = ({ data }) => {
-  const posts = data.allMarkdownRemark.nodes;
-  const siteMeta = data.allSite.nodes;
+  if (posts.length === 0) {
+    return (
+      <Layout location={location} title={siteTitle}>
+        <SEO title="All posts" />
+        <Bio />
+        <p>
+          No blog posts found. Add markdown posts to "content/blog" (or the
+          directory you specified for the "gatsby-source-filesystem" plugin in
+          gatsby-config.js).
+        </p>
+      </Layout>
+    )
+  }
 
   return (
-    <>
-      <PrimaryLayout>
-        <SEO />
+    <Layout location={location} title={siteTitle}>
+      <SEO title="All posts" />
 
-        <Banner data={siteMeta}></Banner>
+      <div className="wrapper wrapper--narrow">
+        <Bio />
+        <ol style={{ listStyle: `none` }}>
+          {posts.map(post => {
+            const title = post.frontmatter.title || post.fields.slug
 
-        <div className="wrapper wrapper--narrow wrapper--no-padding">
-          <div className="site-banner__post">
-            <h2 className="headline headline__feature">Latest Post</h2>
-
-            {posts.map(post => {
-              return post.fields.slug.includes('/blogs') ? (
-                <div key={post.id} className="site-banner__post-block">
-                  <Link to={post.fields.slug}>
-                    <h2 className="headline headline__medium">
-                      {post.frontmatter.title}
+            return (
+              <li key={post.fields.slug}>
+                <article
+                  className="post-list-item"
+                  itemScope
+                  itemType="http://schema.org/Article"
+                >
+                  <header>
+                    <h2>
+                      <Link to={post.fields.slug} itemProp="url">
+                        <span itemProp="headline">{title}</span>
+                      </Link>
                     </h2>
+                    <small className="headline headline__sml">{post.frontmatter.date}</small>
+                  </header>
+                  <section>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: post.frontmatter.description || post.excerpt,
+                      }}
+                      className="headline headline__text"
+                      itemProp="description"
+                    />
+                  </section>
+                </article>
+              </li>
+            )
+          })}
+        </ol>
+      </div>
+    </Layout>
+  )
+}
 
-                    <span className="headline headline__sml headline--dull headline--block">
-                      {format_date(post.frontmatter.date)}
-                    </span>
-                  </Link>
-                </div>
-              ) : (
-                ''
-              );
-            })}
+export default BlogIndex
 
-            <Link className="headline headline__text" to="/blogs/">
-              <span>View all blog post →</span>
-            </Link>
-          </div>
-        </div>
-      </PrimaryLayout>
-    </>
-  );
-};
-
-export default IndexPage;
-
-export const query = graphql`
-query MyQuery {
-  allMarkdownRemark(limit: 10) {
+export const pageQuery = graphql`
+{
+  site {
+    siteMetadata {
+      title
+    }
+  }
+  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, filter: {fields: {slug: {regex: "/blogs/"}}}) {
     nodes {
-      frontmatter {
-        title
-        description
-        date
-        keywords
-        author
-        featuredimage
-      }
+      excerpt
       fields {
         slug
       }
-      id
-    }
-  }
-  allSite {
-    nodes {
-      siteMetadata {
-        name
-        description
-        exerpt
-        image
-        keywords
-        siteUrl
+      frontmatter {
+        date(formatString: "MMMM DD, YYYY")
         title
+        description
       }
     }
   }
 }
-`;
+`

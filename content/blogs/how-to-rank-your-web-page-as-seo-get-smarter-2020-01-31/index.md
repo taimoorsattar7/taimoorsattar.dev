@@ -7,7 +7,6 @@ date: 2020-01-31T19:09:45.637Z
 tags:
   - SEO
 featuredpost: true
-featuredimage: /img/search-query.jpg
 ---
 SEO is search engine optimization which helps to reach better ranking in search engine like GOOGLE, YAHOO, and BING, etc. The search engine crawls the web page and bring the useful information out of it. SEO is getting better and better days after days. People just use to change title and description of the web page to improve its ranking but now it is things have totally changed. To rank your web page, the Google search engine senses more than 200 signals to rank your web page. Here are mention few suggestion that will be useful for you to improve your ranking.
 

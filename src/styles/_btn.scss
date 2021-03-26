@@ -33,6 +33,14 @@
 		text-decoration: none;
 	}
 
+	&--inblk{
+		display: inline-block;
+	}
+
+	&--sm{
+		padding: 0.4rem 1.375rem;
+	}
+
 	&--small{
 		background-color: red;
 

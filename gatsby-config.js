@@ -1,20 +1,67 @@
 module.exports = {
   siteMetadata: {
+    title: `Taimoor Sattar Blog`,
+    author: {
+      name: `Taimoor Sattar`,
+      summary: `I'm full-stack developer, experience in writing websites in JavaScript, node and CSS. But, better I am a problem solver. I used to break down large chunck of problem into small puzzle pieces..`,
+    },
+    description: `A blog demonstrating what Gatsby can do.`,
     siteUrl: `https://taimoorsattar.dev`,
-    name: `Taimoor Sattar`,
-    title: `Full-Stack developer`,
-    exerpt: `I'm full-stack developer, experience in writing websites in JavaScript, node and CSS. But, better I am a problem solver. I used to break down large chunck of problem into small puzzle pieces.
-    `,
-    author: `Taimoor Sattar`,
-    keywords: "taimoorsattar, taimoor, profile, front-end",
-    image: './static/ocean.jpg'
+    social: {
+      twitter: `taimoorsattar7`,
+    },
   },
   plugins: [
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content`,
+        name: `content`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 630,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+            }
+          }
+        ],
+      },
+    },
     `gatsby-plugin-netlify-cms`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-69828471-5",
+      },
+    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -70,56 +117,20 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-        trackingId: "UA-69828471-5",
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `src`,
-        path: `${__dirname}/src/pages`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content`,
-        name: `content`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Taimoor Sattar`,
+        short_name: `Taimoor`,
         start_url: `/`,
-        background_color: `#663399`,
+        background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
-      },
-    },
-    `gatsby-plugin-catch-links`,
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          `gatsby-remark-autolink-headers`,
-          { resolve: `gatsby-remark-prismjs`, },
-          `gatsby-remark-smartypants`,
-          {
-            resolve: 'gatsby-remark-external-links',
-            options: {
-              target: '_blank',
-            }
-          }
-        ],
+        icon: `content/assets/favicon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
-
 }

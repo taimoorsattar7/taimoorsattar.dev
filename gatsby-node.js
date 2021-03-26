@@ -1,105 +1,93 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require(`path`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
-
-const { createFilePath } = require("gatsby-source-filesystem")
-
-const path = require("path")
-
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
-  if (node.internal.type === "MarkdownRemark") {
-    const slug = createFilePath({ node, getNode })
-    createNodeField({
-      node,
-      name: "slug",
-      value: slug,
-
-    })
-  }
-}
-
-
-exports.onCreatePage = async ({ page, actions }) => {
-  const { createPage, deletePage } = actions
-  // Check if the page is a localized 404
-  if (page.path.match(/^\/404\/$/)) {
-    const oldPage = { ...page }
-    // Get the language code from the path, and match all paths
-    // starting with this code (apart from other valid paths)
-    const langCode = page.path.split(`/`)[1]
-    page.matchPath = `/${langCode}/*`
-    // Recreate the modified page
-    deletePage(oldPage)
-    createPage(page)
-  }
-}
-
-
-
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
+  // Define a template for blog post
+  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const bookPost = path.resolve(`./src/templates/book-post.js`)
 
-  return graphql(`
-  {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: ASC }
-      limit: 1000
-    ){
-      nodes{
-        id
-        fields{
-          slug
+  // Get all markdown blog posts sorted by date
+  const result = await graphql(
+    `
+      {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: ASC }
+          limit: 1000
+        ) {
+          nodes {
+            id
+            fields {
+              slug
+            }
+          }
         }
       }
-    }
+    `
+  )
+
+  if (result.errors) {
+    reporter.panicOnBuild(
+      `There was an error loading your blog posts`,
+      result.errors
+    )
+    return
   }
-  `).then(result => {
-    if (result.errors) {
-      throw result.errors
-    }
 
-    result.data.allMarkdownRemark.nodes.forEach(node => {
-      let slug = node.fields.slug;
+  const posts = result.data.allMarkdownRemark.nodes
 
-      if (slug.includes("/blogs")) {
+  // Create blog posts pages
+  // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
+  // `context` is available in the template as a prop and as a variable in GraphQL
+
+  if (posts.length > 0) {
+    posts.forEach((post, index) => {
+      const previousPostId = index === 0 ? null : posts[index - 1].id
+      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
+
+      let slug_pg = post.fields.slug;
+
+      if (slug_pg.includes("/blogs")) {
         createPage({
-          path: node.fields.slug,
-          component: path.resolve(`src/templates/blog-post.js`),
+          path: post.fields.slug,
+          component: blogPost,
           context: {
-            slug: node.fields.slug,
-          },
-        })
-      }
-      else if (slug.includes("/book")) {
-        createPage({
-
-          path: node.fields.slug,
-          component: path.resolve(`src/templates/book-post.js`),
-          context: {
-            slug: node.fields.slug,
-          },
-        })
-      }
-      else {
-        createPage({
-
-          path: node.fields.slug,
-          component: path.resolve(`src/templates/page.js`),
-          context: {
-            slug: node.fields.slug,
+            id: post.id,
+            previousPostId,
+            nextPostId,
           },
         })
       }
 
+      if (slug_pg.includes("/books")) {
+        createPage({
+          path: post.fields.slug,
+          component: bookPost,
+          context: {
+            id: post.id,
+            previousPostId,
+            nextPostId,
+          },
+        })
+      }
     })
-  })
+  }
 }
 
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode })
+
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
+}
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions

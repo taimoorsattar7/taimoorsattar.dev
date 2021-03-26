@@ -10,7 +10,7 @@ tags:
   - style
   - css
 featuredpost: false
-featuredimage: /img/form-style.jpg
+featuredimage: form-style.jpg
 ---
 HTML forms are used for user input/interaction. We can style the HTML form using CSS. In this blog, we style the HTML form with a search icon wrap inside it.
 

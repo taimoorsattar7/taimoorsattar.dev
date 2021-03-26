@@ -1,132 +1,74 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
+import React from "react"
+import PropTypes from "prop-types"
+import { Helmet } from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby"
 
-import logo from '../images/logo.png';
-
-const SEO = ({
-  id,
-  url,
-  title,
-  description,
-  keywords,
-  image,
-  date,
-  modifiedDate,
-  schemaType,
-}) => (
-  <StaticQuery
-    query={query}
-    render={({
-      site: {
-        siteMetadata: {
-          defaultTitle,
-          defaultDescription,
-          defaultKeywords,
-          siteUrl
-        },
-      },
-    }) => {
-      const main_schema = {
-        '@context': 'http://schema.org',
-        '@type': 'Person',
-        name: 'Taimoor Sattar',
-        url: siteUrl,
-        sameAs: [
-          'https://www.linkedin.com/in/taimoorsattar',
-          'https://twitter.com/taimoorsattar7',
-        ],
-      };
-
-      const blog_schema = {
-        '@context': 'http://schema.org',
-        '@type': 'BlogPosting',
-        '@id': id,
-        headline: title || defaultTitle,
-        description: description || defaultDescription,
-        thumbnailUrl: image ? siteUrl + image : siteUrl + '/img/banner.jpg',
-        datePublished: date,
-        dateModified: date,
-        image: image ? siteUrl + image : siteUrl + '/img/banner.jpg',
-        publisher: [
-          {
-            '@type': 'Person',
-            name: 'Taimoor Sattar',
-          },
-        ],
-        mainEntityOfPage: url,
-      };
-
-      const seo = {
-        title: title,
-        description: description || defaultDescription,
-        keywords: keywords || defaultKeywords,
-        image: image ? siteUrl + image : siteUrl + '/img/banner.jpg',
-        url: siteUrl + url,
-      };
-
-      return (
-        <Helmet>
-          <script type="application/ld+json">
-            {JSON.stringify(main_schema)}
-          </script>
-
-          {schemaType === 'blog' ? (
-            <script type="application/ld+json">
-              {JSON.stringify(blog_schema)}
-            </script>
-          ) : (
-            ''
-          )}
-
-          <title>{seo.title}</title>
-          <meta property="title" content={seo.title} />
-          <meta name="image" content={seo.image} />
-          <meta name="description" content={seo.description} />
-          <meta name="keywords" content={seo.keywords} />
-          <link rel="canonical" href={seo.url} />
-          <meta name="robots" content="index,follow" />
-          <html lang="en" />
-
-          <meta property="og:type" content="article" />
-          <meta property="og:locale" content="en_US" />
-          {/* <meta property='og:image:height' content='630' />
-          <meta property='og:image:width' content='1200' /> */}
-          <meta property="og:site_name" content="Taimoor Sattar" />
-          <meta property="og:title" content={seo.title} />
-          <meta property="og:description" content={seo.description} />
-          <meta property="og:url" content={seo.url} />
-
-          <meta property="og:image" content={seo.image} />
-          <meta property="og:og:image:alt" content={seo.title} />
-
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:url" content={seo.url} />
-          <meta name="twitter:title" content={seo.title} />
-          <meta name="twitter:description" content={seo.description} />
-
-          <meta name="twitter:image" content={seo.image} />
-          <meta name="twitter:image:alt" content={seo.title} />
-
-          <meta property="fb:app_id" content="217416985985327" />
-        </Helmet>
-      );
-    }}
-  />
-);
-
-export default SEO;
-
-const query = graphql`
-  {
-    site {
-      siteMetadata {
-        name
-        defaultTitle: title
-        defaultDescription: description
-        defaultKeywords: keywords
-        siteUrl: siteUrl
+const SEO = ({ title, description, image, lang, meta }) => {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            siteUrl
+            description
+            social {
+              twitter
+            }
+          }
+        }
       }
-    }
-  }
-`;
+    `
+  )
+
+  const metaSiteUrl = site.siteMetadata.siteUrl
+  const metaDescription = description || site.siteMetadata.description
+  const metaImage = image;
+  const defaultTitle = site.siteMetadata?.title
+
+  return (
+    <Helmet
+      htmlAttributes={{
+        lang,
+      }}
+      title={title}
+      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      meta={[
+        { property: `twitter:card`, content: "summary_large_image" },
+        { property: `og:title`, content: title },
+        { name: `twitter:title`, content: title },
+
+        { name: `description`, content: metaDescription },
+        { property: `og:description`, content: metaDescription },
+        { name: `twitter:description`, content: metaDescription },
+
+        { name: `image`, content: `${metaSiteUrl}${metaImage}` },
+        { name: `og:image`, content: `${metaSiteUrl}${metaImage}` },
+        { name: `twitter:image`, content: `${metaSiteUrl}${metaImage}` },
+
+        { property: `og:type`, content: `website` },
+        { name: `twitter:card`, content: `summary` },
+        { name: `twitter:creator`, content: site.siteMetadata?.social?.twitter || `` },
+
+        { name: `og:url`, content: metaSiteUrl },
+        { name: `twitter:url`, content: metaSiteUrl }
+
+      ].concat(meta)}
+    />
+  )
+}
+
+SEO.defaultProps = {
+  lang: `en`,
+  meta: [],
+  description: ``,
+}
+
+SEO.propTypes = {
+  description: PropTypes.string,
+  lang: PropTypes.string,
+  meta: PropTypes.arrayOf(PropTypes.object),
+  title: PropTypes.string.isRequired,
+}
+
+export default SEO

@@ -6,7 +6,7 @@ tags:
   - css
   - media queries
 featuredpost: false
-featuredimage: /img/devices.jpg
+featuredimage: devices.jpg
 ---
 Media queries used to assign custom styling based on the browser screen size. For example, we can adjust the font color of text on desktop, tablet, and mobile screen sizes.
 

@@ -7,7 +7,7 @@ tags:
   - javascript
   - loop
 featuredpost: false
-featuredimage: /img/strings-loop.jpg
+featuredimage: strings-loop.jpg
 ---
 There are different ways to loop in an array using JavaScript. In JavaScript, we use the loop to iterate over an array. We will discuss two methods in JavaScript to loop in an array as below:
 

@@ -6,7 +6,6 @@ date: 2021-01-31T00:37:09.804Z
 tags:
   - javascript
 featuredpost: false
-featuredimage: /img/laptop.jpg
 ---
 
 

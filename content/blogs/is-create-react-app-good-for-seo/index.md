@@ -8,7 +8,6 @@ tags:
   - prerender
   - SEO
 featuredpost: true
-featuredimage: /img/react-app.jpg
 ---
 In short, create-react-app is not good for SEO. why? create-react-app is a SPA(single page application). In a SPA, all necessary HTML, JavaScript, and CSS code retrieved by the browser with a single page load or data add dynamically to the page based on certain actions.
 
@@ -16,7 +15,8 @@ Search engines and social media look for SEO meta tags on the website. Based on 
 
 By default in create-react-app, metatag like title and description mentioned in `public/index.html`. When the page loads, the default title shows in the tab of the browser and for every route, it follows the same.
  
-What if, you are fetching an article post from an API and after fetching the data, it updates the value of title and description. But the default title shows up in the SEO, not the fetching title. If your app depends on SEO then it is a huge problem.
+What if, you are fetching an article post from an API and after fetching the data, it updates the value of title and description. But the default title shows up in the SEO, not the fetching title. If your app depends on SEO then it is a huge problem
+.
 
 So how you can overcome this? You need to prerender the create-react-app. To prerender, You can download either of two npm package as below:
 

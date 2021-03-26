@@ -7,7 +7,6 @@ date: 2020-11-30T18:22:49.648Z
 tags:
   - book
 featuredpost: false
-featuredimage: /img/laptop.jpg
 ---
 On the internet, there are plenty of resources and too many disciplines that might confuse you at first. You have to spend a lot of time figuring out what is bad or good for your career.
 

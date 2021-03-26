@@ -46,7 +46,7 @@ const Books = ({ data }) => {
           {posts.map(post => {
             return (
               <div key={post.id} className="site-banner__post-block">
-                <Link to={post.fields.slug}>
+                <Link className="headline--no-decor" to={post.fields.slug}>
                   <h2 className="headline headline__medium">
                     {post.frontmatter.title}
                   </h2>
@@ -75,7 +75,6 @@ export const query = graphql`
         frontmatter {
           title
           date
-          keywords
         }
         excerpt
         internal {

@@ -7,7 +7,6 @@ tags:
   - course
   - website development
 featuredpost: true
-featuredimage: /img/development.jpg
 ---
 Internet is full of content. If you want to learn website development, you need to google it. But... searching for the right content takes time. There are several ways to achieve the same results but to choose the right way you need a mentor to guide you and save your time. This course provides you mentorship to those who have a passion for learning website development. Below, you can find the link for this course:
 

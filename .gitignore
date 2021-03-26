@@ -51,13 +51,12 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
-# dotenv environment variables file
-.env
+# dotenv environment variable files
+.env*
 
 # gatsby files
 .cache/
 public
-package-lock.json
 
 # Mac files
 .DS_Store
@@ -66,6 +65,5 @@ package-lock.json
 yarn-error.log
 .pnp/
 .pnp.js
-yarn.lock
 # Yarn Integrity file
 .yarn-integrity

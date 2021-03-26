@@ -7,7 +7,6 @@ tags:
   - Next.js
   - env
 featuredpost: false
-featuredimage: /img/react-app.jpg
 ---
 The environment variables are the secrets that you don't want to share in public. We need to create the environment variable that is accessible to both the client and server-side function in Next.js
 

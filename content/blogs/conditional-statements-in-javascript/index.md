@@ -7,7 +7,7 @@ tags:
   - javascript
   - conditional statements
 featuredpost: false
-featuredimage: /img/sign.jpg
+featuredimage: sign.jpg
 ---
 Conditional Statements execute certain operations based on logic. In Javascript, we can execute the conditional statements in three (3) ways as below:
 

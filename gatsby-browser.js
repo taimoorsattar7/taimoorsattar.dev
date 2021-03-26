@@ -1,13 +1,16 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+// custom typefaces
+import "typeface-montserrat"
+import "typeface-merriweather"
+import "typeface-roboto"
 
-// You can delete this file if you're not using it
+// normalize CSS across browsers
+import "./src/normalize.css"
+
+// custom CSS styles
+import "./src/style.css"
 
 import './src/styles/render.scss'
 import './src/styles/syntax-editor.scss'
 
-require("prismjs/themes/prism.css")
-require("prismjs/plugins/line-numbers/prism-line-numbers.css")
+import "prismjs/themes/prism.css"
+import "prismjs/plugins/line-numbers/prism-line-numbers.css"

@@ -8,7 +8,7 @@ tags:
   - env
   - create-react-app
 featuredpost: false
-featuredimage: /img/secret.jpg
+featuredimage: secret.jpg
 ---
 Environment Variable works differently in create-react-app. To access the environment variable in your app, you have to add the prefix `REACT_APP_` before defining your variable as described in the below image.
 

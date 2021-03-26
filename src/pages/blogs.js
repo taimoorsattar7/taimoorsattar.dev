@@ -1,7 +1,6 @@
 import React from 'react';
 
-import PrimaryLayout from '../templates/primarylayout';
-import SEO from '../components/SEO';
+import Layout from "../components/layout"
 
 import { Link } from 'gatsby';
 import { graphql } from 'gatsby';
@@ -36,30 +35,27 @@ const Blogs = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes;
 
   return (
-    <>
-      <PrimaryLayout>
-        <SEO />
+    <Layout location={location}>
 
-        <div className="wrapper wrapper--narrow">
-          <h1 className="headline headline--b-margin-small">Recent Blogs</h1>
+      <div className="wrapper wrapper--narrow">
+        <h1 className="headline headline--b-margin-small">Recent Blogs</h1>
 
-          {posts.map(post => {
-            return (
-              <div key={post.id} className="site-banner__post-block">
-                <Link to={post.fields.slug}>
-                  <h2 className="headline headline__medium">
-                    {post.frontmatter.title}
-                  </h2>
-                  <span className="headline headline__sml headline--dull">
-                    {format_date(post.frontmatter.date)}
-                  </span>
-                </Link>
-              </div>
-            );
-          })}
-        </div>
-      </PrimaryLayout>
-    </>
+        {posts.map(post => {
+          return (
+            <div key={post.id} className="site-banner__post-block">
+              <Link className="headline--no-decor" to={post.fields.slug}>
+                <h2 className="headline headline__medium">
+                  {post.frontmatter.title}
+                </h2>
+                <span className="headline headline__sml headline--dull">
+                  {format_date(post.frontmatter.date)}
+                </span>
+              </Link>
+            </div>
+          );
+        })}
+      </div>
+    </Layout>
   );
 };
 
@@ -75,7 +71,6 @@ export const query = graphql`
         frontmatter {
           title
           date
-          keywords
         }
         excerpt
         internal {

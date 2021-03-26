@@ -6,7 +6,6 @@ tags:
   - work
   - productive
 featuredpost: false
-featuredimage: /img/document.jpg
 ---
 Let's explain this to you by a story.
 

@@ -30,6 +30,7 @@ date: 2015-05-01T22:12:03.284Z
 tags:
   - static
   - website
+featuredimage: cover.jpg
 buyLink: https://gumroad.com/l/workflow-to-build-static-website
 popular: true
 ---

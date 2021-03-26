@@ -9,7 +9,7 @@ tags:
   - beginners
   - github
 featuredpost: true
-featuredimage: /img/document.jpg
+featuredimage: document.jpg
 ---
 Documentation of your repo will help you in many aspects. When you link your repo to the hiring team, they will better understand what your code is doing. Also, it will help others to contribute to your project. To write documentation for your repo, you can create `README.md` in the root of the repo.
 

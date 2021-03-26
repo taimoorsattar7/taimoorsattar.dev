@@ -7,7 +7,6 @@ tags:
   - website
   - development
 featuredpost: false
-featuredimage: /img/typing.jpg
 ---
 To learn about web development in 2021, you have to understand what makes up the websites.
 

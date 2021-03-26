@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react"
+import { graphql } from "gatsby"
+import Image from "gatsby-image"
 
-import SEO from '../components/SEO';
-import PrimaryLayout from '../templates/primarylayout';
-
-import { graphql } from 'gatsby';
-import '../components/_blog-post.scss';
-import '../components/_social.scss';
-// import '../styles/markdown.scss'
+import Bio from "../components/bio"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const month_name = num => {
   const monthName = {
@@ -34,124 +32,149 @@ const format_date = date => {
   return format_date;
 };
 
-const BlogPost = ({ data }) => {
+
+const BlogPostTemplate = ({ data, location }) => {
   const url = typeof window !== 'undefined' ? window.location.href : '';
-  const post = data.markdownRemark;
+  const post = data.markdownRemark
+  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const { previous, next } = data
+
+  let featureImg = post.frontmatter?.featuredimage?.childImageSharp?.fluid;
 
   return (
-    <>
-      <PrimaryLayout>
-        <SEO
-          id={post.id}
-          url={post.fields.slug}
-          title={post.frontmatter.title}
-          description={post.frontmatter.description}
-          keywords={post.frontmatter.keywords}
-          image={post.frontmatter.featuredimage}
-          date={post.frontmatter.date}
-          modifiedDate={post.frontmatter.date}
-          schemaType="blog"
-        />
+    <Layout location={location} title={siteTitle}>
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
+      />
+      <div className="wrapper wrapper--narrow">
+        <div className="blogPost">
+          <h1 className="headline">
+            {post.frontmatter.title}
+          </h1>
 
-        <div className="wrapper wrapper--narrow">
-          <div className="blogPost">
-            <h1 className="headline">
-              {post.frontmatter.title}
-            </h1>
-
-            <div className="blogPost__info">
-              <span className="headline headline__sml headline--dull">
-                Taimoor Sattar
+          <div className="blogPost__info">
+            <span className="headline headline__sml headline--dull">
+              Taimoor Sattar
               </span>
-              <span>・</span>
-              <time
-                className="headline headline__sml  headline--dull"
-                dateTime={post.frontmatter.date}
-              >
-                {format_date(post.frontmatter.date)}
-              </time>
-            </div>
-
-            {post.frontmatter.featuredimage && (
-              <img
-                className="blogPost__img-main"
-                src={post.frontmatter.featuredimage}
-                alt={post.frontmatter.title}
-              />
-            )}
-
-            <div
-              className="markdown headline headline__text"
-              dangerouslySetInnerHTML={{ __html: post.html }}
-            ></div>
+            <span>・</span>
+            <time
+              className="headline headline__sml  headline--dull"
+              dateTime={post.frontmatter.date}
+            >
+              {format_date(post.frontmatter.date)}
+            </time>
           </div>
 
-          <div className="blogscontent__socialite">
-            <div className="btn btn__simple btn__r-margin">
-              <a
-                href={`https://www.facebook.com/sharer.php?u=${url}`}
-                rel="nofollow"
-              >
-                <span className="count">Share on Facebook</span>
-              </a>
-            </div>
+          {featureImg && (
+            <Image className="blogPost__img-main"
+              fluid={featureImg} />
+          )}
 
-            <div className="btn btn__simple btn__r-margin">
-              <a
-                href={`https://twitter.com/intent/tweet?original_referer=${url}`}
-                className="socialite twitter"
-                rel="nofollow"
-                title="Share on Twitter"
-              >
-                <span className="count">Share on Twitter</span>
-              </a>
-            </div>
-
-            <div className="btn btn__simple btn__r-margin">
-              <a
-                href={`https://www.linkedin.com/cws/share?url=${url}`}
-                rel="nofollow"
-              >
-                <span className="count">Share on Linkedin</span>
-              </a>
-            </div>
-
-            <iframe
-              title="Substack"
-              src="https://taimoor.substack.com/embed"
-              width="480"
-              height="320"
-              Style={
-                'display:block;border:1px solid #EEE; background:white;margin:auto;margin-top: 50px;'
-              }
-              frameborder="0"
-              scrolling="no"
-            ></iframe>
-          </div>
+          <div
+            className="markdown headline headline__text"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          ></div>
         </div>
-      </PrimaryLayout>
-    </>
-  );
-};
 
-export default BlogPost;
+        <section>
+          <h2>About the Author</h2>
+          <Bio />
+        </section>
 
-export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug, regex: "/blogs/" } }) {
+        <div className="blogscontent__socialite">
+          <div className="btn btn--inblk btn--sm btn__r-margin">
+            <a
+              href={`https://www.facebook.com/sharer.php?u=${url}`}
+              rel="nofollow"
+            >
+              <span className="count">Share on Facebook</span>
+            </a>
+          </div>
+
+          <div className="btn btn--inblk btn--sm btn__r-margin">
+            <a
+              href={`https://twitter.com/intent/tweet?original_referer=${url}`}
+              className="socialite twitter"
+              rel="nofollow"
+              title="Share on Twitter"
+            >
+              <span className="count">Share on Twitter</span>
+            </a>
+          </div>
+
+          <div className="btn btn--inblk btn--sm">
+            <a
+              href={`https://www.linkedin.com/cws/share?url=${url}`}
+              rel="nofollow"
+            >
+              <span className="count">Share on Linkedin</span>
+            </a>
+          </div>
+
+          <iframe
+            title="Substack"
+            src="https://taimoor.substack.com/embed"
+            width="480"
+            height="320"
+            Style={
+              'display:block;border:1px solid #EEE; background:white;margin:auto;margin-top: 50px;'
+            }
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
+        </div>
+      </div>
+    </Layout>
+  )
+}
+
+export default BlogPostTemplate
+
+export const pageQuery = graphql`
+  query BlogPostBySlug(
+    $id: String!
+    $previousPostId: String
+    $nextPostId: String
+  ) {
+    site {
+      siteMetadata {
+        title
+        siteUrl
+      }
+    }
+    markdownRemark(id: { eq: $id }) {
+      id
+      excerpt(pruneLength: 160)
       html
       frontmatter {
         title
-        date
-        keywords
+        date(formatString: "MMMM DD, YYYY")
         description
-        featuredimage
-        author
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
-      id
+    }
+    previous: markdownRemark(id: { eq: $previousPostId }) {
       fields {
         slug
       }
+      frontmatter {
+        title
+      }
+    }
+    next: markdownRemark(id: { eq: $nextPostId }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+      }
     }
   }
-`;
+`

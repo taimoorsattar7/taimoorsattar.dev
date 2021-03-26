@@ -5,6 +5,7 @@ date: 2021-03-16T02:50:12.321Z
 tags:
   - Github Pages
   - hosting
+featuredimage: github-pages-host.jpg
 featuredpost: false
 ---
 Github is the server way for a version control system using Git, tracks your files, and helps coordinate on project files among a group of people.

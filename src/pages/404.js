@@ -1,30 +1,29 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { graphql } from 'gatsby';
 
-import PrimaryLayout from '../templates/primarylayout';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
-import '../components/_error.scss';
+const NotFoundPage = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata.title;
 
-import SEO from '../components/SEO';
+  return (
+    <Layout location={location} title={siteTitle}>
+      <SEO title="404: Not Found" />
+      <h1>404: Not Found</h1>
+      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    </Layout>
+  );
+};
 
-const Four0Four = () => (
-  <>
-    <PrimaryLayout>
-      <SEO />
+export default NotFoundPage;
 
-      <div className="wrapper wrapper--narrow">
-        <div className="error">
-          <div className="headline headline__error-text headline--mid">
-            404 PAGE
-          </div>
-
-          <div className="headline headline__text headline--mid">
-            <Link to="/">HOME PAGE</Link>
-          </div>
-        </div>
-      </div>
-    </PrimaryLayout>
-  </>
-);
-
-export default Four0Four;
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`;

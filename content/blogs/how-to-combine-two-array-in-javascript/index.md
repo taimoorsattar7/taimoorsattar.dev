@@ -6,7 +6,6 @@ tags:
   - javascript
   - arrays
 featuredpost: false
-featuredimage: /img/development.jpg
 ---
 You can combine arrays in Javascript in two ways:
 
@@ -23,7 +22,8 @@ var fruit3 = ["strawberries", "raspberries", "blueberries"];
 
 ## use concat (ES5 version):
 
-If you want to support the old browser, you can use the ES5 version `concat` in Javascript. Perform the combination operation javascript as below.
+If you want to support the old browser, you can use the ES5 version `concat` in Javascript.
+ Perform the combination operation javascript as below.
 
 ```
 var cart1 = fruit1.concat(fruit2);
@@ -41,7 +41,8 @@ var fruits2 = [].concat(fruit1, fruit2, fruit3);
 
 ## Spread operation / destructuring (ES6 version)
 
-Spread operation is easy to write in Javascript. Perform the combination operation using spread operation in javascript as below:
+Spread operation is easy to write in Javascript
+. Perform the combination operation using spread operation in javascript as below:
 
 ```
 const cart3 = [...fruit1, ...fruit2, ...fruit2];

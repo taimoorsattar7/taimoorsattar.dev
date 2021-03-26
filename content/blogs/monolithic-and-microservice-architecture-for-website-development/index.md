@@ -7,7 +7,6 @@ tags:
   - microservice
   - website
 featuredpost: false
-featuredimage: /img/development.jpg
 ---
 As a **monolithic developer**, the application which includes front-end code, admin panel, database, email handler, etc sits on the **same server** (has RAM and CPU). At some point load on, **database** increases due to traffic and we have to increase the server CPU and RAM. But this increase will affect not the database but also on front-end code, admin panel, email handler, etc.
 
@@ -19,4 +18,4 @@ Consider an Application and divide it into three portions as follow:
 - backend admin
 - backend database
 
-[WordPress](https://taimoorsattar.dev/blogs/wordpress) for a monolithic developer makes websites; use a certain plugin, the theme for the website and deploy it on the Hosting website which gives service for hosting website.
+[WordPress](https://taimoorsattar.dev/blogs/wordpress) for a monolithic developer makes websites; use a certain plugin, the theme for the website and deploy it on the Hosting website which gives service for hosting website.

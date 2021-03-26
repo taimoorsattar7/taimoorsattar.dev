@@ -8,7 +8,6 @@ tags:
   - regex
   - email validation
 featuredpost: false
-featuredimage: /img/email.jpg
 ---
 We can define regular expressions to match the patterns in strings. To validate the email address, we can define the regex expression for email validation as below.
 

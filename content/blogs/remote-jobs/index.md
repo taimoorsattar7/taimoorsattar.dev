@@ -7,7 +7,6 @@ date: 2020-03-26T16:02:07.583Z
 tags:
   - remote jobs
 featuredpost: true
-featuredimage: /img/remote-work.jpg
 ---
 Remote Jobs helps you to eliminate the 9-5 working hours of the office and you can earn extra money. But finding remote jobs is not as easy as we think and are different from walk-in interviews. In the application, you present your portfolio and work experience that counts.
 

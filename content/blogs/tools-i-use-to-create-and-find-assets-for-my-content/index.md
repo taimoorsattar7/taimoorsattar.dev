@@ -7,7 +7,6 @@ tags:
   - photos
   - content
 featuredpost: false
-featuredimage: /img/remote-work.jpg
 ---
 There are tons of resources on the internet where you can find and create photos and videos for your content. I have mentioned some of the recommended sites to find assets for yourself.
 
