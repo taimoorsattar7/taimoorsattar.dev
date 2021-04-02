@@ -1,5 +1,8 @@
 ---
-title: Workflow to build Static Website
+exerpt: Develop, build, and deploy your static website up on the web. Static
+  website provides you the
+  simple developer experience, better performance, lower cost, and greater scalability.
+buyLink: https://gumroad.com/l/workflow-to-build-static-website
 pricing:
   - name: Starter
     price: 5
@@ -23,15 +26,12 @@ pricing:
     btnlink: https://gumroad.com/l/workflow-to-build-static-website
     exerpt: Get full access to the book explained with the code example and project
       files.
-exerpt: Develop, build, and deploy your static website up on the web. Static
-  website provides you the
-  simple developer experience, better performance, lower cost, and greater scalability.
+title: Workflow to build Static Website
 date: 2015-05-01T22:12:03.284Z
+featuredimage: cover.jpg
 tags:
   - static
   - website
-featuredimage: cover.jpg
-buyLink: https://gumroad.com/l/workflow-to-build-static-website
 popular: true
 ---
 The static website generates the content on the browser without any modification/processing as it's already pre-rendered. That's why static websites have  **better performance for page speed load**. We cover the project infrastructure to develop, build, and deploy websites on the web. We use *Gatsby* infrastructure for building blazing fast static website, project hosted on *GitHub* for version control, and deploy on *Netlify*.
@@ -57,6 +57,14 @@ Here, we have highlighted what you can learn from the book.
 In past, the website was deployed in a monolithic fashion which means all the *services* that run the website live on the same server. *Services* includes front-end, back-end / Database. That's means if the server is down all the services will be down.
 
 So, let's take another approach (Microservices)... In microservices, all the services run on different servers. If one of the servers is down, it will not affect other services. We can easily find bugs as we have to check only specific portions on the server. This also helps to boost the performance (page speed) of the website.
+
+Smoothen your developing workflow by customizing the VScode editor.
+
+![Customize VScode](vscode-customize.jpg "Customize VScode")
+
+Push your changes on Netlify via Git
+
+![](netlify-via-github.jpg)
 
 ## What you can build next???
 
