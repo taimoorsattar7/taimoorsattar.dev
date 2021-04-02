@@ -34,7 +34,7 @@ tags:
   - website
 popular: true
 ---
-bhgThe static website generates the content on the browser without any modification/processing as it's already pre-rendered. That's why static websites have  **better performance for page speed load**. We cover the project infrastructure to develop, build, and deploy websites on the web. We use *Gatsby* infrastructure for building blazing fast static website, project hosted on *GitHub* for version control, and deploy on *Netlify*.
+The static website generates the content on the browser without any modification/processing as it's already pre-rendered. That's why static websites have  **better performance for page speed load**. We cover the project infrastructure to develop, build, and deploy websites on the web. We use *Gatsby* infrastructure for building blazing fast static website, project hosted on *GitHub* for version control, and deploy on *Netlify*.
 
 That's not it... This book is not only learning about the specific tools but provides you the concepts to manage the project in fracture to build the website. We explain how to use Git in your project for version control and manage the project section with Git branches. You can avoid writing messy code with *prettier* and *ESlint*. Allow to write and manage your content with Netlify CMS on the server and makes your website crawlable by the search engine.
 
@@ -57,6 +57,14 @@ Here, we have highlighted what you can learn from the book.
 In past, the website was deployed in a monolithic fashion which means all the *services* that run the website live on the same server. *Services* includes front-end, back-end / Database. That's means if the server is down all the services will be down.
 
 So, let's take another approach (Microservices)... In microservices, all the services run on different servers. If one of the servers is down, it will not affect other services. We can easily find bugs as we have to check only specific portions on the server. This also helps to boost the performance (page speed) of the website.
+
+Smoothen your developing workflow by customizing the VScode editor.
+
+![Customize VScode](vscode-customize.jpg "Customize VScode")
+
+Push your changes on Netlify via Git
+
+![](netlify-via-github.jpg)
 
 ## What you can build next???
 
