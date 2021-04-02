@@ -1,5 +1,8 @@
 ---
-title: Workflow to build Static Website
+exerpt: Develop, build, and deploy your static website up on the web. Static
+  website provides you the
+  simple developer experience, better performance, lower cost, and greater scalability.
+buyLink: https://gumroad.com/l/workflow-to-build-static-website
 pricing:
   - name: Starter
     price: 5
@@ -23,18 +26,15 @@ pricing:
     btnlink: https://gumroad.com/l/workflow-to-build-static-website
     exerpt: Get full access to the book explained with the code example and project
       files.
-exerpt: Develop, build, and deploy your static website up on the web. Static
-  website provides you the
-  simple developer experience, better performance, lower cost, and greater scalability.
+title: Workflow to build Static Website
 date: 2015-05-01T22:12:03.284Z
+featuredimage: cover.jpg
 tags:
   - static
   - website
-featuredimage: cover.jpg
-buyLink: https://gumroad.com/l/workflow-to-build-static-website
 popular: true
 ---
-The static website generates the content on the browser without any modification/processing as it's already pre-rendered. That's why static websites have  **better performance for page speed load**. We cover the project infrastructure to develop, build, and deploy websites on the web. We use *Gatsby* infrastructure for building blazing fast static website, project hosted on *GitHub* for version control, and deploy on *Netlify*.
+bhgThe static website generates the content on the browser without any modification/processing as it's already pre-rendered. That's why static websites have  **better performance for page speed load**. We cover the project infrastructure to develop, build, and deploy websites on the web. We use *Gatsby* infrastructure for building blazing fast static website, project hosted on *GitHub* for version control, and deploy on *Netlify*.
 
 That's not it... This book is not only learning about the specific tools but provides you the concepts to manage the project in fracture to build the website. We explain how to use Git in your project for version control and manage the project section with Git branches. You can avoid writing messy code with *prettier* and *ESlint*. Allow to write and manage your content with Netlify CMS on the server and makes your website crawlable by the search engine.
 
