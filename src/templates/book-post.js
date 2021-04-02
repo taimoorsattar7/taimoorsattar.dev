@@ -19,6 +19,7 @@ const BookPost = ({ data, location }) => {
   const post = data.markdownRemark;
   let featureImg = post.frontmatter?.featuredimage?.childImageSharp?.fluid;
 
+  const avatar = data?.avatar?.childImageSharp?.fixed
 
   return (
     <Layout location={location}>
@@ -37,7 +38,21 @@ const BookPost = ({ data, location }) => {
 
           <div className="blogPost__info">
 
-            <span className="headline headline__sml headline--dull">
+          <span className="headline headline__sml headline--r-margin-sml">
+          By
+          </span>
+
+          {avatar && (
+            <Image
+              fixed={avatar}
+              className="img__margin-r"
+              imgStyle={{
+                borderRadius: `50%`,
+              }}
+            />
+          )}
+
+            <span className="headline headline__sml">
               <a className="headline--no-decor" href="/">
                 Taimoor Sattar
                 </a>
@@ -67,7 +82,7 @@ const BookPost = ({ data, location }) => {
           }
 
           <div
-            className="headline headline__text"
+            className="headline headline__text markdown"
             dangerouslySetInnerHTML={{ __html: post.html }}
           ></div>
         </div>
@@ -104,6 +119,13 @@ export default BookPost;
 
 export const query = graphql`
   query {
+    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      childImageSharp {
+        fixed(width: 40, height: 40, quality: 95) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
     markdownRemark(fields: { slug: { regex: "/books/" } }) {
       html
       frontmatter {

@@ -26,6 +26,16 @@
         max-width: 300px;
         height: auto;
     }
+
+    &__avatar-sml{
+        max-width: 20px;
+        height: auto;
+    }
+
+    &__margin-r{
+        margin-right: 20px;
+    }
+
     &__float-r{
 
         @include atMinMedium{

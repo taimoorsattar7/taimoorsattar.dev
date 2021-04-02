@@ -1,7 +1,5 @@
 ---
-exerpt: Develop, build, and deploy your static website up on the web. Static
-  website provides you the
-  simple developer experience, better performance, lower cost, and greater scalability.
+exerpt: Develop, build, and deploy your static website up on the web.
 buyLink: https://gumroad.com/l/workflow-to-build-static-website
 pricing:
   - name: Starter
@@ -26,7 +24,7 @@ pricing:
     btnlink: https://gumroad.com/l/workflow-to-build-static-website
     exerpt: Get full access to the book explained with the code example and project
       files.
-title: Workflow to build Static Website
+title: Workflow to build Static Website - ebook
 date: 2015-05-01T22:12:03.284Z
 featuredimage: cover.jpg
 tags:
@@ -34,9 +32,9 @@ tags:
   - website
 popular: true
 ---
-The static website generates the content on the browser without any modification/processing as it's already pre-rendered. That's why static websites have  **better performance for page speed load**. We cover the project infrastructure to develop, build, and deploy websites on the web. We use *Gatsby* infrastructure for building blazing fast static website, project hosted on *GitHub* for version control, and deploy on *Netlify*.
+The static website generates the <mark>content on the browser without any modification/processing as it's already pre-rendered</mark>. That's why static websites have **better performance for page speed load**, simple developer experience, low cost, and great scalability.
 
-That's not it... This book is not only learning about the specific tools but provides you the concepts to manage the project in fracture to build the website. We explain how to use Git in your project for version control and manage the project section with Git branches. You can avoid writing messy code with *prettier* and *ESlint*. Allow to write and manage your content with Netlify CMS on the server and makes your website crawlable by the search engine.
+This book covers how to build the infrastructure with Gatsby to deploy the website live. *Gatsby* is the front-end for modern web used to build blazing-fast static websites. We use *GitHub* for version control, and deploy the website on *Netlify*.
 
 ## Contents
 
@@ -52,22 +50,29 @@ Here, we have highlighted what you can learn from the book.
 * Write and Manage your content with Netlify CMS on the server
 * Allow the user to comment on the post
 
-## A Short history
 
-In past, the website was deployed in a monolithic fashion which means all the *services* that run the website live on the same server. *Services* includes front-end, back-end / Database. That's means if the server is down all the services will be down.
+***A Short history...*** In past, the website was deployed in a monolithic fashion which means all the *services* that run the website live on the same server. *Services* includes front-end, back-end / Database. That's means if the server is down all the services will be down. So, let's take another approach (Microservices)... In microservices, all the services run on different servers. If one of the servers is down, it will not affect other services. We can easily find bugs as we have to check only specific portions on the server. This also helps to boost the performance (page speed) of the website.
 
-So, let's take another approach (Microservices)... In microservices, all the services run on different servers. If one of the servers is down, it will not affect other services. We can easily find bugs as we have to check only specific portions on the server. This also helps to boost the performance (page speed) of the website.
+***Why to enroll...*** We are focus on building your concepts that relevant to modren day web and avoid repetation of thing. By the end of the learning the concepts of the books, <mark>you will be able to read the source code of developer and think from your own mind</mark>. You can expand the concepts (covered in this book) to front-end javascript framework. Initially, when I was starting out as a developer, I don't understands some of the *slangs files* on GitHub projects. 
 
-Smoothen your developing workflow by customizing the VScode editor.
+![Project Files Slangs](project-files-slangs.jpg "Project Files Slangs")
+
+> You can become a better developer by reading the source code of the good developer.  
+
+Avoid writing messy code with **prettier** and **ESlint** and relax your developing experience by customizing the VScode editor look.
 
 ![Customize VScode](vscode-customize.jpg "Customize VScode")
 
-Push your changes on Netlify via Git
+Allow to write, manage, and publish your content with Netlify CMS on the server to the front-end. That's manage via version ontrol, Github.
 
 ![](netlify-via-github.jpg)
 
 ## What you can build next???
 
-You can build your own large e-commerce site, SaaS application, or personal blog. Same as WordPress, which allows you to manage/publish content on the dashboard and display it on the front-end. This book guide you to create a website (same as WordPress) with Gatsby. Static site generator (Gatsby) has a fast page load speed and better developer experience. The website that's loads fast has better sales and user engagement. You can look at the result generated with the lighthouse for the website that serves on Gatsby.
+You can build your own large e-commerce site, SaaS application, or personal blog. Same as WordPress, which allows you to manage/publish content on the dashboard. Static site generator (like Gatsby) has a fast page load speed and better developer experience. The website with fast page load leads to better sales and user engagement. You can look at the result generated with the lighthouse for the website that serves on Gatsby.
 
-![](lighthouse-measure.jpg)
+![](lighthouse-measure.png)
+
+***Pricing Policy***... We have really relax pricing policy. Enroll in the course with a montly pricing and if you can done you can easily cancel your enrollment.  
+
+If you enjoy my work feel free to share it with your friends and family. 📢
