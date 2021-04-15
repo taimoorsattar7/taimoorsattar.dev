@@ -1,12 +1,17 @@
 ---
-title: scroll javascript
-description: scroll javascript
+title: Respond on Scroll with JavaScript
+description: We can respond on page scroll with JavaScript e.g. navigate to the
+  top of the page, reveal content, progress bar on Scroll.
 date: 2021-04-15T19:13:20.478Z
+tags:
+  - scroll
+  - javascript
 featuredpost: false
+featuredimage: scroll.png
 ---
 In this tutorial, we build a page that responds on scroll. Here are the things that we will cover in this tutorial.
 
-* Click to Scroll to the top of the page
+* Click to navigate to the top of the page
 * Animate to reveal the image when its in view
 * Display scroll position in percentage on screen
 
@@ -137,8 +142,6 @@ Instead of the **scrollTo** property of the window object, we can also use other
 | 3.  | `window.scrollTo()`     | Scrolls to a particular set of coordinates in the document. |
 | 4.  | `window.scrollToTop()`  | Scrolls to a particular set of coordinates in the document  |
 
-
-
 Next, we need to implement a scroll position progress bar.
 
 In Javascript, you can listen to the `scroll` event listener so that, when the page scrolls, it can execute certain functions. 
@@ -197,8 +200,6 @@ Also, we need to figure out what value we can use for HTML elements to calculate
 | 5.  | `HTMLElement.clientHeight` | Calculated as CSS height + CSS padding - height of horizontal scrollbar (if present). |
 | 6.  | `HTMLElement.clientWidth`  | Calculated as CSS width + CSS padding - height of vertical scrollbar (if present).    |
 
-
-
 So, using the above information, we can define the scroll behavior of the page. We can define `handleScroll` function as below: 
 
 ```javascript
@@ -255,7 +256,3 @@ function reveal_img_scroll(scroll_page){
 ```
 
 Now scroll down into view of the image, the image will animate to 100% opacity.
-
-<video controls>
-  <source src="https://storage.googleapis.com/masterpro/code/responsive-design/animation/page-scroll.mp4" type="video/mp4">
-</video>
