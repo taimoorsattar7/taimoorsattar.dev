@@ -102,7 +102,7 @@ const BookPost = ({ data, location }) => {
             width="480"
             height="320"
             Style={
-              'display:block;border:1px solid #EEE; background:white;margin:auto;margin-top: 50px;'
+              'width: 100%;display:block;border:1px solid #EEE;background:white;margin:auto;margin-top: 50px;'
             }
             frameborder="0"
             scrolling="no"

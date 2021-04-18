@@ -1,6 +1,5 @@
 {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
     "editor.detectIndentation": true,
     "editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": false,
@@ -66,5 +65,15 @@
     "editor.formatOnPaste": false,
     "editor.cursorSmoothCaretAnimation": true,
     "editor.smoothScrolling": true,
-    "php.suggest.basic": false
+    "php.suggest.basic": false,
+    "editor.formatOnSave": true,
+    "eslint.alwaysShowStatus": true,
+    "eslint.probe": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "html",
+      "vue"
+    ]
   }

@@ -40,12 +40,14 @@ const BlogPostTemplate = ({ data, location }) => {
   const { previous, next } = data
 
   let featureImg = post.frontmatter?.featuredimage?.childImageSharp?.fluid;
+  
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
+        description={post.frontmatter.exerpt || post.excerpt}
+        image={featureImg.src}
       />
       <div className="wrapper wrapper--narrow">
         <div className="blogPost">
@@ -118,7 +120,7 @@ const BlogPostTemplate = ({ data, location }) => {
             width="480"
             height="320"
             Style={
-              'display:block;border:1px solid #EEE; background:white;margin:auto;margin-top: 50px;'
+              'width: 100%;display:block;border:1px solid #EEE;background:white;margin:auto;margin-top: 50px;'
             }
             frameborder="0"
             scrolling="no"

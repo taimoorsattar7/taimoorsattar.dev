@@ -21,9 +21,11 @@ const SEO = ({ title, description, image, lang, meta }) => {
     `
   )
 
+  console.log(image)
+
   const metaSiteUrl = site.siteMetadata.siteUrl
-  const metaDescription = site.siteMetadata.description || description
-  const metaImage = image;
+  const metaDescription = description || site.siteMetadata.description 
+  const metaImage = image ? `${metaSiteUrl}${image}` : "";
   const defaultTitle = site.siteMetadata?.title
 
   return (
@@ -42,12 +44,11 @@ const SEO = ({ title, description, image, lang, meta }) => {
         { property: `og:description`, content: metaDescription },
         { name: `twitter:description`, content: metaDescription },
 
-        { name: `image`, content: `${metaSiteUrl}${metaImage}` },
-        { name: `og:image`, content: `${metaSiteUrl}${metaImage}` },
-        { name: `twitter:image`, content: `${metaSiteUrl}${metaImage}` },
+        { name: `image`, content: metaImage },
+        { name: `og:image`, content: metaImage },
+        { name: `twitter:image`, content: metaImage },
 
         { property: `og:type`, content: `website` },
-        { name: `twitter:card`, content: `summary` },
         { name: `twitter:creator`, content: site.siteMetadata?.social?.twitter || `` },
 
         { name: `og:url`, content: metaSiteUrl },
