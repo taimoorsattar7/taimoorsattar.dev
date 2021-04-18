@@ -27,7 +27,7 @@ const BookPost = ({ data, location }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
-        image={featureImg.src}
+        image={featureImg?.src ?? ""}
       />
 
       <div className="wrapper wrapper--narrow">
