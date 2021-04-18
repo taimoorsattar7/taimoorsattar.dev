@@ -47,7 +47,7 @@ const BlogPostTemplate = ({ data, location }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.exerpt || post.excerpt}
-        image={featureImg.src}
+        image={featureImg.src || ""}
       />
       <div className="wrapper wrapper--narrow">
         <div className="blogPost">
