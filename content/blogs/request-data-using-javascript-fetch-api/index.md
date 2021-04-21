@@ -1,5 +1,5 @@
 ---
-title: request data using JavaScript Fetch API
+title: How to request data using JavaScript Fetch API
 description: API is the route (URL) where we can send the request to retrieve
   and manipulate the data based on the information we provide.
 date: 2021-04-21T02:17:28.784Z
