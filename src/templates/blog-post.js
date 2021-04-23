@@ -1,64 +1,78 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
+import toast, { Toaster } from "react-hot-toast"
+
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 
 import Bio from "../components/bio"
+import SubscribeForm from "../components/subscribeForm"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Modal from "../components/Modal"
+
+import "../styles/markdown.scss"
 
 const month_name = num => {
   const monthName = {
-    '0': 'Jan',
-    '1': 'Feb',
-    '2': 'Mar',
-    '3': 'Apr',
-    '4': 'May',
-    '5': 'Jun',
-    '6': 'Jul',
-    '7': 'Aug',
-    '8': 'Sep',
-    '9': 'Oct',
-    '10': 'Nov',
-    '11': 'Dec',
-  };
-  return monthName[num];
-};
+    0: "Jan",
+    1: "Feb",
+    2: "Mar",
+    3: "Apr",
+    4: "May",
+    5: "Jun",
+    6: "Jul",
+    7: "Aug",
+    8: "Sep",
+    9: "Oct",
+    10: "Nov",
+    11: "Dec",
+  }
+  return monthName[num]
+}
 
 const format_date = date => {
-  let date_var = new Date(date);
+  let date_var = new Date(date)
   var format_date = `${month_name(
     date_var.getUTCMonth()
-  )} ${date_var.getDate()},${date_var.getFullYear()}`;
-  return format_date;
-};
-
+  )} ${date_var.getDate()},${date_var.getFullYear()}`
+  return format_date
+}
 
 const BlogPostTemplate = ({ data, location }) => {
-  const url = typeof window !== 'undefined' ? window.location.href : '';
+  const url = typeof window !== "undefined" ? window.location.href : ""
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
 
-  let featureImg = post.frontmatter?.featuredimage?.childImageSharp?.fluid;
-  
+  const [showModal, setShowModal] = useState(false)
+
+  let featureImg = post.frontmatter?.featuredimage?.childImageSharp?.fluid
+
+  useEffect(() => {
+    const subscribe = localStorage.getItem("subscribe")
+    // const close = localStorage.getItem("close")
+    // const date = localStorage.getItem("date")
+    setShowModal(subscribe == "true" ? false : true)
+  }, [])
 
   return (
     <Layout location={location} title={siteTitle}>
+      <Toaster />
+
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.exerpt || post.excerpt}
         image={featureImg?.src ?? ""}
       />
+
       <div className="wrapper wrapper--narrow">
         <div className="blogPost">
-          <h1 className="headline">
-            {post.frontmatter.title}
-          </h1>
+          <h1 className="headline">{post.frontmatter.title}</h1>
 
           <div className="blogPost__info">
             <span className="headline headline__sml headline--dull">
               Taimoor Sattar
-              </span>
+            </span>
             <span>・</span>
             <time
               className="headline headline__sml  headline--dull"
@@ -69,12 +83,11 @@ const BlogPostTemplate = ({ data, location }) => {
           </div>
 
           {featureImg && (
-            <Image className="blogPost__img-main"
-              fluid={featureImg} />
+            <Image className="blogPost__img-main" fluid={featureImg} />
           )}
 
           <div
-            className="markdown headline headline__text"
+            className="headline headline__text markdown"
             dangerouslySetInnerHTML={{ __html: post.html }}
           ></div>
         </div>
@@ -114,15 +127,31 @@ const BlogPostTemplate = ({ data, location }) => {
             </a>
           </div>
 
+          <div>
+            <Modal
+              title="Subscribe to my Newsletter"
+              body="Never Miss any update from us."
+              onClose={() => setShowModal(false)}
+              timer={9000}
+              show={showModal}
+            >
+              <SubscribeForm
+                onClose={() => setShowModal(false)}
+                onSuccess={msg => toast.success(msg)}
+                onFail={msg => toast.error(msg)}
+              />
+            </Modal>
+          </div>
+
           <iframe
             title="Substack"
             src="https://taimoor.substack.com/embed"
             width="480"
             height="320"
             Style={
-              'width: 100%;display:block;border:1px solid #EEE;background:white;margin:auto;margin-top: 50px;'
+              "width: 100%;display:block;border:1px solid #EEE;background:white;margin:auto;margin-top: 50px;"
             }
-            frameborder="0"
+            frameBorder="0"
             scrolling="no"
           ></iframe>
         </div>

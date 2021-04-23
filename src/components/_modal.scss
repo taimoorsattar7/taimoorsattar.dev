@@ -1,0 +1,90 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+
+    .enter-done {
+      opacity: 1;
+      pointer-events: visible;
+    }
+    .exit {
+      opacity: 0;
+    }
+
+    &__content {
+      max-width: 500px;
+      width: 100%;
+      padding: 18px;
+      background-color: #fff;
+      transition: all 0.3s ease-in-out;
+      border-radius: 3px;
+      border: 1px solid lightgrey;
+    }
+
+    &__close-x {
+      cursor: pointer;
+
+      width: 20px;
+      height: 19px;
+  
+      z-index: 10;
+      margin-top: 8px;
+      margin-left: 25px;
+      position: relative;
+      float: right;
+      
+      &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 20px;
+          height: 3px;
+          background-color: #550000;
+          
+          transform-origin: 100% 0;
+          transition: transform .3s ease-out;
+  
+          transform: rotate(45deg) scaleX(1.25);
+      }
+  
+      .site-header__menu-icon__middle {
+          opacity: 0;
+          transform: scaleX(0);
+      }
+  
+      &::after {
+  
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 20px;
+          height: 3px;
+          background-color: #550000;
+          
+          transform-origin: 0 0;
+          transition: transform .3s ease-out;
+  
+          transform: rotate(-45deg) scaleX(1.25);
+      }
+    }
+  }
+  
+
+  
+  
+  
+  
+
+
+  
+  

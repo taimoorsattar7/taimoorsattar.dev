@@ -12,7 +12,6 @@ import '../components/_blog-post.scss';
 import '../components/_social.scss';
 import '../components/_img.scss';
 import '../styles/_btn.scss';
-import '../styles/markdown.scss';
 
 const BookPost = ({ data, location }) => {
   const url = typeof window !== 'undefined' ? window.location.href : '';
@@ -66,7 +65,7 @@ const BookPost = ({ data, location }) => {
 
           <div>
             <a className="headline--no-decor" href="#pricing">
-              <button className="btn btn--ctr-Atmed btn__r-margin">
+              <button className="btn btn__slice btn--ctr-Atmed btn__r-margin">
                 <span className="headline headline__text headline--b">
                   BUY THE BOOK
                   </span>
@@ -82,7 +81,7 @@ const BookPost = ({ data, location }) => {
           }
 
           <div
-            className="headline headline__text markdown"
+            className="headline headline__text"
             dangerouslySetInnerHTML={{ __html: post.html }}
           ></div>
         </div>
