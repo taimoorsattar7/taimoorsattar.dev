@@ -47,6 +47,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const [showModal, setShowModal] = useState(false)
 
   let featureImg = post.frontmatter?.featuredimage?.childImageSharp?.fluid
+  const avatar = data?.avatar?.childImageSharp?.fixed
 
   useEffect(() => {
     const subscribe = localStorage.getItem("subscribe")
@@ -58,18 +59,30 @@ const BlogPostTemplate = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Toaster />
-
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.exerpt || post.excerpt}
         image={featureImg?.src ?? ""}
+        schemaType={"blog"}
       />
 
       <div className="wrapper wrapper--narrow">
         <div className="blogPost">
-          <h1 className="headline">{post.frontmatter.title}</h1>
+          <h1 className="headline">
+            <b>{post.frontmatter.title}</b>
+          </h1>
 
           <div className="blogPost__info">
+            {avatar && (
+              <Image
+                fixed={avatar}
+                className="img__margin-r"
+                imgStyle={{
+                  borderRadius: `50%`,
+                }}
+              />
+            )}
+
             <span className="headline headline__sml headline--dull">
               Taimoor Sattar
             </span>
@@ -168,6 +181,13 @@ export const pageQuery = graphql`
     $previousPostId: String
     $nextPostId: String
   ) {
+    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      childImageSharp {
+        fixed(width: 40, height: 40, quality: 95) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
     site {
       siteMetadata {
         title

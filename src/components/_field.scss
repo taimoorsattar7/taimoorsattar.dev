@@ -1,12 +1,11 @@
-.field{
-    margin-top: 15px;
-    margin-bottom: 15px;
+.field {
+  margin-top: 15px;
+  margin-bottom: 15px;
 
-    &__label{
-        display: inline-block;
-        background-color: black;
-        color: white;
-        padding-left: 8px;
-        padding-right: 8px;
-    }
+  &__label {
+    display: inline-block;
+    background-color: black;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 }

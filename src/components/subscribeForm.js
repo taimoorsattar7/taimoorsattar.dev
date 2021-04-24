@@ -50,7 +50,7 @@ const SubscribeForm = props => {
       <form className="field" onSubmit={handleSubmit}>
         <div className="field--gap">
           <label
-            className="headline headline__sml field__label"
+            className="headline headline__sml headline--white field__label"
             htmlFor="name"
             required
           >
@@ -69,7 +69,7 @@ const SubscribeForm = props => {
 
         <div className="field--gap">
           <label
-            className="headline headline__sml field__label"
+            className="headline headline__sml headline--white field__label"
             htmlFor="email"
             required
           >

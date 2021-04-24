@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const SEO = ({ title, description, image, lang, meta }) => {
+const SEO = ({ title, description, image, date, schemaType, lang, meta }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -21,12 +21,39 @@ const SEO = ({ title, description, image, lang, meta }) => {
     `
   )
 
-  console.log(image)
-
   const metaSiteUrl = site.siteMetadata.siteUrl
-  const metaDescription = description || site.siteMetadata.description 
-  const metaImage = image ? `${metaSiteUrl}${image}` : "";
+  const metaDescription = description || site.siteMetadata.description
+  const metaImage = image ? `${metaSiteUrl}${image}` : ""
   const defaultTitle = site.siteMetadata?.title
+
+  const main_schema = {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    name: "Taimoor Sattar",
+    url: metaSiteUrl,
+    sameAs: [
+      "https://www.linkedin.com/in/taimoorsattar",
+      "https://twitter.com/taimoorsattar7",
+    ],
+  }
+
+  const blog_schema = {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    headline: defaultTitle,
+    description: metaDescription,
+    thumbnailUrl: metaImage,
+    datePublished: date,
+    dateModified: date,
+    image: metaImage,
+    publisher: [
+      {
+        "@type": "Person",
+        name: "Taimoor Sattar",
+      },
+    ],
+    // mainEntityOfPage: url,
+  }
 
   return (
     <Helmet
@@ -49,13 +76,25 @@ const SEO = ({ title, description, image, lang, meta }) => {
         { name: `twitter:image`, content: metaImage },
 
         { property: `og:type`, content: `website` },
-        { name: `twitter:creator`, content: site.siteMetadata?.social?.twitter || `` },
+        {
+          name: `twitter:creator`,
+          content: site.siteMetadata?.social?.twitter || ``,
+        },
 
         { name: `og:url`, content: metaSiteUrl },
-        { name: `twitter:url`, content: metaSiteUrl }
-
+        { name: `twitter:url`, content: metaSiteUrl },
       ].concat(meta)}
-    />
+    >
+      <script type="application/ld+json">{JSON.stringify(main_schema)}</script>
+
+      {schemaType === "blog" ? (
+        <script type="application/ld+json">
+          {JSON.stringify(blog_schema)}
+        </script>
+      ) : (
+        ""
+      )}
+    </Helmet>
   )
 }
 
