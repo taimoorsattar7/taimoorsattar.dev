@@ -1,6 +1,7 @@
 ---
-title: Layout in CSS
-description: Layout in CSS
+title: 4 Ways to define layout in CSS
+description: Layout in CSS makes your content sit in a row or column. A Flexible
+  layout helps to fit more content in less space.
 date: 2021-04-24T19:00:02.678Z
 tags:
   - layout
