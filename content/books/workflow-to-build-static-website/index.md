@@ -24,7 +24,7 @@ pricing:
     btnlink: https://gumroad.com/l/workflow-to-build-static-website
     exerpt: Get full access to the book explained with the code example and project
       files.
-title: Workflow to build Static Website - ebook
+title: How to build JAMstack site - ebook
 date: 2015-05-01T22:12:03.284Z
 featuredimage: cover.jpg
 tags:
@@ -32,54 +32,57 @@ tags:
   - website
 popular: true
 ---
-The static website generates the <mark>content on the browser without any modification/processing as it's already pre-rendered</mark>. That's why static websites have **better performance for page speed load**, simple developer experience, low cost, and great scalability.
+<mark>Are you tired of website performance?</mark> JAMstack is the modern way to build websites that delivers better performance. The technologies in the stack include JavaScript frameworks, Static Site Generators, Headless CMSs, and CDNs. The benefits of using JAMstack are:
 
-This book covers how to build the infrastructure with Gatsby to deploy the website live. *Gatsby* is the front-end for modern web used to build blazing-fast static websites. We use *GitHub* for version control, and deploy the website on *Netlify*.
+1. Better Performance
+2. Higher Security
+3. Cheaper, Easier Scaling
+4. Better Developer Experience
 
-## Contents
 
-Here, we have highlighted what you can learn from the book.
+## The Stack 👨‍💻
 
-* Required Tools for the project?
+There are a lot of frameworks to create JAMstack architecture on the internet. But the more important thing is to understand the concepts and shifting between different frameworks would be easier. The stack we cover is listed as below:
+
+|Sr# | Tech | Description |
+|:--- |:---- |:----:|
+|1.| Gatsby | Front-end for modern web used to build blazing-fast static websites. |
+|2.| React | JavaScript library for building user Interface. Gatsby's framework is built on React. |
+|3.| Netlify CMS | Headless CMS |
+|4.| Database | Airtable |
+|5.| Email Subscription | Substack |
+|6.| Comments | [utteranc.es](https://utteranc.es) |
+|7.| Code Format | Prettier, Eslint |
+|8.| GitHub / Git | Version Control Project |
+|9.| Netlify (Hosting/Functions/dev/form submissions) | Hosting Platform to deploy the website and execute back-end functions. |
+
+Here, we have highlighted what we cover in the content.
+
 * Introduction to Gatsby (*build on React*)
-* Manage the project with Git
-* Add Git branches in the project for the new features.
-* Hosting on Netlify
-* Follow coding standards with Prettier and ESlint
-* Website for SEO / Optimizes the image with Gatsby Sharp.
-* Write and Manage your content with Netlify CMS on the server
+* Version control the project with Git/branches.
+* Deploy the project on Netlify
+* Execute backend function with Netlify Functions
+* Handle form submission with Netlify Functions
+* Coding standards/format with Prettier and ESlint
+* SEO / Image with Gatsby Sharp.
+* Write and Manage your content with Netlify CMS
 * Allow the user to comment on the post
 
-***A Short history...*** In the past, the website was deployed in a monolithic fashion which means all the *services* that run the website live on the same server. *Services* includes front-end, back-end / Database. That's means if the server is down all the services will be down. So, let's take another approach (Microservices)... In microservices, all the services run on different servers. If one of the servers is down, it will not affect other services. We can easily find bugs as we have to check only specific portions on the server. This also helps to boost the performance (page speed) of the website.
+## Why choose this course 🤔
 
-***Why to enroll...*** We are focus on building your concepts that relevant to the modern-day web and avoid repetition of things. By the end of learning the concepts of the books, <mark>you will be able to read the source code of the developer and think from your own mind</mark>. You can expand the concepts (covered in this book) to the front-end javascript framework. Initially, when I was starting out as a developer, I don't understand some of the *slangs files* on GitHub projects. 
+The course content is a package with the content that helps you to develop the complete website/product. <mark>The content focus to build your concepts that relevant to the modern-day web and avoid repetition of things.</mark>
+ 
+## What we are building 🏗️
 
-![Project Files Slangs](project-files-slangs.jpg "Project Files Slangs")
-
-> You can become a better developer by reading the source code of a good developer.  
-
-Avoid writing messy code with **prettier** and **ESlint** and relax your developing experience by customizing the VScode editor look.
-
-![Customize VScode](vscode-customize.jpg "Customize VScode")
-
-You will learn to handle the form submission via Netlify forms and receive the user message in the inbox via webhooks.
-
-![Netlify Forms](form-submission-netlify.jpg)
-
-Moreover, we learn to handle API request using Netlify functions and store our data in the Airtable.
-
-![Netlify function](netlify-functionsss.jpg)
-
-Allow to write, manage, and publish your content with Netlify CMS on the server to the front-end. That's managed via version control, Github.
+In the course, we build a blog site. The site allows you to manage posts via Netlify CMS, form submission via Netlify forms, and track user download via Netlify function/ Airtable.
 
 ![](netlify-via-github.jpg)
 
-## What you can build next???
+<mark>You can scale the concept of this site to build your own large e-commerce site, SaaS application, or personal blog.</mark>
 
-You can build your own large e-commerce site, SaaS application, or personal blog. Same as WordPress, which allows you to manage/publish content on the dashboard. Static site generator (like Gatsby) has a fast page load speed and better developer experience. A website with a fast page load leads to better sales and user engagement. You can look at the result generated with the lighthouse for the website that serves on Gatsby.
 
-![](lighthouse-measure.png)
+## Pricing 💸
 
-***Pricing Policy***... We have really relaxed pricing policy. Enroll in the course with monthly pricing and you can easily cancel your enrollment as you like.  
+I don't want to charge an amount if you don't like the content. We have 👀 free content for you to get you started. If you are interested to learn more, you can subscribe to the content.
 
 If you enjoy my work feel free to share it with your friends and family. 📢
