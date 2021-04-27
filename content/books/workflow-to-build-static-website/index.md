@@ -1,5 +1,6 @@
 ---
-exerpt: Develop, build, and deploy your static website up on the web.
+exerpt: Build the site with Better Performance, Higher Security, Cheaper/Easier
+  Scaling and have Better Developer Experience.
 buyLink: https://gumroad.com/l/workflow-to-build-static-website
 pricing:
   - name: Starter
@@ -38,6 +39,8 @@ popular: true
 2. Higher Security
 3. Cheaper, Easier Scaling
 4. Better Developer Experience
+
+
 
 
 ## The Stack 👨‍💻
