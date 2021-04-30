@@ -3,7 +3,16 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const SEO = ({ title, description, image, date, schemaType, lang, meta }) => {
+const SEO = ({
+  title,
+  description,
+  slug,
+  image,
+  date,
+  schemaType,
+  lang,
+  meta,
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -23,7 +32,10 @@ const SEO = ({ title, description, image, date, schemaType, lang, meta }) => {
 
   const metaSiteUrl = site.siteMetadata.siteUrl
   const metaDescription = description || site.siteMetadata.description
+
   const metaImage = image ? `${metaSiteUrl}${image}` : ""
+  const metaPageUrl = `${metaSiteUrl}${slug}`
+
   const defaultTitle = site.siteMetadata?.title
 
   const main_schema = {
@@ -52,7 +64,15 @@ const SEO = ({ title, description, image, date, schemaType, lang, meta }) => {
         name: "Taimoor Sattar",
       },
     ],
-    // mainEntityOfPage: url,
+    mainEntityOfPage: metaPageUrl,
+  }
+
+  const book_schema = {
+    "@context": "http://schema.org/",
+    "@id": metaPageUrl,
+    "@type": "Book",
+    name: defaultTitle,
+    bookFormat: { "@id": "http://schema.org/EBook" },
   }
 
   return (
@@ -90,6 +110,14 @@ const SEO = ({ title, description, image, date, schemaType, lang, meta }) => {
       {schemaType === "blog" ? (
         <script type="application/ld+json">
           {JSON.stringify(blog_schema)}
+        </script>
+      ) : (
+        ""
+      )}
+
+      {schemaType === "book" ? (
+        <script type="application/ld+json">
+          {JSON.stringify(book_schema)}
         </script>
       ) : (
         ""

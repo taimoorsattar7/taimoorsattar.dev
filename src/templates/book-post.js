@@ -16,6 +16,7 @@ import "../styles/_btn.scss"
 const BookPost = ({ data, location }) => {
   const url = typeof window !== "undefined" ? window.location.href : ""
   const post = data.markdownRemark
+  const slug = data.markdownRemark.fields.slug
   let featureImg = post.frontmatter?.featuredimage?.childImageSharp?.fluid
 
   const avatar = data?.avatar?.childImageSharp?.fixed
@@ -26,6 +27,8 @@ const BookPost = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
         image={featureImg?.src ?? ""}
+        slug={slug}
+        schemaType={"book"}
       />
 
       <div className="wrapper wrapper--narrow">
@@ -118,6 +121,9 @@ export const query = graphql`
     }
     markdownRemark(fields: { slug: { regex: "/books/" } }) {
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
         exerpt

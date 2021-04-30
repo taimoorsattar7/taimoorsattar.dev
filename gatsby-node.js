@@ -43,10 +43,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   if (posts.length > 0) {
     posts.forEach((post, index) => {
+      const currentPostId = posts[index].id
       const previousPostId = index === 0 ? null : posts[index - 1].id
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
-      let slug_pg = post.fields.slug;
+      let slug_pg = post.fields.slug
 
       if (slug_pg.includes("/blogs")) {
         createPage({
@@ -54,6 +55,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           component: blogPost,
           context: {
             id: post.id,
+            currentPostId,
             previousPostId,
             nextPostId,
           },
@@ -66,6 +68,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           component: bookPost,
           context: {
             id: post.id,
+            currentPostId,
             previousPostId,
             nextPostId,
           },

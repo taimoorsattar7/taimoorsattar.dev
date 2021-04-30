@@ -1,5 +1,5 @@
 ---
-title: Float in CSS place the content side-by-side
+title: Float in CSS
 description: The float CSS property places an element on the left or right side
   with respect to other elements, allowing text and inline elements to wrap
   around it.

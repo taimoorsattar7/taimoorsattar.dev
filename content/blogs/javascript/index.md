@@ -15,19 +15,20 @@ Javascript is used for dynamic content appearing without refreshing the page and
 
 If you are a beginner, you need to learn the <mark>basics of javascript</mark>. We have covered the series of articles that you can follow in sequence as below:
 
-1. Learn to create a basic website using HTML, CSS, and Javascript.
-2. You often have to deal with [Manipulating The DOM Using Javascript](https://taimoorsattar.dev/blogs/manipulate-the-dom-using-javascript/)
-3. [Conditional Statements in JavaScript](https://taimoorsattar.dev/blogs/conditional-statements-in-javascript)
-4. [Loop through an array](https://taimoorsattar.dev/blogs/loop-through-an-array-in-javascript)
-5. [Object in Javascript](https://taimoorsattar.dev/blogs/how-to-use-objects-in-javascript)
-6. [Date format using Javascript](https://taimoorsattar.dev/blogs/javascript-date-format)
-7. [How To Manipulate CSS With Javascript](https://taimoorsattar.dev/blogs/css-with-javascript)
+1. Learn from developing the basic structure of the website.
+2. Based on certain user actions/behavior, we have to manipulate certain DOM elements. Learn more about [Manipulating The DOM Using Javascript →](https://taimoorsattar.dev/blogs/manipulate-the-dom-using-javascript)
+3. JavaScript not only can manipulate HTML DOM elements, but it also can manipulate CSS. Learn how to [manipulate CSS With Javascript →](https://taimoorsattar.dev/blogs/css-with-javascript)
+4. [Conditional Statements in JavaScript →](https://taimoorsattar.dev/blogs/conditional-statements-in-javascript)
+5. [Loop through an array →](https://taimoorsattar.dev/blogs/loop-through-an-array-in-javascript)
+6. [Object in Javascript →](https://taimoorsattar.dev/blogs/how-to-use-objects-in-javascript)
+7. [Date format using Javascript →](https://taimoorsattar.dev/blogs/javascript-date-format)
 
-After covering the basics stuff, you can learn advance concepts in Javascript.
+After covering the basics stuff, you can learn advanced concepts in Javascript.
 
-- [How To Preview An Image Using Javascript](https://taimoorsattar.dev/blogs/preview-an-image-using-javascript)
-- [How To Use Blob Object In JavaScript](https://taimoorsattar.dev/blogs/javascript-blob)
+- How to [preview An Image using Javascript →](https://taimoorsattar.dev/blogs/preview-an-image-using-javascript)
+- How to listen/behave/animate using [Scroll in Javascript →](https://taimoorsattar.dev/blogs/scroll-javascript)
+- How To Use [blob Object In JavaScript →](https://taimoorsattar.dev/blogs/javascript-blob)
 
 To level up your JavaScript skills, learn the tips and tricks of writing code.
 
-- [write better code with Javascript](https://taimoorsattar.dev/blogs/better-code-with-javascript).
+- [Write better code with javascript →](https://taimoorsattar.dev/blogs/better-code-with-javascript).

@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Taimoor Sattar Blog`,
+    title: `Taimoor Sattar`,
     author: {
       name: `Taimoor Sattar`,
-      summary: `I'm Taimoor Sattar, full-stack developer. I've experience to develop websites in JavaScript, Node and CSS. But, better I am a problem solver. I used to break down large chunck of problem into small puzzle pieces.`,
+      summary: `I'm Taimoor Sattar, a full-stack developer, experience to develop websites in React/JavaScript, Node, and HTML/CSS.`,
     },
-    description: `A blog demonstrating what Gatsby can do.`,
+    description: `I'm Taimoor Sattar, a full-stack developer, experience to develop websites in React/JavaScript, Node, and HTML/CSS.`,
     siteUrl: `https://taimoorsattar.dev`,
     social: {
       twitter: `taimoorsattar7`,
@@ -45,11 +45,11 @@ module.exports = {
             },
           },
           {
-            resolve: 'gatsby-remark-external-links',
+            resolve: "gatsby-remark-external-links",
             options: {
-              target: '_blank',
-            }
-          }
+              target: "_blank",
+            },
+          },
         ],
       },
     },
@@ -114,7 +114,7 @@ module.exports = {
             title: `RSS feed name`,
           },
         ],
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,

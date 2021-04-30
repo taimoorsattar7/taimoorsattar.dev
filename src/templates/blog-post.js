@@ -41,6 +41,7 @@ const format_date = date => {
 const BlogPostTemplate = ({ data, location }) => {
   const url = typeof window !== "undefined" ? window.location.href : ""
   const post = data.markdownRemark
+  const slug = data.markdownRemark.fields.slug
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
 
@@ -63,6 +64,7 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.exerpt || post.excerpt}
         image={featureImg?.src ?? ""}
+        slug={slug}
         schemaType={"blog"}
       />
 
@@ -198,6 +200,9 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
