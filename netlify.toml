@@ -3,3 +3,7 @@
     publish = "public"
 [functions]
   directory = "functions/"
+[[redirects]]
+  from = "/books/workflow-to-build-static-website"
+  to = "/books/how-to-build-JAMstack-site"
+	status = 200
