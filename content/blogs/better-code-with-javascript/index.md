@@ -52,7 +52,7 @@ You can use **include** statement in JavaScript as below:
 
 ```jsx
 var str = "I love JavaScript.";
-var word = str.includes("javaScript"); // result: true
+var word = str.includes("JavaScript"); // result: true
 ```
 
 In array,  we can use include statement as below:

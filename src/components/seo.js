@@ -105,6 +105,7 @@ const SEO = ({
         { name: `twitter:url`, content: metaSiteUrl },
       ].concat(meta)}
     >
+      <meta name="yandex-verification" content="42cde140c0068db5" />
       <script type="application/ld+json">{JSON.stringify(main_schema)}</script>
 
       {schemaType === "blog" ? (
