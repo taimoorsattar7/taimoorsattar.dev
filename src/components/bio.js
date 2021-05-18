@@ -37,7 +37,7 @@ const Bio = () => {
   const author = data.site.siteMetadata?.author
   const social = data.site.siteMetadata?.social
 
-  const avatar = data?.avatar?.childImageSharp?.fixed
+  const avatar = data.avatar?.childImageSharp?.fixed
 
   return (
     <div className="bio">
@@ -57,8 +57,8 @@ const Bio = () => {
           {` `}
           <a href={`https://twitter.com/${social?.twitter || ``}`}>
             You should follow them on Twitter
-          </a>.
-          {` `}
+          </a>
+          .{` `}
           <span>
             You can contact me on <Link to="contact-me">this page</Link>.
           </span>

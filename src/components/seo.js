@@ -13,9 +13,16 @@ const SEO = ({
   lang,
   meta,
 }) => {
-  const { site } = useStaticQuery(
+  const { site, avatar } = useStaticQuery(
     graphql`
       query {
+        avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+          childImageSharp {
+            fixed(width: 300, height: 300, quality: 100) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
         site {
           siteMetadata {
             title
@@ -30,18 +37,22 @@ const SEO = ({
     `
   )
 
+  const pic = avatar?.childImageSharp?.fixed?.src
+
   const metaSiteUrl = site.siteMetadata.siteUrl
   const metaDescription = description || site.siteMetadata.description
 
   const metaImage = image ? `${metaSiteUrl}${image}` : ""
   const metaPageUrl = `${metaSiteUrl}${slug}`
 
-  const defaultTitle = site.siteMetadata?.title
+  const defaultTitle = title || site.siteMetadata?.title
 
   const main_schema = {
     "@context": "http://schema.org",
     "@type": "Person",
+    gender: "http://schema.org/Male",
     name: "Taimoor Sattar",
+    image: pic ? `${metaSiteUrl}${pic}` : "",
     url: metaSiteUrl,
     sameAs: [
       "https://www.linkedin.com/in/taimoorsattar",
