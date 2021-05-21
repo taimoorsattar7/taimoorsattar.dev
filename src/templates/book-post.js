@@ -25,7 +25,7 @@ const BookPost = ({ data, location }) => {
     <Layout location={location}>
       <SEO
         title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
+        description={post.frontmatter.exerpt || post.excerpt}
         image={featureImg?.src ?? ""}
         slug={slug}
         schemaType={"book"}

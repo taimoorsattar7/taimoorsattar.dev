@@ -42,7 +42,9 @@ const SEO = ({
   const metaSiteUrl = site.siteMetadata.siteUrl
   const metaDescription = description || site.siteMetadata.description
 
-  const metaImage = image ? `${metaSiteUrl}${image}` : ""
+  const metaImage = image
+    ? `${metaSiteUrl}${image}`
+    : `${metaSiteUrl}/banner.jpg`
   const metaPageUrl = `${metaSiteUrl}${slug}`
 
   const defaultTitle = title || site.siteMetadata?.title
