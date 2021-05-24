@@ -93,32 +93,40 @@ const SEO = ({
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
-      meta={[
-        { property: `twitter:card`, content: "summary_large_image" },
-        { property: `og:title`, content: title },
-        { name: `twitter:title`, content: title },
-
-        { name: `description`, content: metaDescription },
-        { property: `og:description`, content: metaDescription },
-        { name: `twitter:description`, content: metaDescription },
-
-        { name: `image`, content: metaImage },
-        { name: `og:image`, content: metaImage },
-        { name: `twitter:image`, content: metaImage },
-
-        { property: `og:type`, content: `website` },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.social?.twitter || ``,
-        },
-
-        { name: `og:url`, content: metaSiteUrl },
-        { name: `twitter:url`, content: metaSiteUrl },
-      ].concat(meta)}
     >
       <meta name="yandex-verification" content="42cde140c0068db5" />
+      <title>{defaultTitle}</title>
+      <meta name="title" content={`${defaultTitle} | Taimoor Sattar`}></meta>
+
+      <meta name="author" content="Taimoor Sattar" />
+      <meta name="description" content={metaDescription} />
+      <link rel="canonical" href={metaPageUrl} />
+
+      {/* Social: Twitter  */}
+      {/* After inserting META need to validate at https://dev.twitter.com/docs/cards/validation/validator  */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content="@taimoorsattar7" />
+      <meta name="twitter:title" content={defaultTitle} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image" content={metaImage} />
+      <meta name="twitter:url" content={metaSiteUrl} />
+
+      {/* Open Graph */}
+      <meta property="og:url" content={metaPageUrl} />
+      <meta
+        property="og:type"
+        content={
+          schemaType === "blog"
+            ? "article"
+            : schemaType === "book"
+            ? "book"
+            : "website"
+        }
+      />
+      <meta property="og:title" content={defaultTitle} />
+      <meta property="og:image" content={metaImage} />
+      <meta property="og:description" content={metaDescription} />
+
       <script type="application/ld+json">{JSON.stringify(main_schema)}</script>
 
       {schemaType === "blog" ? (
