@@ -18,7 +18,7 @@ To start a career in web development, the first thing you need to choose is the
 As web developers, we have to manage (code) different services of the website. For that, we can choose different programming stacks. But first, we need to know about the different website services as below:
 
 | Sr. | Services | Description |
-| ----------------------- | ---------------------- |
+| ----------------------- | ---------------------- | ---------------------- |
 | 1. | Front End   | It is what user see on the browser (Client-Side) like text, images, animation, etc.                 |
 | 2. | Back End                     | It is used to perform logical operations at the server. |
 | 3. | DataBase                   | It is used to store the data and later we can query the data as requested.                 |
