@@ -1,5 +1,5 @@
 ---
-title: programming stack for web development
+title: How to choose programming stack for web development
 description: To start a career in web development, the first thing you need to
   choose is the programming language.
 date: 2021-06-04T02:01:56.506Z
