@@ -69,7 +69,7 @@ Previously, PHP is the most popular language for writing server-side due to the 
 
 NodeJS is the runtime that allows running JavaScript on the server. Javascript was just a script language to run in the browser. If you have learned the syntax of JavaScript, you learn half of Node.
 
-The back-end server is not accessible by the user. Unlike, in client-side (browser), we can use inspect tool to change the script, markdown, styles of the website. For example, if you want to perform logical checks for the very secure bank application, then writing logic on the browser (client-side) might not be a good option. Because someone can use inspect tool of the browser to change the logic and validate their information. That's where back-end servers are useful.
+The back-end server is not accessible by the user. Unlike, in client-side (browser), we can use inspect tool to change the script, markdown, styles of the website. For example, if you want to perform logical checks for a very secure bank application, then writing logic on the browser (client-side) might not be a good option. Because someone can use inspect tool of the browser to change the logic and validate their information. That's where back-end servers are useful.
 
 ## Choosing DataBase
 
