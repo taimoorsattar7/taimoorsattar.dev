@@ -9,6 +9,8 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
+  const avatar = data.avatar?.childImageSharp?.fixed
+
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -25,7 +27,11 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO
+        title="All posts"
+        description="My name is Taimoor Sattar, a full-stack developer. I have a bachelor's degree in engineering, but love to code."
+        image={avatar?.src ?? ""}
+      />
 
       <div className="wrapper wrapper--narrow">
         <Bio />
@@ -74,6 +80,13 @@ export const pageQuery = graphql`
   site {
     siteMetadata {
       title
+    }
+  }
+  avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+    childImageSharp {
+      fixed(width: 200, height: 200, quality: 100) {
+        ...GatsbyImageSharpFixed
+      }
     }
   }
   allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, filter: {fields: {slug: {regex: "/blogs/"}}}) {

@@ -50,6 +50,36 @@ const BlogPostTemplate = ({ data, location }) => {
   let featureImg = post.frontmatter?.featuredimage?.childImageSharp?.fluid
   const avatar = data?.avatar?.childImageSharp?.fixed
 
+  function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    return re.test(String(email).toLowerCase())
+  }
+
+  async function handleSubmit(name, email) {
+    try {
+      let response
+
+      if (validateEmail(email)) {
+        response = await Axios.post(`/.netlify/functions/addUser`, {
+          name: name,
+          email: email,
+        })
+      }
+
+      if (response.data) {
+        localStorage.setItem("subscribe", true)
+        props.onSuccess("Welcome! You are subscribe to the list")
+        setName("")
+        setEmail("")
+        setShowModal(false)
+      } else {
+        toast.error("Something went wrong")
+      }
+    } catch (e) {
+      toast.error("Refresh the page and try Again...")
+    }
+  }
+
   useEffect(() => {
     const subscribe = localStorage.getItem("subscribe")
     // const close = localStorage.getItem("close")
@@ -145,16 +175,17 @@ const BlogPostTemplate = ({ data, location }) => {
           <div>
             <Modal
               title="Subscribe to my Newsletter"
-              body="Never Miss any update from us."
-              onClose={() => setShowModal(false)}
+              body={`<i>I'm Taimoor Sattar, full-stack developer.</i> Subscribe to my newsletter to get updates about web tech. Check out my recent release book <a href="/books/how-to-build-JAMstack-site/">
+                how to build JAMstack site 📕 →
+              </a>`}
+              onClose={() => {
+                console.log("onClose")
+                setShowModal(false)
+              }}
               timer={9000}
-              show={showModal}
+              show={false}
             >
-              <SubscribeForm
-                onClose={() => setShowModal(false)}
-                onSuccess={msg => toast.success(msg)}
-                onFail={msg => toast.error(msg)}
-              />
+              <SubscribeForm show={true} onSubmit={handleSubmit} />
             </Modal>
           </div>
 

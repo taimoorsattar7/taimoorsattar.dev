@@ -4,25 +4,25 @@ exerpt: Build the site with Better Performance, Higher Security, Cheaper/Easier
 buyLink: https://gumroad.com/l/workflow-to-build-static-website
 pricing:
   - name: Starter
-    price: 5
+    price: 0
+    freebie: true
     interval: month
-    btntxt: Buy on Gumroad
-    btnlink: https://gumroad.com/l/workflow-to-build-static-website
+    btntxt: Grab free chapters 👀
     exerpt: Get full access to the book explained with the code example and project
       files.
   - name: Deluxe
-    price: 15
-    btntxt: Buy on Gumroad
-    btnlink: https://gumroad.com/l/workflow-to-build-static-website
+    price: 10
+    btntxt: Proceed to checkout
+    btnlink: https://gumroad.com/l/kbtAl
     interval: 6 month
     exerpt: Get full access to full book explained with the code example and project
       files.
     popular: true
   - name: Ultimate
-    price: 30
+    price: 15
     interval: year
-    btntxt: Buy on gumroad
-    btnlink: https://gumroad.com/l/workflow-to-build-static-website
+    btntxt: Proceed to checkout
+    btnlink: https://gumroad.com/l/kbtAl
     exerpt: Get full access to the book explained with the code example and project
       files.
 title: How to build JAMstack site - ebook
@@ -47,17 +47,17 @@ popular: true
 
 There are a lot of frameworks to create JAMstack architecture on the internet. But the more important thing is to understand the concepts and shifting between different frameworks would be easier. The stack we cover is listed as below:
 
-|Sr# | Tech | Description |
-|:--- |:---- |:----:|
-|1.| Gatsby | Front-end for modern web used to build blazing-fast static websites. |
-|2.| React | JavaScript library for building user Interface. Gatsby's framework is built on React. |
-|3.| Netlify CMS | Headless CMS |
-|4.| Database | Airtable |
-|5.| Email Subscription | Substack |
-|6.| Comments | [utteranc.es](https://utteranc.es) |
-|7.| Code Format | Prettier, Eslint |
-|8.| GitHub / Git | Version Control Project |
-|9.| Netlify (Hosting/Functions/dev/form submissions) | Hosting Platform to deploy the website and execute back-end functions. |
+| Sr#  | Tech                                             |                                      Description                                      |
+| :--- | :----------------------------------------------- | :-----------------------------------------------------------------------------------: |
+| 1.   | Gatsby                                           |         Front-end for modern web used to build blazing-fast static websites.          |
+| 2.   | React                                            | JavaScript library for building user Interface. Gatsby's framework is built on React. |
+| 3.   | Netlify CMS                                      |                                     Headless CMS                                      |
+| 4.   | Database                                         |                                       Airtable                                        |
+| 5.   | Email Subscription                               |                                       Substack                                        |
+| 6.   | Comments                                         |                          [utteranc.es](https://utteranc.es)                           |
+| 7.   | Code Format                                      |                                   Prettier, Eslint                                    |
+| 8.   | GitHub / Git                                     |                                Version Control Project                                |
+| 9.   | Netlify (Hosting/Functions/dev/form submissions) |        Hosting Platform to deploy the website and execute back-end functions.         |
 
 Here, we have highlighted what we cover in the content.
 

@@ -1,48 +1,33 @@
-import React, { useState } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import Axios from "axios"
 import "./_field.scss"
 
 const SubscribeForm = props => {
   const [name, setName] = useState()
-  const [email, setEmail] = useState()
-  const [msg, setmsg] = useState("")
+
+  const nameRef = useRef(null)
+  const emailRef = useRef(null)
 
   const [disable, setDisable] = useState(false)
 
-  function validateEmail(email) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    return re.test(String(email).toLowerCase())
-  }
+  useEffect(() => {
+    nameRef.current.focus();
+    console.log(nameRef)
+  }, [])
 
   async function handleSubmit(e) {
     e.preventDefault()
 
-    try {
-      setDisable(true)
-      let response
+    setDisable(true)
+    let status = await props.onSubmit({
+      name: nameRef.current.value,
+      email: emailRef.current.value,
+    })
+    setDisable(false)
+  }
 
-      if (validateEmail(email)) {
-        response = await Axios.post(`/.netlify/functions/addUser`, {
-          name: name,
-          email: email,
-        })
-      }
-
-      if (response.data) {
-        localStorage.setItem("subscribe", true)
-        props.onSuccess("Welcome! You are subscribe to the list")
-        setName("")
-        setEmail("")
-        props.onClose()
-      } else {
-        props.onFail("Something went wrong")
-      }
-
-      setDisable(false)
-    } catch (e) {
-      props.onFail("Refresh the page and try Again...")
-      setDisable(false)
-    }
+  if (props.show == true) {
+    return <></>
   }
 
   return (
@@ -58,7 +43,7 @@ const SubscribeForm = props => {
           </label>
 
           <input
-            onChange={e => setName(e.target.value)}
+            ref={nameRef}
             name="name"
             className="headline headline__text field__input"
             type="text"
@@ -77,7 +62,7 @@ const SubscribeForm = props => {
           </label>
 
           <input
-            onChange={e => setEmail(e.target.value)}
+            ref={emailRef}
             name="email"
             className="headline headline__text field__input"
             type="email"

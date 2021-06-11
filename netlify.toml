@@ -7,3 +7,9 @@
   from = "/books/workflow-to-build-static-website"
   to = "/books/how-to-build-JAMstack-site"
 	status = 200
+[[redirects]]
+  from = "/my-work"
+  to = "https://www.notion.so/taimoorsattar/Taimoor-Sattar-d5567816c47f4c91b875b76bdad3fcc8"
+	status = 200
+
+  
