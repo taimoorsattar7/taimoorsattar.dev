@@ -179,11 +179,10 @@ const BlogPostTemplate = ({ data, location }) => {
                 how to build JAMstack site 📕 →
               </a>`}
               onClose={() => {
-                console.log("onClose")
                 setShowModal(false)
               }}
               timer={9000}
-              show={false}
+              show={showModal}
             >
               <SubscribeForm show={true} onSubmit={handleSubmit} />
             </Modal>
