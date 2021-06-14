@@ -10,11 +10,6 @@ const SubscribeForm = props => {
 
   const [disable, setDisable] = useState(false)
 
-  useEffect(() => {
-    nameRef.current.focus();
-    console.log(nameRef)
-  }, [])
-
   async function handleSubmit(e) {
     e.preventDefault()
 
@@ -26,7 +21,7 @@ const SubscribeForm = props => {
     setDisable(false)
   }
 
-  if (props.show == true) {
+  if (props.show == false) {
     return <></>
   }
 

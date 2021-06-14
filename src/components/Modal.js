@@ -23,7 +23,7 @@ const Modal = props => {
     }
   }, [])
 
-  if (!props.show) {
+  if (!props.show || !pop) {
     return <></>
   }
 

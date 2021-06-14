@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
 import toast, { Toaster } from "react-hot-toast"
 
+import Axios from "axios"
+
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 
@@ -55,22 +57,24 @@ const BlogPostTemplate = ({ data, location }) => {
     return re.test(String(email).toLowerCase())
   }
 
-  async function handleSubmit(name, email) {
+  async function handleSubmit(data) {
     try {
       let response
 
-      if (validateEmail(email)) {
-        response = await Axios.post(`/.netlify/functions/addUser`, {
-          name: name,
-          email: email,
-        })
+      console.log(data);
+
+      if (validateEmail(data.email)) {
+          response = await Axios.post(`/.netlify/functions/addUser`, {
+            name: data.name,
+            email: data.email,
+          }) 
       }
+
+      console.log(response);
 
       if (response.data) {
         localStorage.setItem("subscribe", true)
-        props.onSuccess("Welcome! You are subscribe to the list")
-        setName("")
-        setEmail("")
+        toast.success("You are subscribe to the list")
         setShowModal(false)
       } else {
         toast.error("Something went wrong")
@@ -84,6 +88,7 @@ const BlogPostTemplate = ({ data, location }) => {
     const subscribe = localStorage.getItem("subscribe")
     // const close = localStorage.getItem("close")
     // const date = localStorage.getItem("date")
+    
     setShowModal(subscribe == "true" ? false : true)
   }, [])
 
@@ -181,7 +186,7 @@ const BlogPostTemplate = ({ data, location }) => {
               onClose={() => {
                 setShowModal(false)
               }}
-              timer={9000}
+              timer={7000}
               show={showModal}
             >
               <SubscribeForm show={true} onSubmit={handleSubmit} />

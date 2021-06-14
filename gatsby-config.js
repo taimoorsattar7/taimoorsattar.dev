@@ -23,14 +23,6 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-catch-links`,
     {
-      resolve: `gatsby-source-stripe`,
-      options: {
-        objects: ["Price", "Customer"],
-        secretKey: process.env.GATSBY_STRIPE_SECRET_KEY,
-        downloadFiles: true,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content`,

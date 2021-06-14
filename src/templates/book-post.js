@@ -203,7 +203,7 @@ const BookPost = ({ data, location }) => {
             success={showModal && issuccess}
             successmsg="Thanks for you interest. Please check your email for the free chapter of the book 👀📕"
           >
-            <SubscribeForm show={issuccess} onSubmit={handleSubmit} />
+            <SubscribeForm show={!issuccess} onSubmit={handleSubmit} />
           </Modal>
         </div>
 
