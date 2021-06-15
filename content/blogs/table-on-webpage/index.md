@@ -1,5 +1,5 @@
 ---
-title: How to structure/style data in table
+title: How to structure data in HTML table
 description: We can use table to structure data in column and rows. Table is the HTML way to layout the data.
 date: 2021-05-19T16:21:10.500Z
 tags:

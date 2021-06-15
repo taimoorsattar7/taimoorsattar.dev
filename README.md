@@ -6,6 +6,14 @@
 
 This website is open-source uses gatsby as architecture and hosted on Netlify. You can customize according to your needs and requirements.
 
+
+## Features
+
+- [x] Create blog post using Netlify CMS
+- [x] Newsletter support (Airtable, Substack)
+- [ ] Create contact form
+- [x] Send emails using SendGrid
+
 ## Contributing
 If you want to fix any typo or other issue that needs to address, please do not hesitate to open a pull request and fix it!
 
@@ -21,7 +29,3 @@ If you want to fix any typo or other issue that needs to address, please do not 
 - [Twitter](https://twitter.com/taimoorsattar7)
 - [dev.to](https://dev.to/taimoorsattar7)
 - [GitHub](https://github.com/taimoorsattar7)
-
-## LICENSE
-
-This project is open-source and available under the [MIT License](LICENSE).
