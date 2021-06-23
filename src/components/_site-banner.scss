@@ -1,84 +1,180 @@
-@import '../styles/mixin';
+$white: #fff;
+$gray: #a5a5a5;
+$black: #322c2c;
+$text: #8e8e8e;
+$grid-columns: 12;
 
-.site-banner{
+$sm: 48rem;
+$md: 62rem;
+$lg: 75rem;
+
+.intro {
+  margin: 1rem 0;
+  padding: 0;
+  width: 100%;
+}
+
+
+#logo {
+  color: $black;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+main {
+  padding: 2rem 0;
+}
+
+.grid {
+  > [class*="column-"] {
+    padding: 1rem;
+  }
+}
+
+.section-heading {
+  transform: rotate(0) translateX(0);
+}
+
+img {
 	width: 100%;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	overflow: hidden;
+  height: 100%;
+	object-fit: cover;
+}
 
-	&__tech{
-		display: block;
-		text-align: center;
-		opacity: 0.35;
-		width: 100%;
-		margin-top: 25px;
-		margin-bottom: 100px;
+footer {
+  text-align: center;
+}
 
-		img{
-			display: inline-block;
-			width: 36px;
-			height: auto;
-			margin-right: 8%;
-			&:last-of-type{
-				margin-right: 0;
-			}
-		}
-	}
+@media (min-width: $md) {
+  body {
+    font-size: 1.125rem;
+  }
+ 
+  img {
+    height: 40rem;
+  }
+  
+  .section-heading {
+    position: absolute;
+    transform-origin: top left;
+    transform: rotate(-90deg) translateX(-100%);
+  }
+  
+  .intro {
+    padding: 1rem;
+  }
 
-	&__frame{
-		display: block;
-		max-width: 165px;
-		height: auto;
-		float: none;
-		margin: auto;
-		margin-top: 10px;
+}
 
-		@include atMinMedium{
-			display: inline-block;
-			max-width: 185px;
-			height: auto;
-			float: right;
-		}
-		
-		img{
-			border: 2px solid grey;
-			display: inline-block;
-			width: 100%;
-			border-radius: 500px;
-		}
-	
-	}
 
-	&__info{
-		display: inline-block;
-		max-width: 680px;
-		margin: 0 auto;
-	}
+.grid {
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+  > [class*="column-"] {
+    display: block;
+  }
+}
 
-	&__bg-image{
-		display: block;
-		opacity: 0.45;
-		width: 100%;
-		height: auto;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		z-index: 2;
-	}
+.first {
+  order: -1;
+}
 
-	&__post{
-		margin-top: 10px;
-		margin-bottom: 8px;
-	}
-	&__post-block{
-		padding: 10px 8px;
-		margin-bottom: 8px;
-		a{
-			text-decoration: none;
-			color: none;
-		}
-	}
-	
+.last {
+  order: 12;
+}
 
+.align-top {
+  align-items: start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-bottom {
+  align-items: end;
+}
+
+@for $i from 1 through $grid-columns {
+  .column-xs-#{$i} {
+    flex-basis: $i / $grid-columns * 100%;
+    max-width: $i / $grid-columns * 100%;
+  }
+}
+
+@media (min-width: $sm) {
+  @for $i from 1 through $grid-columns {
+    .column-sm-#{$i} {
+      flex-basis: $i / $grid-columns * 100%;
+      max-width: $i / $grid-columns * 100%;
+    }
+  }
+}
+
+@media (min-width: $md) {
+  @for $i from 1 through $grid-columns {
+    .column-md-#{$i} {
+      flex-basis: $i / $grid-columns * 100%;
+      max-width: $i / $grid-columns * 100%;
+    }
+  }
+}
+
+@media (min-width: $lg) {
+  @for $i from 1 through $grid-columns {
+    .column-lg-#{$i} {
+      flex-basis: $i / $grid-columns * 100%;
+      max-width: $i / $grid-columns * 100%;
+    }
+  }
+}
+
+@supports (display: grid) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    > [class*="column-"] {
+      margin: 0;
+      max-width: 100%;
+    }
+  }
+
+  @for $i from 1 through $grid-columns {
+    .column-xs-#{$i} {
+      grid-column-start: span #{$i};
+      grid-column-end: span #{$i};
+    }
+  }
+
+  @media(min-width: $sm) {
+    @for $i from 1 through $grid-columns {
+      .column-sm-#{$i} {
+        grid-column-start: span #{$i};
+        grid-column-end: span #{$i};
+      }
+    }
+  }
+
+  @media(min-width: $md) {
+    @for $i from 1 through $grid-columns {
+      .column-md-#{$i} {
+        grid-column-start: span #{$i};
+        grid-column-end: span #{$i};
+      }
+    }
+  }
+
+  @media(min-width: $lg) {
+    @for $i from 1 through $grid-columns {
+      .column-lg-#{$i} {
+        grid-column-start: span #{$i};
+        grid-column-end: span #{$i};
+      }
+    }
+  }
 }

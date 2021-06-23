@@ -6,7 +6,7 @@ const Pricetable = props => {
   let pricing = props.pricing
 
   return (
-    <div id="pricing" className="container">
+    <div id="pricing" className="container margin-b-large">
       {pricing.map(item => (
         <div
           key={item.name}

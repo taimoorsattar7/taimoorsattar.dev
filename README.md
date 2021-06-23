@@ -17,12 +17,6 @@ This website is open-source uses gatsby as architecture and hosted on Netlify. Y
 ## Contributing
 If you want to fix any typo or other issue that needs to address, please do not hesitate to open a pull request and fix it!
 
-## Features
-
-- Create Posts in Markdown
-- Netlify CMS support
-- SASS
-
 ## SOCIAL PLATFORM
 
 - [Linkedin](https://www.linkedin.com/in/taimoorsattar)

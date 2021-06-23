@@ -13,3 +13,5 @@ import './src/styles/syntax-editor.scss'
 
 import "prismjs/themes/prism.css"
 import "prismjs/plugins/line-numbers/prism-line-numbers.css"
+
+

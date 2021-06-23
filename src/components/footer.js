@@ -9,13 +9,6 @@ import './_flex.scss';
 
 const Footer = () => (
   <footer className="footer">
-    <div className="wrapper wrapper--narrow">
-      <div className="footer__logo">
-        <Link to="/">
-          <img src="/img/logo-grey.svg" alt="Taimoor Sattar" />
-        </Link>
-      </div>
-    </div>
 
     <div className="primary-nav">
       <ul className="footer-links">

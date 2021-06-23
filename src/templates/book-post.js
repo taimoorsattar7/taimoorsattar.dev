@@ -9,6 +9,8 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Pricetable from "../components/Pricetable"
+import FAQ from "../components/FAQ"
+import Testimonial from "../components/testimonial"
 
 import Modal from "../components/Modal"
 import SubscribeForm from "../components/subscribeForm"
@@ -177,7 +179,7 @@ const BookPost = ({ data, location }) => {
           )}
 
           <div
-            className="headline headline__text"
+            className="headline headline__text margin-b-large"
             dangerouslySetInnerHTML={{ __html: post.html }}
           ></div>
         </div>
@@ -194,6 +196,10 @@ const BookPost = ({ data, location }) => {
           }}
         />
 
+        <FAQ FAQ={post.frontmatter?.FAQ} />
+
+        <Testimonial testimonial={post.frontmatter?.testimonial} />
+        
         <div>
           <Modal
             title="Grab free chapter of this ebook 👀"
@@ -207,19 +213,6 @@ const BookPost = ({ data, location }) => {
           </Modal>
         </div>
 
-        <div className="blogscontent__socialite">
-          <iframe
-            title="Substack"
-            src="https://taimoor.substack.com/embed"
-            width="480"
-            height="320"
-            Style={
-              "width: 100%;display:block;border:1px solid #EEE;background:white;margin:auto;margin-top: 50px;"
-            }
-            frameborder="0"
-            scrolling="no"
-          ></iframe>
-        </div>
       </div>
     </Layout>
   )
@@ -250,6 +243,15 @@ export const query = graphql`
               ...GatsbyImageSharpFluid
             }
           }
+        }
+        FAQ{
+          question
+          answer
+        }
+        testimonial{
+          name
+          designation
+          says
         }
         pricing {
           btntxt

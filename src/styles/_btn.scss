@@ -16,6 +16,18 @@
     text-decoration: none;
   }
 
+  &__black {
+    background-color: #000000;
+    border: 2px solid #000000;
+    margin: 0;
+    padding: 8px 25px 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  &__black:hover {
+    filter: brightness(0.8);
+  }
+
   &__curv {
     padding-top: 3px;
     padding-bottom: 3px;

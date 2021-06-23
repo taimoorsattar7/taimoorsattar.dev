@@ -1,7 +1,17 @@
 ---
+title: How To Build JAMstack Site
 exerpt: Build the site with Better Performance, Higher Security, Cheaper/Easier
   Scaling and have Better Developer Experience.
 buyLink: https://gumroad.com/l/workflow-to-build-static-website
+FAQ:
+  - question: How can I access the course?
+    answer: You can access the course (book) via gumroad. After the successful payment, you will recieve an email about your course details.
+  - question: Is this course for me?
+    answer: Yes, If you want to learn about JAMstack. The approach of this course is to teach you why you are doing this before how you are going to achieve it. You can also read the free content of the course. 
+  - question: Do you have discounts for students or teams?
+    answer: Yes, I've discount for student and teams. For me, learning is more valuable than money. If you are a student, you can email me the proof of your student email id to get 50% - 70% discount. For teams, you can <a href="mailto:taimoor@taimoorsattar.dev">email me</a> with details, I'll setup accounts upto 5-100+ members.
+  - question: I've a question?
+    answer: If you have a question, you can reach me out via at <a href="mailto:taimoor@taimoorsattar.dev">taimoor@taimoorsattar.dev</a>. 
 pricing:
   - name: Starter
     price: 0
@@ -22,7 +32,10 @@ pricing:
     btntxt: Proceed to checkout
     btnlink: https://gumroad.com/l/kbtAl
     exerpt: Download the full book (course) + Project files.
-title: How to build JAMstack site
+testimonial:
+  - name: Taimoor Sattar
+    designation: Full stack developer
+    says: Using Jamstack, the hosting infrastructure relies on fewer moving parts and systems, thus reducing the risk of attack.
 date: 2015-05-01T22:12:03.284Z
 featuredimage: cover.jpg
 tags:
@@ -51,19 +64,9 @@ As a developer, I was confused about what tech stack works best for my website w
 
 We can build a tech stack to manage all the above services. That's where we can leverage the power of JAMstack. The benefit of JAMstack is that the front-end decoupled from the back-end, which makes the website better performance and a good developer experience.
 
-The tech for the JAMstack that we cover are listed below:
+Below you can visualize the stack covered in this course.
 
-| Sr#  | Tech                                             |                                      Description                                      |
-| :--- | :----------------------------------------------- | :-----------------------------------------------------------------------------------: |
-| 1.   | Gatsby                                           |         Front-end for modern web used to build blazing-fast static websites.          |
-| 2.   | React                                            | JavaScript library for building user Interface. Gatsby's framework is built on React. |
-| 3.   | Netlify CMS                                      |                                     Headless CMS                                      |
-| 4.   | Airtable                                         |             Database (sheet)                                                                  |
-| 5.   | Substack                               |         For Email Subscriber                                                                      |
-| 6.   | utteranc.es                                         |                   Comments                                  |
-| 7.   | Prettier, Eslint                                      |                        Code Format                                               |
-| 8.   | Version Control                                     |                       GitHub / Git                                         |
-| 9.   | Netlify (Hosting/Functions/dev/form submissions) |        Hosting Platform to deploy the website and execute back-end functions.         |
+![The Stack](the-stack.jpg)
 
 Here, we have highlighted what we cover in the content.
 

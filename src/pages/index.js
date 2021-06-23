@@ -5,6 +5,8 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import SiteBanner from "../components/site-banner"
+
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
@@ -15,7 +17,7 @@ const BlogIndex = ({ data, location }) => {
     return (
       <Layout location={location} title={siteTitle}>
         <SEO title="All posts" />
-        <Bio />
+        <SiteBanner />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
           directory you specified for the "gatsby-source-filesystem" plugin in
@@ -34,7 +36,7 @@ const BlogIndex = ({ data, location }) => {
       />
 
       <div className="wrapper wrapper--narrow">
-        <Bio />
+      <SiteBanner />
         <ol style={{ listStyle: `none` }}>
           {posts.map(post => {
             const title = post.frontmatter.title || post.fields.slug
