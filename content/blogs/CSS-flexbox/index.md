@@ -26,10 +26,9 @@ The possible CSS property we can assign to the parent div is listed below:
 | 1.   | `display: flex`                 |                Allow the content to sit side-by-side                |                                                       flex, inline-flex |
 | 2.   | `flex-direction: row`           | Specify how flex items (child) are place in flex container (parent) |                                row, row-reverse, column, column-reverse |
 | 3.   | `flex-wrap: wrap`               |          Allow the flex items to wrap into multiple lines           |                                              nowrap, wrap, wrap-reverse |
-| 3.   | `justify-content: flex-start`   |                align flex items along the main axis                 | flex-start, flex-end, center, space-between, space-around, space-evenly |
-| 3.   | `align-items: center`           |               align flex items along the cross axis.                |                           stretch, flex-start, flex-end, baseline, auto |
-| 3.   | `align-content: stretch`        |      aligns a flex container’s lines within the flex container      |      flex-start, flex-end, center, space-between, space-around, stretch |
-|      |
+| 4.   | `justify-content: flex-start`   |                align flex items along the main axis                 | flex-start, flex-end, center, space-between, space-around, space-evenly |
+| 5.   | `align-items: center`           |               align flex items along the cross axis.                |                           stretch, flex-start, flex-end, baseline, auto |
+| 6.   | `align-content: stretch`        |      aligns a flex container’s lines within the flex container      |      flex-start, flex-end, center, space-between, space-around, stretch |
 
 
 The above CSS properties applies only to the parent div (flex container). We can visiualize thes CSS property for flexbox that can assign to the parent div as below:

@@ -28,7 +28,7 @@ const Header = () => {
           }
         >
           <h1 className="headline headline--logo">
-            <Link to="/">
+            <Link to="/?from=header">
               <img
                 className="site-header__logo"
                 src={logo}
@@ -67,28 +67,28 @@ const Header = () => {
           >
             <ul className="nav">
               <li>
-                <Link to="/about/">
+                <Link to="/about?from=header">
                   <img src={about} alt="Taimoor Sattar" />
                   <span>About</span>
                 </Link>
               </li>
 
               <li>
-                <Link to="/blogs/">
+                <Link to="/blogs?from=header">
                   <img src={blogs} alt="Taimoor Sattar" />
                   <span>Blogs</span>
                 </Link>
               </li>
 
               <li>
-                <Link to="/books/">
+                <Link to="/books?from=header">
                   <img src={blogs} alt="Taimoor Sattar" />
                   <span>Books</span>
                 </Link>
               </li>
 
               <li>
-                <Link to="/contact/">
+                <Link to="/contact?from=header">
                   <img src={contact} alt="Taimoor Sattar" />
                   <span>Contact</span>
                 </Link>

@@ -300,7 +300,11 @@ a:focus {
 }
 
 img {
-  width: 100%;
+  width: 95%;
+}
+
+video{
+  margin: auto;
 }
 
 .input {

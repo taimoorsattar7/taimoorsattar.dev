@@ -77,3 +77,7 @@ In the CSS code, paste the below code:
 ```
 
 The div has the position set to a relative in CSS and the `img` icon position related to the `div`(reference).
+
+You can view the code at the following CodePen link:
+
+🔗 [codepen/taimoorsattar/pen/rNePNNb](https://codepen.io/taimoorsattar/pen/rNePNNb)
